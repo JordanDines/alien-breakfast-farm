@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/MainScene.unity
     guid: 89b10cc6fdb436c40a2c459edc9591f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Jordan's Shitbox.unity
     guid: 936a811c0767c2644a0c367a948b4b7b
+  - enabled: 1
+    path: Assets/_Scenes/Josh's Sandbox.unity
+    guid: 7c8fd364583178140b667e3296e07be6
