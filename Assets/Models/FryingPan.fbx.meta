@@ -1,29 +1,16 @@
 fileFormatVersion: 2
-guid: 7d5b87d9f6492234698625560219f0ec
-timeCreated: 1521435352
+guid: 8d10417a28531bd4ea522a3afff24e11
+timeCreated: 1521419038
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Button1
-    100002: button3
-    100004: //RootNode
-    100006: Stove
-    400000: Button1
-    400002: button3
-    400004: //RootNode
-    400006: Stove
-    2100000: lambert2
-    2100002: lambert1
-    2300000: Button1
-    2300002: button3
-    2300004: Stove
-    3300000: Button1
-    3300002: button3
-    3300004: Stove
-    4300000: button3
-    4300002: Stove
-    4300004: Button1
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert1
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder2
     9500000: //RootNode
   externalObjects: {}
   materials:
