@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1293184833}
-  m_IndirectSpecularColor: {r: 0.3613337, g: 0.36451983, b: 0.33541554, a: 1}
+  m_IndirectSpecularColor: {r: 0.36133388, g: 0.3645201, b: 0.3354157, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3535,6 +3535,10 @@ Prefab:
         type: 2}
       propertyPath: m_TargetEye
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282112231953976, guid: f26203a829e97334baa32ee363f7980d, type: 2}
+      propertyPath: m_Name
+      value: GVR_Player(replacew/ Jordans new one)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f26203a829e97334baa32ee363f7980d, type: 2}
