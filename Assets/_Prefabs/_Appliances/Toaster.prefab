@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 33618933654903652}
   - component: {fileID: 23076435497614300}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ButtonToaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 33650426833815936}
   - component: {fileID: 23957437366492578}
   m_Layer: 0
-  m_Name: ButtonHole1
+  m_Name: ButtonHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 64c67e4b74b16614f8daa5fcd914fd5e, type: 3}
+  - {fileID: 2100000, guid: 22b5d9a9c6259784191988671b22ff27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

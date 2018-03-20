@@ -19,6 +19,10 @@ public class JumboTronTracking : MonoBehaviour
 	void Update () 
 	{
 		transform.rotation = Quaternion.Lerp (transform.rotation, player.transform.rotation, rotateSpeed);
+		Quaternion temp = transform.rotation;
+		temp.x = 0;
+		temp.z = 0;
+		transform.rotation = temp;
 	}
 
 }
