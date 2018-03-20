@@ -17,6 +17,10 @@ public class ObjectInteract : MonoBehaviour {
 	[SerializeField]
 	private bool isGrabbing = false;
 
+	public bool hasBeenPlaced = false;
+
+	public bool interactable = true;
+
 
 	void Start () {
 		//Find the GameManager in the scene to reference later on
@@ -38,7 +42,8 @@ public class ObjectInteract : MonoBehaviour {
 
 	public void GrabObject () {
 		//If you're not holding anything, and you're looking at a valid target to be picked up, pick the object up (See MoveTowardsPlayer())
-		if(gm.canHold && transform.tag == "Box") {
+		//&& transform.tag == "Box"
+		if(interactable && gm.canHold && transform.tag != "Toaster") {
 			isGrabbing = true;
 			//Set it's parent to your holdingPoint
 			transform.SetParent (holdingPoint.transform);
@@ -48,7 +53,7 @@ public class ObjectInteract : MonoBehaviour {
 
 	public void PlaceObject () {
 		//If you're holding something and you're looking at a valid target, put the object down (See MoveTowardsPlacement())
-		if (gm.canPlace && transform.tag == "Interactable") {
+		if (gm.canPlace && (transform.tag != "Box" || transform.tag != "Toast")) {
 			isPlacing = true;
 			//Also set it to the specific target gameobject's PlacePoint parent
 			gm.holdingObject.transform.SetParent (transform.Find ("PlacePoint").transform);
@@ -71,6 +76,7 @@ public class ObjectInteract : MonoBehaviour {
 			gm.holdingObject.GetComponent<Collider> ().enabled = true;
 			//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
 			if (Vector3.Distance (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position) < .1f) {
+				hasBeenPlaced = true;
 				isPlacing = false;
 				gm.canPlace = false;
 				gm.canHold = true;
@@ -91,6 +97,7 @@ public class ObjectInteract : MonoBehaviour {
 			gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
 			//If it has reached the player's holding point, allow it to be put down in a specific spot
 			if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
+				hasBeenPlaced = false;
 				gm.canHold = false;
 				gm.canPlace = true;
 				isGrabbing = false;
