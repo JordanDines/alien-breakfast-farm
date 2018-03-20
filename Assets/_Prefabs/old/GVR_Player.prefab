@@ -683,7 +683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalGainDb: 0
-  worldScale: 1
   occlusionMask:
     serializedVersion: 2
     m_Bits: 4294967295
