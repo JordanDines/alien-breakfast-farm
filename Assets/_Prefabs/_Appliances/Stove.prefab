@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33178180315706682}
   - component: {fileID: 23658575693950680}
   m_Layer: 0
-  m_Name: Button1
+  m_Name: ButtonHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33660518126992296}
   - component: {fileID: 23814724579364726}
   m_Layer: 0
-  m_Name: button3
+  m_Name: ButtonStove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,7 +89,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4535316453101974}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4535316453101974
 Transform:
@@ -101,8 +101,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.2375, z: 0.6471}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4024700215911440}
   - {fileID: 4943160090062360}
+  - {fileID: 4024700215911440}
   - {fileID: 4953452820392774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -118,7 +118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4535316453101974}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4953452820392774
 Transform:
@@ -215,7 +215,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9dc0897abd53ab94f961e904581d6508, type: 3}
+  - {fileID: 2100000, guid: 0dc3cd45050068e46aea2045ed051709, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

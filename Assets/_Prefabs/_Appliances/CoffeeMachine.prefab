@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33223605889138796}
   - component: {fileID: 23445969589523386}
   m_Layer: 0
-  m_Name: CoffeeMachine1
+  m_Name: CoffeeMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
+  - {fileID: 2100000, guid: 156b0441ba8dd5a47a224559d3707813, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
