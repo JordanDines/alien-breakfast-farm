@@ -147,7 +147,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  - {fileID: 2100000, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,7 +181,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  - {fileID: 2100000, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,7 +215,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  - {fileID: 2100002, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,21 +241,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316630986293242}
-  m_Mesh: {fileID: 4300002, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
 --- !u!33 &33763891394116952
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000469165807750}
-  m_Mesh: {fileID: 4300004, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  m_Mesh: {fileID: 4300004, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
 --- !u!33 &33958513478033950
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753423623640184}
-  m_Mesh: {fileID: 4300000, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
 --- !u!95 &95322704728677666
 Animator:
   serializedVersion: 3
@@ -264,7 +264,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1617564107323694}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5a8e06aa337ee804e920a015569e8f8e, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
