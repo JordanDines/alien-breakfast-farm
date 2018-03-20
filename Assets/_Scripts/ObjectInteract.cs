@@ -4,80 +4,105 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour {
 
-	public GameObject holdingPoint;
-	public GameObject objectPoint;
-	public float grabbingSpeed = 1;
-	public GameObject holdingParent;
+	private GameManager gm;
+	[Header("References")]
+	[SerializeField]
+	private GameObject holdingPoint;
 
-	public bool isMoving = false;
-	public bool isHeld = false;
-	public bool isPlacing = false;
+	[Header("Variables")]
+	[SerializeField]
+	private float grabbingSpeed = 1;
+	[SerializeField]
+	private bool isPlacing = false;
+	[SerializeField]
+	private bool isGrabbing = false;
 
-	private GameManager gameManager;
 
 	void Start () {
+		//Find the GameManager in the scene to reference later on
+		gm = FindObjectOfType<GameManager> ();
+		//Find the player's HoldingPoint to also reference later on
 		holdingPoint = GameObject.FindGameObjectWithTag ("HoldingPoint");
+		//Initialize the object currently being held in the GameManager
+		gm.holdingObject = null;
+
 	}
 
 	void Update () {
+		//These Functions allow the objects to move after the events trigger as buttons are static
 		MoveTowardsPlayer ();
 		MoveTowardsPlacement ();
 		HoldingObject ();
+	}
+	#region BUTTONS
 
-		print (holdingPoint.transform.childCount);
+	public void GrabObject () {
+		//If you're not holding anything, and you're looking at a valid target to be picked up, pick the object up (See MoveTowardsPlayer())
+		if(gm.canHold && transform.tag == "Box") {
+			isGrabbing = true;
+			//Set it's parent to your holdingPoint
+			transform.SetParent (holdingPoint.transform);
+			gm.holdingObject = gameObject;
+		}
 	}
 
-
-	#region BUTTONS
-	public void GrabObject () {
-		if (isHeld && transform.tag == "Interactable") {
-			isHeld = false;
+	public void PlaceObject () {
+		//If you're holding something and you're looking at a valid target, put the object down (See MoveTowardsPlacement())
+		if (gm.canPlace && transform.tag == "Interactable") {
 			isPlacing = true;
-			transform.SetParent (null);
-			Debug.Log ("HIT" + transform.name);
-		} else if(!isHeld && transform.tag == "Box") {
-			isMoving = true;
-			transform.SetParent (holdingParent.transform);
-		}
-		else if (isHeld) {
-			isHeld = false;
-			transform.SetParent (null);
-			gameObject.GetComponent<Collider> ().enabled = true;
-			gameObject.GetComponent<Rigidbody> ().useGravity = true;
+			//Also set it to the specific target gameobject's PlacePoint parent
+			gm.holdingObject.transform.SetParent (transform.Find ("PlacePoint").transform);
 		}
 	}
 	#endregion
 
 	#region PLAYER_INTERACTIONS
+
+	void DropObject () {
+
+	}
+
 	void MoveTowardsPlacement () {
+		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
 		if (isPlacing) {
-			transform.position = Vector3.Lerp (transform.position, objectPoint.transform.position, grabbingSpeed);
-			if (transform.position == objectPoint.transform.position) {
+			gm.holdingObject.transform.rotation = transform.Find ("PlacePoint").transform.rotation;
+			gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position, grabbingSpeed);
+			//Also enable the collider to allow it to be interactable again
+			gm.holdingObject.GetComponent<Collider> ().enabled = true;
+			//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
+			if (Vector3.Distance (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position) < .1f) {
 				isPlacing = false;
+				gm.canPlace = false;
+				gm.canHold = true;
+				gm.holdingObject = null;
+
 			}
 		}
 	}
 
 	void MoveTowardsPlayer () {
 		//Check is the object has been picked up
-		if (isMoving) {
+		if (isGrabbing) {
 			//Turn off the rigidbody and collider
 			gameObject.GetComponent<Rigidbody> ().useGravity = false;
 			gameObject.GetComponent<Collider> ().enabled = false;
 			//Then move it to the player and make it look at the player
 			transform.position = Vector3.Lerp (transform.position, holdingPoint.transform.position, grabbingSpeed);
-			transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
-			//If it has reached it's holding point, allow it to be interactable
-			if (transform.position == holdingPoint.transform.position) {
-				isHeld = true;
-				isMoving = false;
+			gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
+			//If it has reached the player's holding point, allow it to be put down in a specific spot
+			if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
+				gm.canHold = false;
+				gm.canPlace = true;
+				isGrabbing = false;
 			}
 		}
 	}
 
 	void HoldingObject () {
-		if (isHeld) {
-			transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
+		//If you're holding the object, make it look at the player. Will follow the player's rotation
+		if (gm.canPlace) {
+			gm.holdingObject.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
+			gm.holdingObject.transform.rotation = Camera.main.GetComponent<Transform> ().transform.rotation;
 		}
 	}
 	#endregion

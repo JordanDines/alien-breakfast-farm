@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+	public bool canHold = true;
+	public bool canPlace = false;
 
+	public GameObject holdingObject;
 
 	// Use this for initialization
 	void Start () {

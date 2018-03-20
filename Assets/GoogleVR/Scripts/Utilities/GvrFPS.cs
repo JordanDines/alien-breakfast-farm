@@ -50,4 +50,8 @@ public class GvrFPS : MonoBehaviour {
     textField.text = string.Format(DISPLAY_TEXT_FORMAT,
         msf.ToString(MSF_FORMAT), Mathf.RoundToInt(fps));
   }
+
+	public void OnGUI () {
+		GUILayout.Label ("FPS: " + fps.ToString("00"));
+	}
 }
