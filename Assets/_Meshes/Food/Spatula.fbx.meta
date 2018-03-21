@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: 0251f43f2b5077745ab9d7a81be4bb0d
-timeCreated: 1521420809
+guid: 6a11ac7869de0e7408ea711d71d5dd87
+timeCreated: 1521592249
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: m_BreadLoaf
-    100004: m_BreadLoaf_Dressing
     400000: //RootNode
-    400002: m_BreadLoaf
-    400004: m_BreadLoaf_Dressing
     2100000: lambert1
-    2300000: m_BreadLoaf
-    2300002: m_BreadLoaf_Dressing
-    3300000: m_BreadLoaf
-    3300002: m_BreadLoaf_Dressing
-    4300000: m_BreadLoaf
-    4300002: m_BreadLoaf_Dressing
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: m_Spatula
   externalObjects: {}
   materials:
     importMaterials: 1

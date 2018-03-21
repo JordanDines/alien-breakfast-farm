@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: d13e6470af997894398d3f6d3aab19f2
-timeCreated: 1521586334
+guid: 5aa94bc875b1cb04a91e86ef23e391b4
+timeCreated: 1521592249
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: mat_TomatoBody
-    2100002: Default_Material
+    2100000: mat_BottleBody
+    2100002: mat_BottleTop
     2300000: //RootNode
     3300000: //RootNode
-    4300000: m_Tomato
+    4300000: m_HollandaiseSauce
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 81d856f45bcd1c344b6cbe872924b554
-timeCreated: 1521456101
+guid: 45e387e375b6cf94ab563921071ead7e
+timeCreated: 1521592249
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,7 +8,7 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: mat_TomatoBody
-    2100002: mat_TomatoCut
+    2100002: Default_Material
     2300000: //RootNode
     3300000: //RootNode
     4300000: m_Tomato

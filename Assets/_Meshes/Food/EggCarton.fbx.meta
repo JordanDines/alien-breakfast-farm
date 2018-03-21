@@ -1,69 +1,29 @@
 fileFormatVersion: 2
-guid: 271d2e4777083f743950fbb2727f9f28
-timeCreated: 1521456101
+guid: 3081765c5b130c341b84a5606ddc97a7
+timeCreated: 1521592249
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: m_Egg1
-    100004: m_Egg2
-    100006: m_Egg3
-    100008: m_Egg4
-    100010: m_Egg5
-    100012: m_Egg6
-    100014: m_Egg7
-    100016: m_Egg8
-    100018: m_EggCartonBottom
-    100020: m_EggCartonLip
-    100022: m_EggCartonTop
+    100002: m_EggCartonBottom
+    100004: m_EggCartonLip
+    100006: m_EggCartonTop
     400000: //RootNode
-    400002: m_Egg1
-    400004: m_Egg2
-    400006: m_Egg3
-    400008: m_Egg4
-    400010: m_Egg5
-    400012: m_Egg6
-    400014: m_Egg7
-    400016: m_Egg8
-    400018: m_EggCartonBottom
-    400020: m_EggCartonLip
-    400022: m_EggCartonTop
+    400002: m_EggCartonBottom
+    400004: m_EggCartonLip
+    400006: m_EggCartonTop
     2100000: lambert1
     2100002: mat_EggCartonDivider
-    2300000: m_Egg1
-    2300002: m_Egg2
-    2300004: m_Egg3
-    2300006: m_Egg4
-    2300008: m_Egg5
-    2300010: m_Egg6
-    2300012: m_Egg7
-    2300014: m_Egg8
-    2300016: m_EggCartonBottom
-    2300018: m_EggCartonLip
-    2300020: m_EggCartonTop
-    3300000: m_Egg1
-    3300002: m_Egg2
-    3300004: m_Egg3
-    3300006: m_Egg4
-    3300008: m_Egg5
-    3300010: m_Egg6
-    3300012: m_Egg7
-    3300014: m_Egg8
-    3300016: m_EggCartonBottom
-    3300018: m_EggCartonLip
-    3300020: m_EggCartonTop
+    2300000: m_EggCartonBottom
+    2300002: m_EggCartonLip
+    2300004: m_EggCartonTop
+    3300000: m_EggCartonBottom
+    3300002: m_EggCartonLip
+    3300004: m_EggCartonTop
     4300000: m_EggCartonTop
-    4300002: m_Egg1
-    4300004: m_Egg2
-    4300006: m_Egg3
-    4300008: m_Egg4
-    4300010: m_Egg5
-    4300012: m_Egg6
-    4300014: m_Egg7
-    4300016: m_Egg8
-    4300018: m_EggCartonBottom
-    4300020: m_EggCartonLip
+    4300002: m_EggCartonLip
+    4300004: m_EggCartonBottom
   externalObjects: {}
   materials:
     importMaterials: 1

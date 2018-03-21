@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 4994026454361d54ea3d106ef4a06d51
-timeCreated: 1521586451
+guid: 1c277624781d86d48a49e3583ab2f058
+timeCreated: 1521592248
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: mat_TomatoStems
-    2100002: mat_TomatoBody
+    2100000: mat_SpinachStem
+    2100002: mat_SpinachLeaf
+    2100004: mat_SpinachBand
     2300000: //RootNode
     3300000: //RootNode
-    4300000: m_Tomato
+    4300000: m_Spinach
   externalObjects: {}
   materials:
     importMaterials: 1
