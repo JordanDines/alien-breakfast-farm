@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Appliances : MonoBehaviour {
-
-	private ObjectInteract oi;
+	[SerializeField]
+	public ObjectInteract oi;
 	private GameManager gm;
 	[SerializeField]
 	private GameObject holdingPoint;
@@ -14,51 +14,76 @@ public class Appliances : MonoBehaviour {
 	private bool isPlacing = false;
 	private bool isGrabbing = false;
 
-	private bool inserting = false;
-	private bool removing = false;
-	private bool appIsHolding = false;
-	//private 
+	public bool inserting = false;
+	public bool removing = false;
+	public bool isCooking = false;
+
+	public float cookingTimer;
+	public string foodTag;
 
 
+	public GameObject button;
 	public GameObject holdingPoint1;
 	public GameObject holdingPoint2;
 	public GameObject heldObject;
 	public GameObject tempHeldObj;
 
 
-	public string holdingPointTag;
+//	public string holdingPointTag;
 
 	void Start () {
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
-		oi = FindObjectOfType<ObjectInteract> ();
 		//Find the player's HoldingPoint to also reference later on
 		holdingPoint = GameObject.FindGameObjectWithTag ("HoldingPoint");
 
 		//Reference each of the holding points
-		holdingPoint1 = GameObject.FindGameObjectWithTag (holdingPointTag).transform.GetChild (0).gameObject;
-		holdingPoint2 = GameObject.FindGameObjectWithTag (holdingPointTag).transform.GetChild (1).gameObject;
 		heldObject = null;
 	}
 
 	void Update () {
-		MoveTowardsPlacement ();
-		MoveTowardsPlayer ();
-		MoveToHoldingPoint1 ();
-		MoveToHoldingPoint2 ();
-
-		CookFood ();
+		if (isPlacing) {
+			MoveTowardsPlacement ();
+		}
+		if (isGrabbing) {
+			MoveTowardsPlayer ();
+		}
+		if (inserting) 
+		{
+			MoveToHoldingPoint1 ();
+		}
+		if (isCooking) 
+		{
+			CookFood ();
+		}
+		if (removing) 
+		{
+			MoveToHoldingPoint2 ();
+		}
 	}
 
 
 	void CookFood () {
-		if (appIsHolding) {
-			//Wait for seconds before collider is turned back on, then call MoveToHoldingPoint2();
+
+		cookingTimer += Time.deltaTime;
+		if (cookingTimer >= oi.ingredient.timeToCook) {
+			oi.isReady = true;
+			oi.interactable = true;
+			removing = true;
+			isCooking = false;
+			cookingTimer = 0;
+
 		}
+			
+
+
+		//Wait for seconds before collider is turned back on, then call MoveToHoldingPoint2();
+
+
 	}
 	void MoveTowardsPlacement () {
 		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-		if (isPlacing) {
+
 			gm.holdingObject.transform.rotation = holdingPoint1.transform.rotation;
 
 			gm.holdingObject.transform.position = Vector3.Lerp 
@@ -72,12 +97,12 @@ public class Appliances : MonoBehaviour {
 				gm.canPlace = false;
 				gm.holdingObject = null;
 			}
-		}
+
 	}
 
 	void MoveTowardsPlayer () {
 		//Check is the object has been picked up
-		if (isGrabbing) {
+
 			//Turn off the rigidbody and collider
 			gm.holdingObject.GetComponent<Rigidbody> ().useGravity = false;
 			gm.holdingObject.GetComponent<Collider> ().enabled = true;
@@ -88,11 +113,10 @@ public class Appliances : MonoBehaviour {
 			if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
 				gm.GetComponent<ObjectInteract> ().interactable = false;
 			}
-		}
+
 	}
 
 	void MoveToHoldingPoint1 () {
-		if (inserting) {
 			tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint2.transform.position, grabbingSpeed);
 			Debug.Log ("I made it this far");
 			//holdingPoint1.transform.SetParent (holdingPoint2.transform);
@@ -100,42 +124,41 @@ public class Appliances : MonoBehaviour {
 				Debug.Log ("I'm in");
 				inserting = false;
 				transform.GetComponent<Collider> ().enabled = true;
-				appIsHolding = true;
 			}
-		}
+		
 	}
 
 
 	void MoveToHoldingPoint2 () {
-		if (removing) {
-			heldObject.transform.position = Vector3.Lerp (holdingPoint2.transform.position, holdingPoint1.transform.position, grabbingSpeed);
-			if (Vector3.Distance (holdingPoint2.transform.position, holdingPoint1.transform.position) < 0.1f) {
+		tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint1.transform.position, grabbingSpeed);
+			if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint1.transform.position) < 0.1f) {
 				Debug.Log ("I'm out");
-				heldObject.GetComponent<Collider> ().enabled = true;
 				removing = false;
 			}
-		}
+		
 
 	}
 	#region TOAST
-	public void ToastInsert () {
-		if (gm.holdingObject.tag == "Toast") {
-			heldObject = tempHeldObj;
+	public void PlaceFood () {
+		if (gm.holdingObject.tag == foodTag) {
+			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
 			heldObject = gm.holdingObject;
+			button.transform.GetComponent<Collider> ().enabled = true;
+			button.transform.GetComponent <Appliances> ().tempHeldObj = heldObject;
 			isPlacing = true;
 			gm.holdingObject.transform.SetParent (holdingPoint1.transform.parent);
 			transform.GetComponent<Collider> ().enabled = false;
-			GameObject.FindGameObjectWithTag ("Button").transform.GetComponent<Collider> ().enabled = true;
-			GameObject.FindGameObjectWithTag ("Button").transform.GetComponent <Appliances> ().tempHeldObj = heldObject;
-		} else if (gm.holdingObject.tag != "Toast") {
+		} else if (gm.holdingObject.tag != foodTag) {
+			Debug.Log ("Sorry, this is tagged as: " + gm.holdingObject.tag + ". This needs to be tagged as: " + foodTag);
 			return;
 		}
 	}
 
-	public void ToastButton () {
-			inserting = true;
-			transform.GetComponent<Collider> ().enabled = false;
-			Debug.Log ("This works sorta");
+	public void FoodButton () {
+		inserting = true;
+		transform.GetComponent<Collider> ().enabled = false;
+		isCooking = true;
+		oi = tempHeldObj.GetComponent<ObjectInteract> ();
 		} 
 
 	public void ToastRemove() {
