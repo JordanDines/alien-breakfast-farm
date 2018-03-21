@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c99c3aaa7ffd8fb4095a32b9d6e569f0
-timeCreated: 1521645044
+guid: 8b5b5be48dcbc2940a85ef9d85bed0be
+timeCreated: 1521646714
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: mat_Bread
+    2100000: pasted__mat_Bread
     2300000: //RootNode
     3300000: //RootNode
-    4300000: m_Toast
+    4300000: pasted__m_Bread2
   externalObjects: {}
   materials:
     importMaterials: 1
