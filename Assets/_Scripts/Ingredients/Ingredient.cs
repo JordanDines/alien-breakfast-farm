@@ -10,7 +10,10 @@ public class Ingredient : ScriptableObject {
 
 	[Header ("Tags")]
 	public string tagThisAs;
-	public string tagToInteractWith;
+	//public string tagToInteractWith;
+
+	public List<string> tagsToInteractWith = new List<string>();
+
 
 
 

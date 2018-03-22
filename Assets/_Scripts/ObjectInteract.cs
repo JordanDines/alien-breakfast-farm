@@ -19,14 +19,14 @@ public class ObjectInteract : MonoBehaviour {
 	[Header("Variables")]
 	[SerializeField]
 	private float grabbingSpeed = 1;
-	[SerializeField]
-	private bool isPlacing = false;
+	//private bool isPlacing = false;
 	[SerializeField]
 	private bool isGrabbing = false;
 	[SerializeField]
 	public bool hasBeenPlaced = false;
 	[SerializeField]
 	public bool interactable = true;
+	[SerializeField]
 	public bool isReady;
 
 
@@ -37,7 +37,7 @@ public class ObjectInteract : MonoBehaviour {
 		holdingPoint = GameObject.FindGameObjectWithTag ("HoldingPoint");
 		//Initialize the object currently being held in the GameManager
 		gm.holdingObject = null;
-
+		//Set this objects tag to the tag it needs to be
 		transform.tag = ingredient.tagThisAs;
 
 	}
@@ -48,18 +48,24 @@ public class ObjectInteract : MonoBehaviour {
 		{
 			MoveTowardsPlayer ();
 		}
-		if (isPlacing) 
-		{
-			MoveTowardsPlacement ();
-		}
+		//if (isPlacing) 
+		//{
+		//	MoveTowardsPlacement ();
+		//}
 		if (gm.canPlace) 
 		{
 			HoldingObject ();
 		}
-
+		
 		if (isReady) 
 		{
 			FoodReady ();
+		}
+
+		if (interactable == true) {
+			GetComponent<Collider> ().enabled = true;
+		} else if (interactable == false) {
+			GetComponent<Collider> ().enabled = false;
 		}
 
 	}
@@ -68,7 +74,11 @@ public class ObjectInteract : MonoBehaviour {
 	public void GrabObject () {
 		//If you're not holding anything, and you're looking at a valid target to be picked up, pick the object up (See MoveTowardsPlayer())
 		if(interactable && gm.canHold && transform.tag == ingredient.tagThisAs) {
+			//Turn off the rigidbody and colliderd
+			GetComponent<Rigidbody> ().useGravity = false;
+			//gameObject.GetComponent<Collider> ().enabled = false;
 			isGrabbing = true;
+			interactable = false;
 			//Set it's parent to your holdingPoint
 			transform.SetParent (holdingPoint.transform);
 			gm.holdingObject = gameObject;
@@ -76,9 +86,13 @@ public class ObjectInteract : MonoBehaviour {
 	}
 
 	public void PlaceObject () {
+		//If the food is ready and is looking at the serving area, put the food down (and no one will get hurt)
+		if (isReady && gm.canPlace) {
+
+		} 
 		//If you're holding something and you're looking at a valid target, put the object down (See MoveTowardsPlacement())
-		if (gm.canPlace && transform.tag == ingredient.tagToInteractWith) {
-			isPlacing = true;
+		else if (gm.canPlace && transform.tag == ingredient.tagsToInteractWith.ToString()) {
+//			isPlacing = true;
 			//Also set it to the specific target gameobject's PlacePoint parent
 			gm.holdingObject.transform.SetParent (transform.Find ("PlacePoint").transform);
 		}
@@ -88,41 +102,35 @@ public class ObjectInteract : MonoBehaviour {
 	#region PLAYER_INTERACTIONS
 
 	void FoodReady () {
-
-		//if (this.gameObject == cookedMesh) {
-		//	return;
-		//} else
 		uncookedMesh.SetActive (false);
 		cookedMesh.SetActive (true);
-		interactable = true;
-		isReady = true;
 	}
 
 	void DropObject () {
 
 	}
 
-	void MoveTowardsPlacement () {
-		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-			gm.holdingObject.transform.rotation = transform.Find ("PlacePoint").transform.rotation;
-			gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position, grabbingSpeed);
-			//Also enable the collider to allow it to be interactable again
-			gm.holdingObject.GetComponent<Collider> ().enabled = true;
-			//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
-			if (Vector3.Distance (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position) < .1f) {
-				hasBeenPlaced = true;
-				isPlacing = false;
-				gm.canPlace = false;
-				gm.canHold = true;
-				gm.holdingObject = null;
 
-			}
-	}
+	//See Appliances.cs MoveTowardsPlacement()
+	//void MoveTowardsPlacement () {
+	//	//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
+	//		gm.holdingObject.transform.rotation = transform.Find ("PlacePoint").transform.rotation;
+	//		gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position, grabbingSpeed);
+	//		//Also enable the collider to allow it to be interactable again
+	//		gm.holdingObject.GetComponent<Collider> ().enabled = true;
+	//		//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
+	//		if (Vector3.Distance (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position) < .1f) {
+	//			hasBeenPlaced = true;
+	//			isPlacing = false;
+	//			gm.canPlace = false;
+	//			gm.canHold = true;
+	//			gm.holdingObject = null;
+	//
+	//		}
+	//}
 
 	void MoveTowardsPlayer () {
-		//Turn off the rigidbody and collider
-		gameObject.GetComponent<Rigidbody> ().useGravity = false;
-		gameObject.GetComponent<Collider> ().enabled = false;
+		
 		//Then move it to the player and make it look at the player
 		transform.position = Vector3.Lerp (transform.position, holdingPoint.transform.position, grabbingSpeed);
 		gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);

@@ -36,7 +36,6 @@ public class Appliances : MonoBehaviour {
 		gm = FindObjectOfType<GameManager> ();
 		//Find the player's HoldingPoint to also reference later on
 		holdingPoint = GameObject.FindGameObjectWithTag ("HoldingPoint");
-
 		//Reference each of the holding points
 		heldObject = null;
 	}
@@ -45,21 +44,24 @@ public class Appliances : MonoBehaviour {
 		if (isPlacing) {
 			MoveTowardsPlacement ();
 		}
-		if (isGrabbing) {
-			MoveTowardsPlayer ();
-		}
+		//if (isGrabbing) {
+		//	//MoveTowardsPlayer ();
+		//}
 		if (inserting) 
 		{
 			MoveToHoldingPoint1 ();
 		}
+
 		if (isCooking) 
 		{
 			CookFood ();
 		}
+
 		if (removing) 
 		{
 			MoveToHoldingPoint2 ();
 		}
+	
 	}
 
 
@@ -72,14 +74,7 @@ public class Appliances : MonoBehaviour {
 			removing = true;
 			isCooking = false;
 			cookingTimer = 0;
-
 		}
-			
-
-
-		//Wait for seconds before collider is turned back on, then call MoveToHoldingPoint2();
-
-
 	}
 	void MoveTowardsPlacement () {
 		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
@@ -100,21 +95,20 @@ public class Appliances : MonoBehaviour {
 
 	}
 
-	void MoveTowardsPlayer () {
-		//Check is the object has been picked up
-
-			//Turn off the rigidbody and collider
-			gm.holdingObject.GetComponent<Rigidbody> ().useGravity = false;
-			gm.holdingObject.GetComponent<Collider> ().enabled = true;
-			//Then move it to the player and make it look at the player
-			gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, holdingPoint.transform.position, grabbingSpeed);
-			gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
-			//If it has reached the player's holding point, allow it to be put down in a specific spot
-			if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
-				gm.GetComponent<ObjectInteract> ().interactable = false;
-			}
-
-	}
+	//See ObjectInteract.cs void MoveTowardPlayer()
+	//void MoveTowardsPlayer () {
+	//		//Turn off the rigidbody and collider
+	//		gm.holdingObject.GetComponent<Rigidbody> ().useGravity = false;
+	//		gm.holdingObject.GetComponent<Collider> ().enabled = true;
+	//		//Then move it to the player and make it look at the player
+	//		gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, holdingPoint.transform.position, grabbingSpeed);
+	//		gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
+	//		//If it has reached the player's holding point, allow it to be put down in a specific spot
+	//		if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
+	//			gm.GetComponent<ObjectInteract> ().interactable = false;
+	//		}
+	//
+	//}
 
 	void MoveToHoldingPoint1 () {
 			tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint2.transform.position, grabbingSpeed);
@@ -124,6 +118,7 @@ public class Appliances : MonoBehaviour {
 				Debug.Log ("I'm in");
 				inserting = false;
 				transform.GetComponent<Collider> ().enabled = true;
+				button.transform.GetComponent<Collider> ().enabled = false;
 			}
 		
 	}
@@ -138,7 +133,7 @@ public class Appliances : MonoBehaviour {
 		
 
 	}
-	#region TOAST
+	#region PLACE_FOOD
 	public void PlaceFood () {
 		if (gm.holdingObject.tag == foodTag) {
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
@@ -160,9 +155,6 @@ public class Appliances : MonoBehaviour {
 		isCooking = true;
 		oi = tempHeldObj.GetComponent<ObjectInteract> ();
 		} 
-
-	public void ToastRemove() {
 		
-	}
 	#endregion 
 }

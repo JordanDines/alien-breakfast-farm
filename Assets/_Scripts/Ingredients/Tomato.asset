@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbingSpeed: 0.1
   timeToCook: 2
-  isReady: 0
   tagThisAs: Tomato
-  tagToInteractWith: Pan
+  tagsToInteractWith:
+  - Pan
+  - PlateUp

@@ -14,4 +14,6 @@ MonoBehaviour:
   grabbingSpeed: 0.1
   timeToCook: 3
   tagThisAs: Toast
-  tagToInteractWith: Toaster
+  tagsToInteractWith:
+  - Toaster
+  - PlateUp
