@@ -260,13 +260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  holdingPoint: {fileID: 0}
   grabbingSpeed: 0.1
   inserting: 0
   removing: 0
   isCooking: 0
   cookingTimer: 0
-  foodTag: Toast
+  applianceObject: {fileID: 1516158064497136}
   button: {fileID: 1160519754975588}
   holdingPoint1: {fileID: 1805026941040826}
   holdingPoint2: {fileID: 1025131398910234}
@@ -314,13 +313,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  holdingPoint: {fileID: 0}
   grabbingSpeed: 0.1
   inserting: 0
   removing: 0
   isCooking: 0
   cookingTimer: 0
-  foodTag: 
+  applianceObject: {fileID: 1516158064497136}
   button: {fileID: 1160519754975588}
   holdingPoint1: {fileID: 1805026941040826}
   holdingPoint2: {fileID: 1025131398910234}

@@ -230,13 +230,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  holdingPoint: {fileID: 0}
   grabbingSpeed: 0.1
   inserting: 0
   removing: 0
   isCooking: 0
   cookingTimer: 0
-  foodTag: Tomato
+  applianceObject: {fileID: 1095351169297360}
   button: {fileID: 1886604331732696}
   holdingPoint1: {fileID: 1976605214607828}
   holdingPoint2: {fileID: 1075323039284674}
@@ -254,13 +253,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  holdingPoint: {fileID: 0}
   grabbingSpeed: 0.1
   inserting: 0
   removing: 0
   isCooking: 0
   cookingTimer: 0
-  foodTag: Tomato
+  applianceObject: {fileID: 1095351169297360}
   button: {fileID: 1886604331732696}
   holdingPoint1: {fileID: 1976605214607828}
   holdingPoint2: {fileID: 1075323039284674}

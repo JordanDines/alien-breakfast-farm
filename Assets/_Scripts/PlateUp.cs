@@ -40,10 +40,8 @@ public class PlateUp : MonoBehaviour {
 
 	void MoveTowardsPlateUp () {
 		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-
 		gm.holdingObject.transform.rotation = holdingPoint1.transform.rotation;
-
-		gm.holdingObject.transform.position = Vector3.Lerp 
+		gm.holdingObject.transform.position = Vector3.Lerp
 			(gm.holdingObject.transform.position, holdingPoint1.transform.position, grabbingSpeed);
 		//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
 		if (Vector3.Distance (gm.holdingObject.transform.position, holdingPoint1.transform.position) < .1f) {
