@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114738899589131364}
   m_Layer: 0
   m_Name: PlateUp
-  m_TagString: Interactable
+  m_TagString: PlateUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
   heldObject: {fileID: 0}
-  holdingPoint1: {fileID: 1814194565046294}
+  placePoint: {fileID: 1814194565046294}
   grabbingSpeed: 0.6
   isPlating: 0
 --- !u!135 &135790079644683710
@@ -168,7 +168,7 @@ SphereCollider:
   m_GameObject: {fileID: 1581804116054734}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

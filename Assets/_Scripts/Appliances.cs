@@ -8,6 +8,7 @@ public class Appliances : MonoBehaviour {
 	[HideInInspector]
 	private GameManager gm;
 	[SerializeField]
+	[Tooltip("How long it takes for the object to move to the player")]
 	public float grabbingSpeed = 1;
 
 	[HideInInspector]
@@ -29,12 +30,16 @@ public class Appliances : MonoBehaviour {
 
 	[Header("References")]
 	//Needs to be the parent object
+	[Tooltip("Reference the Appliance Parent GameObject")]
 	public GameObject applianceObject;
 	//Needs to reference the appliances button
+	[Tooltip("Reference this objects Button GameObject")]
 	public GameObject button;
 	//The holding point the object will go to first
+	[Tooltip("Reference the space the Ingredient will go to first")]
 	public GameObject holdingPoint1;
 	//The second place the object will go to
+	[Tooltip("Reference the space the Ingredient will go to second")]
 	public GameObject holdingPoint2;
 	[HideInInspector]
 	//Reference to the current object in the appliance

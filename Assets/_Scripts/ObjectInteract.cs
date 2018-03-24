@@ -14,11 +14,13 @@ public class ObjectInteract : MonoBehaviour {
 	private GameObject holdingPoint;
 
 	[Header ("Mesh Changes")]
+	[Tooltip("Reference the uncooked GameObject that is a child of this GameObject")]
 	public GameObject uncookedMesh;
+	[Tooltip("Reference the cooked GameObject that is a child of this GameObject")]
 	public GameObject cookedMesh;
 
 	[Header("Variables")]
-	[SerializeField]
+	[Tooltip("The speed at which the ingredient goes to the player")]
 	private float grabbingSpeed = 1;
 	[HideInInspector]
 	private bool isGrabbing = false;
@@ -26,7 +28,7 @@ public class ObjectInteract : MonoBehaviour {
 	public bool hasBeenPlaced = false;
 	[HideInInspector]
 	public bool interactable = true;
-	[HideInInspector]
+	[SerializeField]
 	public bool isReady;
 
 

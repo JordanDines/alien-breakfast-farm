@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694688593436252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.18, y: 1.03, z: 2.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4966603075865894}
@@ -266,11 +266,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredient: {fileID: 11400000, guid: 4eb752e0793e14544b8e7dcde8c29157, type: 2}
-  holdingPoint: {fileID: 0}
   uncookedMesh: {fileID: 1091851397223076}
   cookedMesh: {fileID: 1295932644794864}
   grabbingSpeed: 0.1
-  isGrabbing: 0
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
