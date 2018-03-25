@@ -17,6 +17,8 @@ public class PlateUp : MonoBehaviour {
 	[HideInInspector]
 	public bool isPlating = false;
 
+	public List<Ingredient> currentlyPlated = new List<Ingredient>();
+
 	// Use this for initialization
 	void Start () {
 		//Find the GameManager in the scene to reference later on
@@ -36,6 +38,15 @@ public class PlateUp : MonoBehaviour {
 		{
 			MoveTowardsPlateUp ();
 		}
+		//if (Input.GetKeyDown(KeyCode.A)) {
+		//	
+		//	for (int i = 0; i < gm.currentRecipe.ingredientsInRecipe.Count; i++) {
+		//		currentlyPlated.Add ();
+		//	}
+		//}
+		//if(gm.currentRecipe.ingredientsInRecipe.Contains()) {
+		//
+		//}
 
 	}
 
@@ -60,6 +71,7 @@ public class PlateUp : MonoBehaviour {
 	public void PlaceFood () {
 		if (gm.holdingObject.GetComponent<ObjectInteract> ().isReady || gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false) {
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
+			currentlyPlated.Add (oi.ingredient);
 			isPlating = true;
 			//button.transform.GetComponent<Collider> ().enabled = true;
 			//button.transform.GetComponent <Appliances> ().tempHeldObj = heldObject;

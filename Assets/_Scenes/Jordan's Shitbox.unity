@@ -243,6 +243,12 @@ MonoBehaviour:
   canPlace: 0
   holdingObject: {fileID: 0}
   plateUp: {fileID: 1721748519}
+  ingredient: []
+  breakfastReady: 0
+  recipes:
+  - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
+  - {fileID: 11400000, guid: dac7aeffcaa468f4eb57c65a6be1ec96, type: 2}
+  currentRecipe: {fileID: 0}
 --- !u!114 &845248163
 MonoBehaviour:
   m_ObjectHideFlags: 0

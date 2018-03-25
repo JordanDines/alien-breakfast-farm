@@ -8,14 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246d21d8adfd50f46af4fc641c74746b, type: 3}
-  m_Name: Toast
+  m_Script: {fileID: 11500000, guid: 6976dd85c7030d94eadd57d32e9e5dfd, type: 3}
+  m_Name: Recipe2
   m_EditorClassIdentifier: 
-  grabbingSpeed: 0.1
-  timeToCook: 3
-  needsToBeCooked: 1
-  cookedName: Toast
-  tagThisAs: Toast
-  tagsToInteractWith:
-  - Toaster
-  - PlateUp
+  ingredientsInRecipe:
+  - {fileID: 11400000, guid: 1342aac01b711114c824706d8107d9d8, type: 2}
