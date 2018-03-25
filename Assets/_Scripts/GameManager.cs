@@ -19,9 +19,13 @@ public class GameManager : MonoBehaviour {
 
 	public List<Recipe> recipes = new List<Recipe>();
 	private int recipeIndex = 0;
+	private int ingredientIndex = 0;
+
+	public List<Ingredient> currentNeededIngredients = new List<Ingredient> ();
 
 	public Recipe currentRecipe;
 
+	public List<Ingredient> currentlyPlated = new List<Ingredient>();
 
 
 	void Start () {
@@ -29,22 +33,40 @@ public class GameManager : MonoBehaviour {
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 
 		currentRecipe = recipes[recipeIndex];
+
+		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+			currentNeededIngredients.Add (ingredient);
+		}
 	}
 
 
 	void Update () {
 
 
+		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+			if (currentNeededIngredients.Count >= currentRecipe.ingredientsInRecipe.Count) {
+				Debug.Log ("Got them adding to list");
+				return;
+			} else {
+				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
+					currentNeededIngredients.Add (ingredient);
 
-		foreach (Recipe recipe in recipes) {
-			if(plateUp.GetComponent<PlateUp>().currentlyPlated.Equals(recipe.ingredientsInRecipe)){
-				Debug.Log(recipe);
-				
-				Debug.Log ("YOU DID IT");
+				}
 			}
 		}
+
+
+		//foreach (Recipe recipe in recipes) {
+		//	if(currentlyPlated.Equals(recipe.ingredientsInRecipe)){
+		//		Debug.Log(recipe);
+		//		
+		//		Debug.Log ("YOU DID IT");
+		//	}
 		//}
-		//if(FindObjectOfType<PlateUp>().currentlyPlated.Contains (currentRecipe.ingredientsInRecipe)){
+		//}
+
+
+		//if(currentlyPlated.FindAll (currentNeededIngredients)){
 		//	Debug.Log ("YOU DID IT");
 		//	breakfastReady = true;
 		//}
@@ -58,6 +80,9 @@ public class GameManager : MonoBehaviour {
 		if(breakfastReady) {
 			recipeIndex++;
 			currentRecipe = recipes [recipeIndex];
+			foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+				currentNeededIngredients.Add (ingredient);
+			}
 			//breakfastReady = false;
 		}
 		//Checks if the currently held object is ready to be plated up

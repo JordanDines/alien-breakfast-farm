@@ -17,7 +17,7 @@ public class PlateUp : MonoBehaviour {
 	[HideInInspector]
 	public bool isPlating = false;
 
-	public List<Ingredient> currentlyPlated = new List<Ingredient>();
+	//public List<Ingredient> currentlyPlated = new List<Ingredient>();
 
 	// Use this for initialization
 	void Start () {
@@ -71,7 +71,7 @@ public class PlateUp : MonoBehaviour {
 	public void PlaceFood () {
 		if (gm.holdingObject.GetComponent<ObjectInteract> ().isReady || gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false) {
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
-			currentlyPlated.Add (oi.ingredient);
+			gm.currentlyPlated.Add (oi.ingredient);
 			isPlating = true;
 			//button.transform.GetComponent<Collider> ().enabled = true;
 			//button.transform.GetComponent <Appliances> ().tempHeldObj = heldObject;
