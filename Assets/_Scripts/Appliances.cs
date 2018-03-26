@@ -156,7 +156,7 @@ public class Appliances : MonoBehaviour {
 		//Get the button's tempHeldObject position, then move it back to the first holding point over (preset) time. This holding point is the REMOVED transform
 		tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint1.transform.position, grabbingSpeed);
 		//If it gets close enough
-		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint1.transform.position) < 0.1f) {
+		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint1.transform.position) < 0.0001f) {
 			//Stop this function from running
 			button.GetComponent<Appliances> ().tempHeldObj = null;
 			removing = false;
