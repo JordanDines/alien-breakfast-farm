@@ -1,34 +1,16 @@
 fileFormatVersion: 2
-guid: 8554a2b9893a6ba4f923b549174d5332
-timeCreated: 1522031475
+guid: 84af97278dd678b4694b924f5af6f08f
+timeCreated: 1522019029
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: button10
-    100002: //RootNode
-    100004: pCube13
-    100006: pCube6
-    100008: polySurface19
-    400000: button10
-    400002: //RootNode
-    400004: pCube13
-    400006: pCube6
-    400008: polySurface19
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2100002: lambert2
-    2300000: button10
-    2300002: pCube13
-    2300004: pCube6
-    2300006: polySurface19
-    3300000: button10
-    3300002: pCube13
-    3300004: pCube6
-    3300006: polySurface19
-    4300000: pCube6
-    4300002: button10
-    4300004: polySurface19
-    4300006: pCube13
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder3
     9500000: //RootNode
   externalObjects: {}
   materials:
