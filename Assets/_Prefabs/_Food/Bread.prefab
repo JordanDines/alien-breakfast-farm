@@ -21,10 +21,14 @@ GameObject:
   - component: {fileID: 4901303792901414}
   - component: {fileID: 33177792054724090}
   - component: {fileID: 23388223506534064}
+  - component: {fileID: 65369833836035366}
+  - component: {fileID: 114447618518873132}
+  - component: {fileID: 114171503514717668}
+  - component: {fileID: 54344186220254106}
   m_Layer: 0
   m_Name: Bread
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34,13 +38,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333014783556934}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83057433, y: 0.45466334, z: 0.2841695}
+  m_LocalRotation: {x: -0, y: 0.7933532, z: -0, w: 0.60876167}
+  m_LocalPosition: {x: -0.686, y: -0.545, z: 10.241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 105.00001, z: 0}
 --- !u!23 &23388223506534064
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,3 +86,77 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333014783556934}
   m_Mesh: {fileID: 4300000, guid: c99c3aaa7ffd8fb4095a32b9d6e569f0, type: 3}
+--- !u!54 &54344186220254106
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333014783556934}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65369833836035366
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333014783556934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 0.1}
+  m_Center: {x: 0, y: 0.08672341, z: 0}
+--- !u!114 &114171503514717668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333014783556934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1895ac3a2985927439e3fbde69c98e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: {fileID: 11400000, guid: 1342aac01b711114c824706d8107d9d8, type: 2}
+  uncookedMesh: {fileID: 1333014783556934}
+  cookedMesh: {fileID: 1064707661439290, guid: 232acc465ade5f6499518be955ea3494, type: 2}
+  hasBeenPlaced: 0
+  interactable: 1
+  isReady: 0
+--- !u!114 &114447618518873132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333014783556934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114171503514717668}
+          m_MethodName: GrabObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
