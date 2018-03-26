@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3081765c5b130c341b84a5606ddc97a7
-timeCreated: 1521592249
+guid: 57ce31b530cc5784ca40304381ba1f8b
+timeCreated: 1522037192
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -14,7 +14,8 @@ ModelImporter:
     400004: m_EggCartonLip
     400006: m_EggCartonTop
     2100000: lambert1
-    2100002: mat_EggCartonDivider
+    2100002: mat_eggCarton_Eggs
+    2100004: mat_EggCartonDivider
     2300000: m_EggCartonBottom
     2300002: m_EggCartonLip
     2300004: m_EggCartonTop

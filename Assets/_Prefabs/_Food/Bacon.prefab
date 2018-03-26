@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33884541435149312}
   - component: {fileID: 23999505243871098}
   m_Layer: 0
-  m_Name: BaconV2
+  m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
