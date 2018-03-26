@@ -144,7 +144,7 @@ public class Appliances : MonoBehaviour {
 			//Stop this function from working
 			inserting = false;
 			//Set the appliance to be interacted with
-			transform.GetComponent<Collider> ().enabled = true;
+			//transform.GetComponent<Collider> ().enabled = true;
 			//Set the button to non-interactable, as to not interfere with player feedback (reticle size)
 			button.transform.GetComponent<Collider> ().enabled = false;
 		}
@@ -168,17 +168,19 @@ public class Appliances : MonoBehaviour {
 		if (gm.holdingObject != null) {
 			//Check if the thing that you're holding can interact with the thing you're looking at AND if the thing you're looking at isn't already in use
 			if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag) && applianceObject.GetComponent<Appliances> ().heldObject == null) {
+				Debug.Log ("Object to interact with: " + transform.tag + ". The current held object is: " + applianceObject.GetComponent<Appliances> ().heldObject);
 				//Then, make this appliance interactable
 				applianceObject.transform.GetComponent<Collider> ().enabled = true;
 			} else {
 				//Else, make it unusable
-				applianceObject.transform.GetComponent<Collider> ().enabled = false;
+				//applianceObject.transform.GetComponent<Collider> ().enabled = false;
 			}
 			//If you're NOT holding something AND the appliance ISN'T holding something
 		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && button.GetComponent<Appliances> ().heldObject == null) {
+			
 			//Then make the object unsable. This is to prevent player feedback from being confused as to what is usable or not, otherwise a NullReference
 			//will come up in the console. Nothing bad will happen just, poor player feedback
-			transform.GetComponent<Collider> ().enabled = false;
+			applianceObject.transform.GetComponent<Collider> ().enabled = false;
 		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null) {
 			applianceObject.transform.GetComponent<Collider> ().enabled = true;
 		}

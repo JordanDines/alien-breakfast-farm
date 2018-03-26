@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlateUp
+  - HoldingPoint
+  - Toaster
+  - Button
+  - Pan
+  - GameManager
+  - Toast
+  - Tomato
   layers:
   - Default
   - TransparentFX

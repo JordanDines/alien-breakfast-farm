@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
 	//If the player can hold something
 	public bool canHold = true;
@@ -10,14 +11,14 @@ public class GameManager : MonoBehaviour {
 	public bool canPlace = false;
 	//Reference to the currently held object
 	public GameObject holdingObject;
-	[Tooltip("Reference the PlateUp GameObject")]
+	[Tooltip ("Reference the PlateUp GameObject")]
 	//Reference to the plate up area
 	public GameObject plateUp;
 
-	public Ingredient ingredient;
+	//public Ingredient ingredient;
 	public bool breakfastReady = false;
 
-	public List<Recipe> recipes = new List<Recipe>();
+	public List<Recipe> recipes = new List<Recipe> ();
 	private int recipeIndex = 0;
 	private int ingredientIndex = 0;
 
@@ -25,74 +26,146 @@ public class GameManager : MonoBehaviour {
 
 	public Recipe currentRecipe;
 
-	public List<Ingredient> currentlyPlated = new List<Ingredient>();
+	public List<Ingredient> currentlyPlated = new List<Ingredient> ();
 
 
-	void Start () {
+	void Start ()
+	{
 		//Locks the rotation of the screen so the home button is on the right
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
-
-		currentRecipe = recipes[recipeIndex];
-
+		currentRecipe = recipes [recipeIndex];
 		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-			currentNeededIngredients.Add (ingredient);
+			if (currentNeededIngredients.Count >= currentRecipe.ingredientsInRecipe.Count) {
+				breakfastReady = false;
+				Debug.Log ("Got them adding to list");
+				break;
+			} else {
+				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
+					currentNeededIngredients.Add (ingredient);
+				}
+			}
 		}
 	}
 
 
-	void Update () {
+	void Update ()
+	{
+		currentRecipe = recipes [recipeIndex];
+		PlateUpInteractive ();
+
+		if (!breakfastReady) {
+			CheckRecipe ();
+		}
+		if (breakfastReady) {
+			Invoke ("CreateNewRecipe", .1f);
+		}
+
+	}
 
 
+
+	void CreateNewRecipe ()
+	{
+
+		//foreach (Ingredient oldIng in currentlyPlated) {
+		//
+		//	if(currentRecipe.ingredientsInRecipe.Contains(oldIng)) {
+		//		Debug.Log ("I should destroy this");
+		//	}
+		//	//if (!currentlyPlated.Contains (oldIng)) {
+		//	//	break;
+		//	//} else 
+		//	//	if (currentlyPlated.Contains (oldIng)){
+		//	//	currentlyPlated.Remove (oldIng);
+		//	//	currentNeededIngredients.Remove (oldIng);
+		//	//}
+		//}
+
+		/*
+		currentRecipe = recipes [recipeIndex];
 		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-			if (currentNeededIngredients.Count >= currentRecipe.ingredientsInRecipe.Count) {
-				Debug.Log ("Got them adding to list");
-				return;
-			} else {
+			//if (currentNeededIngredients.Count > currentRecipe.ingredientsInRecipe.Count) {
+			//	breakfastReady = false;
+			//	break;
+			//} else 
+
+				
 				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
 					currentNeededIngredients.Add (ingredient);
+				}
+		}
+		*/
+		currentNeededIngredients.Clear();
+		currentlyPlated.Clear();
+	
+		//currentNeededIngredients = currentRecipe.ingredientsInRecipe;
+		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+			currentNeededIngredients.Add (ingredient);
+		}
 
+		// currentNeededIngredients.Clear();
+		// for each ingredient in new recipe
+			// currentNeededIngredients.Add(ingredient);
+
+
+	}
+
+
+
+
+
+	// runs every frame, checks if the meal has been made -> if so, button becomes active
+	void CheckRecipe ()
+	{
+		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
+		int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
+		int numItemsCorrect = 0;
+
+		// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
+		foreach (Ingredient ingredient in currentNeededIngredients) {
+			if (currentlyPlated.Contains (ingredient)) {
+				numItemsCorrect++;
 				}
 			}
+		if (numItemsCorrect == numItemsNeeded) {
+			breakfastReady = true;
 		}
+	}
+
+		// if all items were present, BreakfastReady = true;
 
 
-		//foreach (Recipe recipe in recipes) {
-		//	if(currentlyPlated.Equals(recipe.ingredientsInRecipe)){
-		//		Debug.Log(recipe);
-		//		
-		//		Debug.Log ("YOU DID IT");
+
+
+
+	public void NextRecipe ()
+	{
+		//foreach (Ingredient ingredient in currentNeededIngredients) {
+		//	if (currentlyPlated.Contains (ingredient)) {
+		//		currentlyPlated.Remove (ingredient);
+		//		currentNeededIngredients.Remove (ingredient);
+		//		break;
 		//	}
 		//}
+		//if (currentlyPlated.Count == 0) {
+		breakfastReady = false;
+		recipeIndex++;
+		Debug.Log (currentRecipe);
 		//}
+	}
 
-
-		//if(currentlyPlated.FindAll (currentNeededIngredients)){
-		//	Debug.Log ("YOU DID IT");
-		//	breakfastReady = true;
-		//}
-		//if (plateUp.GetComponent<PlateUp>().currentlyPlated.Exists(currentRecipe.ingredientsInRecipe)) {
-		//}
-		//for (int i = 0; i < currentRecipe.ingredientsInRecipe.Count; i++) {
-		//	Debug.Log(plateUp.GetComponent<PlateUp>().currentlyPlated.Count);
-		//	
-		//}
-
-		if(breakfastReady) {
-			recipeIndex++;
-			currentRecipe = recipes [recipeIndex];
-			foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-				currentNeededIngredients.Add (ingredient);
-			}
-			//breakfastReady = false;
-		}
+	void PlateUpInteractive ()
+	{
 		//Checks if the currently held object is ready to be plated up
-		if (holdingObject != null && (holdingObject.GetComponent<ObjectInteract> ().isReady == true|| holdingObject.GetComponent<ObjectInteract>().ingredient.needsToBeCooked == false)) {
+		if (holdingObject != null && (holdingObject.GetComponent<ObjectInteract> ().isReady == true || holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false)) {
+			Debug.Log ("The plate can be used");
 			//Make the plate up area interactable
 			plateUp.GetComponent<Collider> ().enabled = true;
 		} else {//if (holdingObject != null && holdingObject.GetComponent<ObjectInteract> ().isReady == false) {
 			//Make it not interactable
 			plateUp.GetComponent<Collider> ().enabled = false;
-		//}
+			//}
 		}
 	}
+
 }
