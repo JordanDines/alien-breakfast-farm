@@ -15,9 +15,12 @@ public class GameManager : MonoBehaviour
 	[Tooltip ("Reference the PlateUp GameObject")]
 	//Reference to the plate up area
 	public GameObject plateUp;
+	public GameObject plateUpButton;
 
 	//public Ingredient ingredient;
 	public bool breakfastReady = false;
+	public bool isPlating = false;
+
 
 	public List<Recipe> recipes = new List<Recipe> ();
 	private int recipeIndex = 0;
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour
 
 	void Start ()
 	{
-		int ingCount = ingredientPanel.transform.childCount;
+		
 
 		//Locks the rotation of the screen so the home button is on the right
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -62,12 +65,16 @@ public class GameManager : MonoBehaviour
 
 	void Update ()
 	{
+
+		if (isPlating) {
+
+		}
 		currentRecipe = recipes [recipeIndex];
 		PlateUpInteractive ();
 
 		if (breakfastReady) {
-			Invoke ("CreateNewRecipe", .1f);
-		} else
+			plateUpButton.GetComponent <Collider> ().enabled = true;
+		}
 		if (!breakfastReady) {
 			CheckRecipe ();
 		}
@@ -94,35 +101,38 @@ public class GameManager : MonoBehaviour
 		//	//}
 		//}
 
-		/*
+
 		currentRecipe = recipes [recipeIndex];
 		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
 			//if (currentNeededIngredients.Count > currentRecipe.ingredientsInRecipe.Count) {
 			//	breakfastReady = false;
 			//	break;
 			//} else 
-
-				
-				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
-					currentNeededIngredients.Add (ingredient);
-				}
+		
+			if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
+				currentNeededIngredients.Add (ingredient);
+				Instantiate (ingredient.notPlatedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
+			}
 		}
-		*/
-		currentNeededIngredients.Clear();
-		currentlyPlated.Clear();
+		
+		//currentNeededIngredients.Clear();
+		//currentlyPlated.Clear();
 
+		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
+		int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
+		int numItemsCorrect = 0;
 
 		//currentNeededIngredients = currentRecipe.ingredientsInRecipe;
-		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-			currentNeededIngredients.Add (ingredient);
-		}
+		//foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+		//	currentNeededIngredients.Add (ingredient);
+		//}
 
 		// currentNeededIngredients.Clear();
 		// for each ingredient in new recipe
 			// currentNeededIngredients.Add(ingredient);
 
 
-	}
+		} 
 
 
 
@@ -136,14 +146,23 @@ public class GameManager : MonoBehaviour
 		int numItemsCorrect = 0;
 
 		// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
-		foreach (Ingredient ingredient in currentNeededIngredients) {
+		foreach (Ingredient ingredient in currentNeededIngredients.ToArray()) {
 			if (currentlyPlated.Contains (ingredient)) {
-				
 				numItemsCorrect++;
+				int ingCount = ingredientPanel.transform.childCount;
+				Transform tempGO;
+				for (int i = 0; i < ingCount; i++) {
+					tempGO = ingredientPanel.transform.GetChild (i);
+					if (ingredient.tagThisAs == tempGO.tag) {
+						Instantiate (ingredient.platedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
+						Destroy (tempGO.gameObject);
+					}
 				}
 			}
-		if (numItemsCorrect == numItemsNeeded) {
-			breakfastReady = true;
+			if (numItemsCorrect == numItemsNeeded) {
+				breakfastReady = true;
+				numItemsCorrect = 0;
+			}
 		}
 	}
 
@@ -153,8 +172,25 @@ public class GameManager : MonoBehaviour
 
 	public void NextRecipe ()
 	{
-		breakfastReady = false;
+
+		//List<GameObject> panel = new List<GameObject>;
+		//foreach (GameObject child in panel.ToArray()) {
+		//
+		//}
+		int ingCount = ingredientPanel.transform.childCount;
+		Transform tempGO;
+		for (int i = 0; i < ingCount; i++) {
+			tempGO = ingredientPanel.transform.GetChild (i);
+			Destroy (tempGO.gameObject);
+		}
+
 		recipeIndex++;
+		currentNeededIngredients.Clear();
+		currentlyPlated.Clear();
+
+		plateUpButton.GetComponent <Collider> ().enabled = false;
+		breakfastReady = false;
+		CreateNewRecipe ();
 		Debug.Log (currentRecipe);
 	}
 
