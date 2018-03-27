@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 33614391341133898}
   - component: {fileID: 23781466280865036}
   - component: {fileID: 114196381461027162}
-  - component: {fileID: 65766871302265578}
   - component: {fileID: 114901011396381960}
+  - component: {fileID: 135797565640960812}
   m_Layer: 0
   m_Name: ButtonFridge
   m_TagString: Untagged
@@ -181,8 +181,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730239337563030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.093593836, y: -0.28548473, z: 0.4667089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4443847345520814}
@@ -316,18 +316,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1902545162841368}
   m_Mesh: {fileID: 4300006, guid: 7f856a98b9c0db5408350bc83245aa92, type: 3}
---- !u!65 &65766871302265578
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1633911872001258}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.098534495, y: 0.034834564, z: 0.09853457}
-  m_Center: {x: -0.44250846, y: 0.83676386, z: -0.08418346}
 --- !u!114 &114196381461027162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,3 +358,15 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!135 &135797565640960812
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1633911872001258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06
+  m_Center: {x: -0.44250846, y: 0.83676386, z: -0.08418346}
