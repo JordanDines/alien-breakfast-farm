@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -133,10 +134,6 @@ public class GameManager : MonoBehaviour
 
 	}
 
-
-
-
-
 	// runs every frame, checks if the meal has been made -> if so, button becomes active
 	void CheckRecipe ()
 	{
@@ -166,9 +163,6 @@ public class GameManager : MonoBehaviour
 			}
 		}
 	}
-
-
-
 
 
 	public void NextRecipe ()
@@ -207,6 +201,10 @@ public class GameManager : MonoBehaviour
 			plateUp.GetComponent<Collider> ().enabled = false;
 			//}
 		}
+	}
+
+	public void RestartScene () {
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 	}
 
 }
