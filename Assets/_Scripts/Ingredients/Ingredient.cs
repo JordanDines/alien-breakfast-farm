@@ -29,6 +29,9 @@ public class Ingredient : ScriptableObject {
 	//List of object's tags that this ingredient can interact with
 	public List<string> tagsToInteractWith = new List<string>();
 
+
+	public GameObject notPlatedSprite;
+	public GameObject platedSprite;
 }
 //[CustomEditor(typeof(Ingredient))]
 //public class IngredientCustomEditor:Editor {

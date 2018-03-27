@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,9 +29,12 @@ public class GameManager : MonoBehaviour
 
 	public List<Ingredient> currentlyPlated = new List<Ingredient> ();
 
+	public GameObject ingredientPanel;
 
 	void Start ()
 	{
+		int ingCount = ingredientPanel.transform.childCount;
+
 		//Locks the rotation of the screen so the home button is on the right
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		currentRecipe = recipes [recipeIndex];
@@ -42,9 +46,17 @@ public class GameManager : MonoBehaviour
 			} else {
 				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
 					currentNeededIngredients.Add (ingredient);
+					Instantiate (ingredient.notPlatedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
+					//ingredientScreen.transform.GetComponentInChildren<GameObject>().SetActive(true);
+					//ingredientScreen.transform.GetComponentInChildren<Image> ().sprite = ingredient.notPlatedSprite;
+
 				}
 			}
+
 		}
+		//for (int i = 0; i < ingCount; i++) {
+		//}
+
 	}
 
 
@@ -53,12 +65,13 @@ public class GameManager : MonoBehaviour
 		currentRecipe = recipes [recipeIndex];
 		PlateUpInteractive ();
 
+		if (breakfastReady) {
+			Invoke ("CreateNewRecipe", .1f);
+		} else
 		if (!breakfastReady) {
 			CheckRecipe ();
 		}
-		if (breakfastReady) {
-			Invoke ("CreateNewRecipe", .1f);
-		}
+		 
 
 	}
 
@@ -97,7 +110,8 @@ public class GameManager : MonoBehaviour
 		*/
 		currentNeededIngredients.Clear();
 		currentlyPlated.Clear();
-	
+
+
 		//currentNeededIngredients = currentRecipe.ingredientsInRecipe;
 		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
 			currentNeededIngredients.Add (ingredient);
@@ -124,6 +138,7 @@ public class GameManager : MonoBehaviour
 		// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
 		foreach (Ingredient ingredient in currentNeededIngredients) {
 			if (currentlyPlated.Contains (ingredient)) {
+				
 				numItemsCorrect++;
 				}
 			}
@@ -132,26 +147,15 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-		// if all items were present, BreakfastReady = true;
-
 
 
 
 
 	public void NextRecipe ()
 	{
-		//foreach (Ingredient ingredient in currentNeededIngredients) {
-		//	if (currentlyPlated.Contains (ingredient)) {
-		//		currentlyPlated.Remove (ingredient);
-		//		currentNeededIngredients.Remove (ingredient);
-		//		break;
-		//	}
-		//}
-		//if (currentlyPlated.Count == 0) {
 		breakfastReady = false;
 		recipeIndex++;
 		Debug.Log (currentRecipe);
-		//}
 	}
 
 	void PlateUpInteractive ()

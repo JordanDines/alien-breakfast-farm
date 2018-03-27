@@ -19,3 +19,6 @@ MonoBehaviour:
   tagsToInteractWith:
   - Toaster
   - PlateUp
+  notPlatedSprite: {fileID: 1902417473466302, guid: 65d273ffa149b7444b3630961a57d911,
+    type: 2}
+  platedSprite: {fileID: 0}

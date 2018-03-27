@@ -48,6 +48,8 @@ public class Appliances : MonoBehaviour {
 	//Secondary reference to the current object in the appliance
 	public GameObject tempHeldObj;
 
+	public GameObject particle;
+
 	void Start () {
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
@@ -85,6 +87,8 @@ public class Appliances : MonoBehaviour {
 	void CookFood () {
 		//This function just gets the ingredients cooking time and cooks the food for however long you want
 
+		//Turn the particle system on
+		particle.SetActive(true);
 		//Starts the cooking timer
 		cookingTimer += Time.deltaTime;
 		//If it reaches the ingredients time to cook
@@ -99,6 +103,8 @@ public class Appliances : MonoBehaviour {
 			isCooking = false;
 			//Reset the timer so it works within a loop
 			cookingTimer = 0;
+			//Turn the particle system off
+			particle.SetActive(false);
 		}
 	}
 
