@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
 	//If the player can hold something
 	public bool canHold = true;
 	//If the player is holding something and can place it
@@ -87,51 +86,15 @@ public class GameManager : MonoBehaviour
 
 	void CreateNewRecipe ()
 	{
-
-		//foreach (Ingredient oldIng in currentlyPlated) {
-		//
-		//	if(currentRecipe.ingredientsInRecipe.Contains(oldIng)) {
-		//		Debug.Log ("I should destroy this");
-		//	}
-		//	//if (!currentlyPlated.Contains (oldIng)) {
-		//	//	break;
-		//	//} else 
-		//	//	if (currentlyPlated.Contains (oldIng)){
-		//	//	currentlyPlated.Remove (oldIng);
-		//	//	currentNeededIngredients.Remove (oldIng);
-		//	//}
-		//}
-
-
 		currentRecipe = recipes [recipeIndex];
 		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-			//if (currentNeededIngredients.Count > currentRecipe.ingredientsInRecipe.Count) {
-			//	breakfastReady = false;
-			//	break;
-			//} else 
-		
 			if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
 				currentNeededIngredients.Add (ingredient);
 				Instantiate (ingredient.notPlatedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
 			}
 		}
-		
-		//currentNeededIngredients.Clear();
-		//currentlyPlated.Clear();
-
 		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
 		int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
-
-		//currentNeededIngredients = currentRecipe.ingredientsInRecipe;
-		//foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
-		//	currentNeededIngredients.Add (ingredient);
-		//}
-
-		// currentNeededIngredients.Clear();
-		// for each ingredient in new recipe
-		// currentNeededIngredients.Add(ingredient);
-
-
 	}
 
 	// runs every frame, checks if the meal has been made -> if so, button becomes active
@@ -149,7 +112,7 @@ public class GameManager : MonoBehaviour
 				Transform tempGO;
 				for (int i = 0; i < ingCount; i++) {
 					tempGO = ingredientPanel.transform.GetChild (i);
-					 if (ingredient.tagThisAs == tempGO.tag) {
+					if (ingredient.tagThisAs == tempGO.tag) {
 						Instantiate (ingredient.platedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
 						Destroy (tempGO.gameObject);
 					}
@@ -159,24 +122,29 @@ public class GameManager : MonoBehaviour
 			if (numItemsCorrect == numItemsNeeded) {
 				breakfastReady = true;
 				numItemsCorrect = 0;
-
+				break;
 			}
+
 		}
 	}
 
 
 	public void NextRecipe ()
 	{
-
-		//List<GameObject> panel = new List<GameObject>;
-		//foreach (GameObject child in panel.ToArray()) {
-		//
-		//}
+		//Clears the ingredients panel
 		int ingCount = ingredientPanel.transform.childCount;
-		Transform tempGO;
+		Transform tempIng;
 		for (int i = 0; i < ingCount; i++) {
-			tempGO = ingredientPanel.transform.GetChild (i);
-			Destroy (tempGO.gameObject);
+			tempIng = ingredientPanel.transform.GetChild (i);
+			Destroy (tempIng.gameObject);
+		}
+
+		//Clears the served items from the game world
+		int servedItems = plateUp.GetComponent<PlateUp> ().placePoint.transform.childCount;
+		Transform tempServed;
+		for (int i = 0; i < servedItems; i++) {
+			tempServed = plateUp.GetComponent<PlateUp> ().placePoint.transform.GetChild (i);
+			Destroy (tempServed.gameObject);
 		}
 
 		recipeIndex++;

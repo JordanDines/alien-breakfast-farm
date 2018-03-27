@@ -17,6 +17,8 @@ public class PlateUp : MonoBehaviour {
 	[HideInInspector]
 	public bool isPlating = false;
 
+	public List<GameObject> listOfIngredients = new List<GameObject>();
+
 	//public List<Ingredient> currentlyPlated = new List<Ingredient>();
 
 	// Use this for initialization
@@ -76,12 +78,21 @@ public class PlateUp : MonoBehaviour {
 			//button.transform.GetComponent<Collider> ().enabled = true;
 			//button.transform.GetComponent <Appliances> ().tempHeldObj = heldObject;
 			//isPlacing = true;
-			gm.holdingObject.transform.SetParent (placePoint.transform.parent);
+			gm.holdingObject.transform.SetParent (placePoint.transform);
 			transform.GetComponent<Collider> ().enabled = false;
 		} else if (!gm.holdingObject.GetComponent<ObjectInteract> ().isReady && gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked) {
 			Debug.Log ("Sorry, this food is not yet ready. Try cooking it, idiot");
 			return;
 		}
 	}
+
+	//void Respawn () 
+	//{
+	//	foreach (GameObject go in listOfIngredients) {
+	//		if (go.transform.childCount == 0) {
+	//			Instantiate ();
+	//		}
+	//	}
+	//}
 
 }
