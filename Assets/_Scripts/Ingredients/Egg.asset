@@ -14,7 +14,7 @@ MonoBehaviour:
   grabbingSpeed: 0.1
   timeToCook: 0
   needsToBeCooked: 1
-  cookedName: 
+  cookedName: CookedEgg
   tagThisAs: Egg
   tagsToInteractWith:
   - Pan

@@ -12,6 +12,8 @@ TagManager:
   - GameManager
   - Toast
   - Tomato
+  - Egg
+  - CookedEgg
   layers:
   - Default
   - TransparentFX
