@@ -120,7 +120,6 @@ public class GameManager : MonoBehaviour
 
 		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
 		int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
-		int numItemsCorrect = 0;
 
 		//currentNeededIngredients = currentRecipe.ingredientsInRecipe;
 		//foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
@@ -129,10 +128,10 @@ public class GameManager : MonoBehaviour
 
 		// currentNeededIngredients.Clear();
 		// for each ingredient in new recipe
-			// currentNeededIngredients.Add(ingredient);
+		// currentNeededIngredients.Add(ingredient);
 
 
-		} 
+	}
 
 
 
@@ -153,15 +152,17 @@ public class GameManager : MonoBehaviour
 				Transform tempGO;
 				for (int i = 0; i < ingCount; i++) {
 					tempGO = ingredientPanel.transform.GetChild (i);
-					if (ingredient.tagThisAs == tempGO.tag) {
+					 if (ingredient.tagThisAs == tempGO.tag) {
 						Instantiate (ingredient.platedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
 						Destroy (tempGO.gameObject);
 					}
 				}
+
 			}
 			if (numItemsCorrect == numItemsNeeded) {
 				breakfastReady = true;
 				numItemsCorrect = 0;
+
 			}
 		}
 	}
@@ -185,8 +186,8 @@ public class GameManager : MonoBehaviour
 		}
 
 		recipeIndex++;
-		currentNeededIngredients.Clear();
-		currentlyPlated.Clear();
+		currentNeededIngredients.Clear ();
+		currentlyPlated.Clear ();
 
 		plateUpButton.GetComponent <Collider> ().enabled = false;
 		breakfastReady = false;

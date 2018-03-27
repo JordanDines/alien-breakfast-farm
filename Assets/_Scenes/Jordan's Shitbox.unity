@@ -510,8 +510,8 @@ MonoBehaviour:
   breakfastReady: 0
   isPlating: 0
   recipes:
-  - {fileID: 11400000, guid: dac7aeffcaa468f4eb57c65a6be1ec96, type: 2}
   - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
+  - {fileID: 11400000, guid: 480b274277fd95d43bd88f4848585e2f, type: 2}
   - {fileID: 11400000, guid: dac7aeffcaa468f4eb57c65a6be1ec96, type: 2}
   - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
   - {fileID: 11400000, guid: dac7aeffcaa468f4eb57c65a6be1ec96, type: 2}
