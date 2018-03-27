@@ -19,3 +19,7 @@ MonoBehaviour:
   tagsToInteractWith:
   - Pan
   - PlateUp
+  notPlatedSprite: {fileID: 1055776456058038, guid: f31b3b80598fe334fb5a5c8e4da4394f,
+    type: 2}
+  platedSprite: {fileID: 1055776456058038, guid: 239e070de19b9404091af8d7f2184b88,
+    type: 2}
