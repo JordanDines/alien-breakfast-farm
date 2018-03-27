@@ -41,12 +41,12 @@ GameObject:
   - component: {fileID: 198324002343164380}
   - component: {fileID: 199077377621184978}
   m_Layer: 0
-  m_Name: Cooking
+  m_Name: CookingParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1227965708877080
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +475,7 @@ MonoBehaviour:
   holdingPoint2: {fileID: 1881150094427468}
   heldObject: {fileID: 0}
   tempHeldObj: {fileID: 0}
+  particle: {fileID: 1147500894999924}
 --- !u!114 &114730707275371240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,6 +559,7 @@ MonoBehaviour:
   holdingPoint2: {fileID: 1881150094427468}
   heldObject: {fileID: 0}
   tempHeldObj: {fileID: 0}
+  particle: {fileID: 1147500894999924}
 --- !u!136 &136794846785651720
 CapsuleCollider:
   m_ObjectHideFlags: 1

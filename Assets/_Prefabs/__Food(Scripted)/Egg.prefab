@@ -21,13 +21,9 @@ GameObject:
   - component: {fileID: 4484364575128970}
   - component: {fileID: 33377245242943504}
   - component: {fileID: 23977278054018372}
-  - component: {fileID: 65427407675331812}
-  - component: {fileID: 114719695546211952}
-  - component: {fileID: 114515330122624504}
-  - component: {fileID: 54945141512946222}
   m_Layer: 0
   m_Name: EggUncooked
-  m_TagString: Untagged
+  m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,9 +53,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4717019923265528}
+  - component: {fileID: 54753538683435068}
+  - component: {fileID: 65599240765727860}
+  - component: {fileID: 114414002477681626}
+  - component: {fileID: 114551926900109682}
   m_Layer: 0
   m_Name: Egg
-  m_TagString: Untagged
+  m_TagString: Egg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ Transform:
   m_GameObject: {fileID: 1795364462992582}
   m_LocalRotation: {x: -0.0000000037252903, y: -0.000000029802322, z: 0.0000000018626451,
     w: 1}
-  m_LocalPosition: {x: 0.045500003, y: 0.0013000523, z: 0.019800045}
+  m_LocalPosition: {x: 0.0449, y: 0, z: 0.0182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4484364575128970}
@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520253300754488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.69429994, y: -0.4845, z: 10.34}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4717019923265528}
@@ -189,12 +189,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520253300754488}
   m_Mesh: {fileID: 4300000, guid: fbd0a8f1418793c438feca91c5a5c1be, type: 3}
---- !u!54 &54945141512946222
+--- !u!54 &54753538683435068
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471804666780228}
+  m_GameObject: {fileID: 1795364462992582}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -204,42 +204,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65427407675331812
+--- !u!65 &65599240765727860
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471804666780228}
+  m_GameObject: {fileID: 1795364462992582}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.05512739, y: 0.071442015, z: 0.052429225}
   m_Center: {x: -0.00000006156709, y: 0.035721187, z: -0.000000059471574}
---- !u!114 &114515330122624504
+--- !u!114 &114414002477681626
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471804666780228}
+  m_GameObject: {fileID: 1795364462992582}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1895ac3a2985927439e3fbde69c98e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ingredient: {fileID: 11400000, guid: f19335adb8e518249a5760cc38cbe153, type: 2}
-  uncookedMesh: {fileID: 1934855136438506, guid: 4f13d84f5d2de694bab0a89bda10cc1b,
-    type: 2}
-  cookedMesh: {fileID: 1143471478780896, guid: 416801ff04f3c574fb821d7b34ce5447, type: 2}
+  uncookedMesh: {fileID: 1471804666780228}
+  cookedMesh: {fileID: 1520253300754488}
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
---- !u!114 &114719695546211952
+--- !u!114 &114551926900109682
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471804666780228}
+  m_GameObject: {fileID: 1795364462992582}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -250,7 +249,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114515330122624504}
+        - m_Target: {fileID: 114414002477681626}
           m_MethodName: GrabObject
           m_Mode: 1
           m_Arguments:
