@@ -1,24 +1,16 @@
 fileFormatVersion: 2
-guid: dbc8ac450f7372f46a4aa6e138de382b
-timeCreated: 1522200486
+guid: 0110f5429d4e2f748b469922c05fded1
+timeCreated: 1522198030
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder6
-    100004: pPlane4
     400000: //RootNode
-    400002: pCylinder6
-    400004: pPlane4
     2100000: lambert1
-    2100002: lambert3
-    2300000: pCylinder6
-    2300002: pPlane4
-    3300000: pCylinder6
-    3300002: pPlane4
-    4300000: pCylinder6
-    4300002: pPlane4
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder8
     9500000: //RootNode
   externalObjects: {}
   materials:
