@@ -28,9 +28,10 @@ public class ObjectInteract : MonoBehaviour {
 	public bool hasBeenPlaced = false;
 	[HideInInspector]
 	public bool interactable = true;
-	[SerializeField]
+	[HideInInspector]
 	public bool isReady;
 
+	public GameObject staplePoint;
 
 	void Start () {
 		//Find the GameManager in the scene to reference later on

@@ -6,19 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	[HideInInspector]
 	//If the player can hold something
 	public bool canHold = true;
+	[HideInInspector]
 	//If the player is holding something and can place it
 	public bool canPlace = false;
 	//Reference to the currently held object
+	[HideInInspector]
 	public GameObject holdingObject;
+	[HideInInspector]
+	public GameObject previousObject;
+
 	[Tooltip ("Reference the PlateUp GameObject")]
 	//Reference to the plate up area
 	public GameObject plateUp;
 	public GameObject plateUpButton;
 
-	//public Ingredient ingredient;
+	[HideInInspector]
 	public bool breakfastReady = false;
+	[HideInInspector]
 	public bool isPlating = false;
 
 
@@ -26,10 +33,12 @@ public class GameManager : MonoBehaviour
 	private int recipeIndex = 0;
 	private int ingredientIndex = 0;
 
+	[HideInInspector]
 	public List<Ingredient> currentNeededIngredients = new List<Ingredient> ();
 
+	[HideInInspector]
 	public Recipe currentRecipe;
-
+	[HideInInspector]
 	public List<Ingredient> currentlyPlated = new List<Ingredient> ();
 
 	public GameObject ingredientPanel;
@@ -150,7 +159,7 @@ public class GameManager : MonoBehaviour
 		recipeIndex++;
 		currentNeededIngredients.Clear ();
 		currentlyPlated.Clear ();
-
+		previousObject = null;
 		plateUpButton.GetComponent <Collider> ().enabled = false;
 		breakfastReady = false;
 		CreateNewRecipe ();
