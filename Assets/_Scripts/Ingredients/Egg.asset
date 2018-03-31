@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Egg
   m_EditorClassIdentifier: 
   grabbingSpeed: 0.1
-  timeToCook: 0
+  timeToCook: 4
   needsToBeCooked: 1
   cookedName: CookedEgg
   tagThisAs: Egg

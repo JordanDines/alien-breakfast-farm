@@ -130,6 +130,7 @@ MonoBehaviour:
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
+  staplePoint: {fileID: 0}
 --- !u!114 &114447618518873132
 MonoBehaviour:
   m_ObjectHideFlags: 1
