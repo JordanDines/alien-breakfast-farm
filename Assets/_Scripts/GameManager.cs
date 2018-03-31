@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
 	//If the player is holding something and can place it
 	public bool canPlace = false;
 	//Reference to the currently held object
-	[HideInInspector]
+	//[HideInInspector]
 	public GameObject holdingObject;
-	[HideInInspector]
+	//[HideInInspector]
 	public GameObject previousObject;
 
 	[Tooltip ("Reference the PlateUp GameObject")]
