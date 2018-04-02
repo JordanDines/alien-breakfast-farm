@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 246d21d8adfd50f46af4fc641c74746b, type: 3}
-  m_Name: Mug
+  m_Name: Coffee
   m_EditorClassIdentifier: 
   grabbingSpeed: 0.1
   timeToCook: 0
