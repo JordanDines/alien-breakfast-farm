@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Tomato
   m_EditorClassIdentifier: 
   grabbingSpeed: 0.1
-  timeToCook: 3
+  timeToCook: 2
   needsToBeCooked: 1
   cookedName: Cooked Tomato
   tagThisAs: Tomato
