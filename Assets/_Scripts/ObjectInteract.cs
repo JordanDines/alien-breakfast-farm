@@ -33,6 +33,8 @@ public class ObjectInteract : MonoBehaviour {
 	[HideInInspector]
 	public bool isReady;
 
+	public Vector3 offset;
+
 	private GameObject reticle;
 
 	public GameObject staplePoint;
