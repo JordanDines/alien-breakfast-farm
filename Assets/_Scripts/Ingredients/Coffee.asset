@@ -15,6 +15,7 @@ MonoBehaviour:
   timeToCook: 0
   needsToBeCooked: 0
   tagThisAs: 
-  tagsToInteractWith: []
+  tagsToInteractWith:
+  - 
   notPlatedSprite: {fileID: 0}
   platedSprite: {fileID: 0}

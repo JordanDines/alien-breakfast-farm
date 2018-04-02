@@ -220,6 +220,7 @@ Transform:
   m_Children:
   - {fileID: 1542661582}
   - {fileID: 507635291}
+  - {fileID: 584084289}
   m_Father: {fileID: 1902331322}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1920,6 +1921,81 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 583194963}
   m_Mesh: {fileID: 4300004, guid: 6d37637c0caffaf4992be7090a010fc8, type: 3}
+--- !u!1 &584084288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1359925481772810, guid: bdaeb9a0dbad29249b69570ae05d6228,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 584084289}
+  - component: {fileID: 584084291}
+  - component: {fileID: 584084290}
+  m_Layer: 0
+  m_Name: BaconUncooked (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584084289
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4093629104313104, guid: bdaeb9a0dbad29249b69570ae05d6228,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584084288}
+  m_LocalRotation: {x: 0.034534328, y: 0.4007194, z: 0.078611426, w: 0.9121686}
+  m_LocalPosition: {x: 0.0066888332, y: 0.0040230453, z: 0.00467366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 58976766}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &584084290
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23369679315589012, guid: bdaeb9a0dbad29249b69570ae05d6228,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584084288}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e5a559094e484f443944a204daf8beb2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &584084291
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33949708606651918, guid: bdaeb9a0dbad29249b69570ae05d6228,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584084288}
+  m_Mesh: {fileID: 4300000, guid: 38770c61f2fe6854d9272e7065566059, type: 3}
 --- !u!1 &588523556
 GameObject:
   m_ObjectHideFlags: 0
