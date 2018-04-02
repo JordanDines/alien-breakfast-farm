@@ -39,7 +39,7 @@ GameObject:
   m_Layer: 0
   m_Name: EggCarton
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -96,8 +96,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1411392246059868}
-  m_LocalRotation: {x: -0, y: 0.6366172, z: -0, w: 0.77118003}
-  m_LocalPosition: {x: -0.6380255, y: 1.0464847, z: -0.20655107}
+  m_LocalRotation: {x: 0.028707389, y: -0.3824949, z: 0.0115659945, w: 0.92343915}
+  m_LocalPosition: {x: 0.43817902, y: 0.1588282, z: 0.05075848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4266747536767180}
@@ -105,7 +105,7 @@ Transform:
   - {fileID: 4864324165107374}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.5470002, y: 79.079, z: -0.034}
 --- !u!4 &4266747536767180
 Transform:
   m_ObjectHideFlags: 1
@@ -146,7 +146,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 57ce31b530cc5784ca40304381ba1f8b, type: 3}
+  - {fileID: 2100000, guid: ce529d56a51914649883c79b9d42f631, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -180,7 +180,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 57ce31b530cc5784ca40304381ba1f8b, type: 3}
+  - {fileID: 2100000, guid: 5616f6156d7abe044934a2d2ecc0141f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,9 +214,9 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: 57ce31b530cc5784ca40304381ba1f8b, type: 3}
+  - {fileID: 2100000, guid: 9692d1a042fb3634cbeab7ca8cb291f4, type: 2}
   - {fileID: 2100004, guid: 57ce31b530cc5784ca40304381ba1f8b, type: 3}
-  - {fileID: 2100000, guid: 57ce31b530cc5784ca40304381ba1f8b, type: 3}
+  - {fileID: 2100000, guid: 5616f6156d7abe044934a2d2ecc0141f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
