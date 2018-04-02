@@ -32,14 +32,15 @@ public class ObjectInteract : MonoBehaviour {
 	public bool interactable = true;
 	[HideInInspector]
 	public bool isReady;
-
+	[Tooltip ("Change this offset to change the rotation when this item gets plated up")]
 	public Vector3 offset;
-
+	//This is a reference to the GvrReticlePointer's gameobject
 	private GameObject reticle;
-
+	[Tooltip("Drag in this objects 'Staple Point' GameObject which will reference the position that the next item will be stacked at")]
 	public GameObject staplePoint;
 
 	void Start () {
+		//Find the object holding this script and get the gameobject as a reference
 		reticle = FindObjectOfType<GvrReticlePointer> ().gameObject;
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
@@ -53,11 +54,13 @@ public class ObjectInteract : MonoBehaviour {
 
 	public void OnMouseEnter () {
 		Debug.Log ("On");
+		//When the cursor hovers over the ingredient, turn the reticle on
 		reticle.GetComponent<MeshRenderer> ().enabled = true;
 	}
 
 	public void OnMouseExit () {
 		Debug.Log ("Off");
+		//When the cursor leaves the ingredient, turn the reticle off
 		reticle.GetComponent<MeshRenderer> ().enabled = false;
 	}
 
