@@ -11,7 +11,7 @@ public class Ingredient : ScriptableObject {
 	public float grabbingSpeed = .1f;
 	//How long this ingredient takes to become ready
 	[Tooltip("How long this ingredient takes to become ready")]
-	public int timeToCook;
+	public float timeToCook;
 	//Set this to true if the ingredient needs to be cooked before plating up
 	[Tooltip("Set this to true if the ingredient needs to be cooked before plating up")]
 	public bool needsToBeCooked;
