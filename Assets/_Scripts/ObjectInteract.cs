@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Gvr;
+using UnityEngine.EventSystems;
 
 public class ObjectInteract : MonoBehaviour {
 	[Header ("Ingredient to Use")]
@@ -31,9 +33,12 @@ public class ObjectInteract : MonoBehaviour {
 	[HideInInspector]
 	public bool isReady;
 
+	private GameObject reticle;
+
 	public GameObject staplePoint;
 
 	void Start () {
+		reticle = FindObjectOfType<GvrReticlePointer> ().gameObject;
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
 		//Find the player's HoldingPoint to also reference later on
@@ -42,7 +47,16 @@ public class ObjectInteract : MonoBehaviour {
 		gm.holdingObject = null;
 		//Set this objects tag to the tag it needs to be
 		transform.tag = ingredient.tagThisAs;
+	}
 
+	public void OnMouseEnter () {
+		Debug.Log ("On");
+		reticle.GetComponent<MeshRenderer> ().enabled = true;
+	}
+
+	public void OnMouseExit () {
+		Debug.Log ("Off");
+		reticle.GetComponent<MeshRenderer> ().enabled = false;
 	}
 
 	void Update () {
