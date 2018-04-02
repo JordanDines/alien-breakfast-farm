@@ -14,8 +14,7 @@ MonoBehaviour:
   grabbingSpeed: 0.1
   timeToCook: 3
   needsToBeCooked: 1
-  cookedName: Bacon
-  tagThisAs: RawBacon
+  tagThisAs: Bacon
   tagsToInteractWith:
   - Pan
   - PlateUp

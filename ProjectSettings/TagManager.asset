@@ -13,11 +13,9 @@ TagManager:
   - Toast
   - Tomato
   - Egg
-  - CookedEgg
   - Bacon
   - Mushroom
-  - CookedMushroom
-  - Bread
+  - Spinach
   layers:
   - Default
   - TransparentFX

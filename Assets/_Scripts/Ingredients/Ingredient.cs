@@ -15,8 +15,6 @@ public class Ingredient : ScriptableObject {
 	//Set this to true if the ingredient needs to be cooked before plating up
 	[Tooltip("Set this to true if the ingredient needs to be cooked before plating up")]
 	public bool needsToBeCooked;
-	[Tooltip("What name to give this ingredient once it gets cooked")]
-	public string cookedName;
 
 
 	[Header ("Tags")]
