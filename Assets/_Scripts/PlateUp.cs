@@ -17,6 +17,8 @@ public class PlateUp : MonoBehaviour {
 	[HideInInspector]
 	public bool isPlating = false;
 
+	public AudioSource putDownSound;
+
 	public GameObject plateUpGlow;
 
 	public List<GameObject> listOfIngredients = new List<GameObject>();
@@ -89,6 +91,7 @@ public class PlateUp : MonoBehaviour {
 			isPlating = true;
 			gm.holdingObject.transform.SetParent (placePoint.transform);
 			transform.GetComponent<Collider> ().enabled = false;
+			putDownSound.Play ();
 
 		} else if (!gm.holdingObject.GetComponent<ObjectInteract> ().isReady && gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked) {
 			Debug.Log ("Sorry, this food is not yet ready. Try cooking it, idiot");
