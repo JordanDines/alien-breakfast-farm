@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4899337073085988}
   - component: {fileID: 198243889682592912}
   - component: {fileID: 199266809456971218}
+  - component: {fileID: 114088437840195524}
   m_Layer: 0
   m_Name: FinishedCookingParticle
   m_TagString: Untagged
@@ -35,12 +36,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918757026565528}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.015, y: 0.347, z: 0.602}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114088437840195524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918757026565528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5271e235395b0447a72f731acbca3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestory: 4
 --- !u!198 &198243889682592912
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +114,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1379893324
+  randomSeed: 726979366
   InitialModule:
     serializedVersion: 3
     enabled: 1
