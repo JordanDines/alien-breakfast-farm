@@ -52,17 +52,18 @@ public class ObjectInteract : MonoBehaviour {
 		transform.tag = ingredient.tagThisAs;
 	}
 
-	public void OnMouseEnter () {
-		Debug.Log ("On");
-		//When the cursor hovers over the ingredient, turn the reticle on
-		reticle.GetComponent<MeshRenderer> ().enabled = true;
-	}
 
-	public void OnMouseExit () {
-		Debug.Log ("Off");
-		//When the cursor leaves the ingredient, turn the reticle off
-		reticle.GetComponent<MeshRenderer> ().enabled = false;
-	}
+	//public void OnMouseEnter () {
+	//	Debug.Log ("On");
+	//	//When the cursor hovers over the ingredient, turn the reticle on
+	//	reticle.GetComponent<MeshRenderer> ().enabled = true;
+	//}
+	//
+	//public void OnMouseExit () {
+	//	Debug.Log ("Off");
+	//	//When the cursor leaves the ingredient, turn the reticle off
+	//	reticle.GetComponent<MeshRenderer> ().enabled = false;
+	//}
 
 	void Update () {
 		//These Functions allow the objects to move after the events trigger as buttons are static

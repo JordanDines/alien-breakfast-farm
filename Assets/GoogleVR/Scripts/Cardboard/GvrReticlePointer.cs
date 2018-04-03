@@ -69,16 +69,19 @@ public class GvrReticlePointer : GvrBasePointer {
 
   public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
+		GetComponent<MeshRenderer> ().enabled = true;
   }
 
   public override void OnPointerHover(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
+		GetComponent<MeshRenderer> ().enabled = true;
   }
 
   public override void OnPointerExit(GameObject previousObject) {
     ReticleDistanceInMeters = maxReticleDistance;
     ReticleInnerAngle = RETICLE_MIN_INNER_ANGLE;
     ReticleOuterAngle = RETICLE_MIN_OUTER_ANGLE;
+		GetComponent<MeshRenderer> ().enabled = false;
   }
 
   public override void OnPointerClickDown() {}
