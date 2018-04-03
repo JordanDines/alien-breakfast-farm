@@ -17,6 +17,8 @@ public class PlateUp : MonoBehaviour {
 	[HideInInspector]
 	public bool isPlating = false;
 
+	public GameObject plateUpGlow;
+
 	public List<GameObject> listOfIngredients = new List<GameObject>();
 
 	//public List<Ingredient> currentlyPlated = new List<Ingredient>();

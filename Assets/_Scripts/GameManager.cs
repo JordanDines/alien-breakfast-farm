@@ -172,9 +172,11 @@ public class GameManager : MonoBehaviour
 		if (holdingObject != null && (holdingObject.GetComponent<ObjectInteract> ().isReady == true || holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false)) {
 			Debug.Log ("The plate can be used");
 			//Make the plate up area interactable
+			plateUp.GetComponent<PlateUp>().plateUpGlow.SetActive(true);
 			plateUp.GetComponent<Collider> ().enabled = true;
 		} else {//if (holdingObject != null && holdingObject.GetComponent<ObjectInteract> ().isReady == false) {
 			//Make it not interactable
+			plateUp.GetComponent<PlateUp>().plateUpGlow.SetActive(false);
 			plateUp.GetComponent<Collider> ().enabled = false;
 			//}
 		}
