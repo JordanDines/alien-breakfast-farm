@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   grabbingSpeed: 0.1
-  timeToCook: 0
-  needsToBeCooked: 0
-  tagThisAs: 
+  timeToCook: 4
+  needsToBeCooked: 1
+  tagThisAs: Coffee
   tagsToInteractWith:
-  - 
+  - CoffeeMachine
+  - PlateUp
   notPlatedSprite: {fileID: 0}
   platedSprite: {fileID: 0}
