@@ -88,7 +88,6 @@ public class Appliances : MonoBehaviour {
 		
 	void CookFood () {
 		//This function just gets the ingredients cooking time and cooks the food for however long you want
-
 		//Turn the particle system on
 		cookingParticle.SetActive(true);
 		//Starts the cooking timer
@@ -112,9 +111,9 @@ public class Appliances : MonoBehaviour {
 	}
 
 	void CookedParticle () {
-		Instantiate (finishedParticle, transform.position, Quaternion.identity);
-		Destroy (finishedParticle, 1f);
+		Instantiate (finishedParticle, holdingPoint1.transform.position, Quaternion.identity);
 	}
+
 	void MoveTowardsPlacement () {
 		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
 		gm.holdingObject.transform.rotation = holdingPoint1.transform.rotation;
