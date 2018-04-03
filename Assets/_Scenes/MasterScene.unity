@@ -3057,13 +3057,13 @@ MonoBehaviour:
   breakfastReady: 0
   isPlating: 0
   recipes:
-  - {fileID: 11400000, guid: c942fefe28450ce42ad86d8634e58173, type: 2}
+  - {fileID: 11400000, guid: 05a474d55a7204149934dd8270e52f72, type: 2}
   - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
   - {fileID: 11400000, guid: 480b274277fd95d43bd88f4848585e2f, type: 2}
   - {fileID: 11400000, guid: 920092824fec98b4db3f235489dd9076, type: 2}
   - {fileID: 11400000, guid: f4cf61bf49ec50549908714c543a4e2f, type: 2}
   - {fileID: 11400000, guid: 2536ea0cc63ebd747a0e507619008625, type: 2}
-  - {fileID: 11400000, guid: c942fefe28450ce42ad86d8634e58173, type: 2}
+  - {fileID: 11400000, guid: 05a474d55a7204149934dd8270e52f72, type: 2}
   currentNeededIngredients: []
   currentRecipe: {fileID: 0}
   currentlyPlated: []
