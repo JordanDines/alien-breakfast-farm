@@ -3057,10 +3057,13 @@ MonoBehaviour:
   breakfastReady: 0
   isPlating: 0
   recipes:
+  - {fileID: 11400000, guid: 05a474d55a7204149934dd8270e52f72, type: 2}
   - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
-  - {fileID: 11400000, guid: dac7aeffcaa468f4eb57c65a6be1ec96, type: 2}
+  - {fileID: 11400000, guid: 480b274277fd95d43bd88f4848585e2f, type: 2}
   - {fileID: 11400000, guid: 920092824fec98b4db3f235489dd9076, type: 2}
-  - {fileID: 11400000, guid: be1adc883b686e245b43ae60ad97d2b1, type: 2}
+  - {fileID: 11400000, guid: f4cf61bf49ec50549908714c543a4e2f, type: 2}
+  - {fileID: 11400000, guid: 2536ea0cc63ebd747a0e507619008625, type: 2}
+  - {fileID: 11400000, guid: 05a474d55a7204149934dd8270e52f72, type: 2}
   currentNeededIngredients: []
   currentRecipe: {fileID: 0}
   currentlyPlated: []
@@ -3380,19 +3383,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1429602322290250, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
-      propertyPath: m_Name
-      value: JumboTron
-      objectReference: {fileID: 0}
     - target: {fileID: 114295812559648812, guid: 2b830cdd372a5e7478117fffbec5b3b6,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1795517007}
-    - target: {fileID: 114296682762224554, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.478
+    - target: {fileID: 1429602322290250, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
+      propertyPath: m_Name
+      value: JumboTron
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
