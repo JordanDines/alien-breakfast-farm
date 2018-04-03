@@ -3383,39 +3383,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 1429602322290250, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
-      propertyPath: m_Name
-      value: JumboTron
-      objectReference: {fileID: 0}
     - target: {fileID: 114295812559648812, guid: 2b830cdd372a5e7478117fffbec5b3b6,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1795517007}
-    - target: {fileID: 114296682762224554, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 224620447086582634, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 224620447086582634, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 224620447086582634, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224620447086582634, guid: 2b830cdd372a5e7478117fffbec5b3b6,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 500
+    - target: {fileID: 1429602322290250, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
+      propertyPath: m_Name
+      value: JumboTron
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b830cdd372a5e7478117fffbec5b3b6, type: 2}
