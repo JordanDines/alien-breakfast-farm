@@ -111,7 +111,7 @@ public class Appliances : MonoBehaviour {
 	}
 
 	void CookedParticle () {
-		Instantiate (finishedParticle, holdingPoint1.transform.position, Quaternion.identity);
+		Instantiate (finishedParticle, holdingPoint1.transform.position, finishedParticle.transform.rotation);
 	}
 
 	void MoveTowardsPlacement () {
