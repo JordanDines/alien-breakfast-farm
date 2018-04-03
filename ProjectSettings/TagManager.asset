@@ -16,6 +16,11 @@ TagManager:
   - Bacon
   - Mushroom
   - Spinach
+  - Bread
+  - CookedEgg
+  - CookedMushroom
+  - CoffeeMachine
+  - Coffee
   layers:
   - Default
   - TransparentFX
