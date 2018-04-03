@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6976dd85c7030d94eadd57d32e9e5dfd, type: 3}
+  m_Name: (1) Test_Coffee
+  m_EditorClassIdentifier: 
+  ingredientsInRecipe:
+  - {fileID: 11400000, guid: e379df44344734a4988b719e4abd8bb8, type: 2}

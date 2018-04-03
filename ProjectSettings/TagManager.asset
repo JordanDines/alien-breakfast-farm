@@ -21,6 +21,7 @@ TagManager:
   - CookedMushroom
   - CoffeeMachine
   - Coffee
+  - Plate
   layers:
   - Default
   - TransparentFX

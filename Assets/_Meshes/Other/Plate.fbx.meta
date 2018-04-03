@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 84af97278dd678b4694b924f5af6f08f
-timeCreated: 1522019029
+timeCreated: 1522764653
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,11 +8,29 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: lambert2
+    2100004: mat_CookedPlate
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCylinder3
+    4300002: m_Plate
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_CookedPlate
+    second: {fileID: 2100000, guid: 4422ccb2eb388244d9ffce03a7c0dc39, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlateCooked2
+    second: {fileID: 2800000, guid: bb7116b92e264924db50fc324fdbea50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlateCooked2TestNormaltga
+    second: {fileID: 2800000, guid: e7d2cd586fb5332499e0f82455f63b46, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -42,7 +60,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.86
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

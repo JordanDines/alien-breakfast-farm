@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4710509245480032}
   - component: {fileID: 33763546326440594}
   - component: {fileID: 23039676695349256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mug
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 114019492493491550}
   - component: {fileID: 114478696102721966}
   - component: {fileID: 82032167952381852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mug_Obj
-  m_TagString: Untagged
+  m_TagString: Coffee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4952270685557760}
   - component: {fileID: 33231765843071638}
   - component: {fileID: 23807912188593400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoffeeLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4580684868547466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StaplePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4198019460979464}
   - component: {fileID: 33909609837118408}
   - component: {fileID: 23799942028551660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mug (Full)
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -248,7 +248,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b9492603f1d1609428252b722340e964, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
