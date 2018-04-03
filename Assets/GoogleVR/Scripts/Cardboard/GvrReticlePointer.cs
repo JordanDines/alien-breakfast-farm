@@ -85,6 +85,7 @@ public class GvrReticlePointer : GvrBasePointer {
     ReticleDistanceInMeters = maxReticleDistance;
     ReticleInnerAngle = RETICLE_MIN_INNER_ANGLE;
     ReticleOuterAngle = RETICLE_MIN_OUTER_ANGLE;
+		GetComponent<MeshRenderer> ().enabled = false;
   }
 
   public override void OnPointerClickDown() {}
