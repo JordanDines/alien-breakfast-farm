@@ -59,7 +59,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1568759584412624
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,12 +68,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4982951236512854}
-  - component: {fileID: 54941529012623618}
-  - component: {fileID: 135431360225968278}
-  - component: {fileID: 114185183622945194}
-  - component: {fileID: 114269357970024468}
+  - component: {fileID: 54725741997405784}
+  - component: {fileID: 135690181720716508}
+  - component: {fileID: 114360926398839276}
+  - component: {fileID: 114750617739218626}
   m_Layer: 0
-  m_Name: Bacon
+  m_Name: Bacon_PickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +216,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359925481772810}
   m_Mesh: {fileID: 4300000, guid: 38770c61f2fe6854d9272e7065566059, type: 3}
---- !u!54 &54941529012623618
+--- !u!54 &54725741997405784
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -231,7 +231,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114185183622945194
+--- !u!114 &114360926398839276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   isReady: 0
   offset: {x: 0, y: 0, z: 0}
   staplePoint: {fileID: 1462778100974796}
---- !u!114 &114269357970024468
+--- !u!114 &114750617739218626
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -266,7 +266,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114185183622945194}
+        - m_Target: {fileID: 114360926398839276}
           m_MethodName: GrabObject
           m_Mode: 1
           m_Arguments:
@@ -280,7 +280,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!135 &135431360225968278
+--- !u!135 &135690181720716508
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
