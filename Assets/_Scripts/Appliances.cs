@@ -112,7 +112,7 @@ public class Appliances : MonoBehaviour {
 	}
 
 	void CookedParticle () {
-		Instantiate (finishedParticle, oi.transform.position, Quaternion.identity);
+		Instantiate (finishedParticle, transform.position, Quaternion.identity);
 		Destroy (finishedParticle, 1f);
 	}
 	void MoveTowardsPlacement () {
