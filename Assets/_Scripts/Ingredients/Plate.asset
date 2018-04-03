@@ -14,7 +14,7 @@ MonoBehaviour:
   grabbingSpeed: 0.1
   timeToCook: 0
   needsToBeCooked: 0
-  tagThisAs: 
+  tagThisAs: Plate
   tagsToInteractWith: []
   notPlatedSprite: {fileID: 0}
   platedSprite: {fileID: 0}

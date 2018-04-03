@@ -18,5 +18,7 @@ MonoBehaviour:
   tagsToInteractWith:
   - CoffeeMachine
   - PlateUp
-  notPlatedSprite: {fileID: 0}
-  platedSprite: {fileID: 0}
+  notPlatedSprite: {fileID: 1045971044332020, guid: 798324b630a9da145aa7564087f3ee04,
+    type: 2}
+  platedSprite: {fileID: 1045971044332020, guid: 71771d486f7bf2747b4f131189c4d3fd,
+    type: 2}
