@@ -38,8 +38,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_Sun: {fileID: 751062023}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2757984}
   - component: {fileID: 2757986}
   - component: {fileID: 2757985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 32573468}
   - component: {fileID: 32573470}
   - component: {fileID: 32573469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 36413082}
   - component: {fileID: 36413084}
   - component: {fileID: 36413083}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 40178866}
   - component: {fileID: 40178865}
   - component: {fileID: 40178864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 40844078}
   - component: {fileID: 40844077}
   - component: {fileID: 40844076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NoPickupCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107291313}
   - component: {fileID: 107291312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,6 +729,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1506653194210672, guid: dbf41fdb362c86f4eba6cff6cfcb1b5e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882934515480472, guid: dbf41fdb362c86f4eba6cff6cfcb1b5e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254830685810474, guid: dbf41fdb362c86f4eba6cff6cfcb1b5e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625439146867850, guid: dbf41fdb362c86f4eba6cff6cfcb1b5e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbf41fdb362c86f4eba6cff6cfcb1b5e, type: 2}
   m_IsPrefabParent: 0
@@ -741,7 +757,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 129658795}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SceneryItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145594009}
   - component: {fileID: 145594010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,6 +899,26 @@ Prefab:
     - target: {fileID: 1402632260402338, guid: 070d087d446818e4b892a705535da4b5, type: 2}
       propertyPath: m_Name
       value: Bread_Obj
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402632260402338, guid: 070d087d446818e4b892a705535da4b5, type: 2}
+      propertyPath: m_TagString
+      value: Bread
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402632260402338, guid: 070d087d446818e4b892a705535da4b5, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237268609574378, guid: 070d087d446818e4b892a705535da4b5, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991157048065300, guid: 070d087d446818e4b892a705535da4b5, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164566602189298, guid: 070d087d446818e4b892a705535da4b5, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 070d087d446818e4b892a705535da4b5, type: 2}
@@ -1120,7 +1156,7 @@ GameObject:
   - component: {fileID: 189207453}
   - component: {fileID: 189207455}
   - component: {fileID: 189207454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: m_EggCartonTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1231,7 @@ GameObject:
   - component: {fileID: 212651404}
   - component: {fileID: 212651406}
   - component: {fileID: 212651405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1305,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 263692782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,6 +1365,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1475288490994068, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009207408428320, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102655146977840, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393495653036612, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
   m_IsPrefabParent: 0
@@ -1343,7 +1395,7 @@ GameObject:
   - component: {fileID: 280784063}
   - component: {fileID: 280784065}
   - component: {fileID: 280784064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1416,7 +1468,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 294411365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Food Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1500,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 297361322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InteractableFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1608,7 +1660,7 @@ GameObject:
   - component: {fileID: 309721622}
   - component: {fileID: 309721624}
   - component: {fileID: 309721623}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1684,7 +1736,7 @@ GameObject:
   - component: {fileID: 327449342}
   - component: {fileID: 327449341}
   - component: {fileID: 327449340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1782,7 +1834,7 @@ GameObject:
   - component: {fileID: 459614784}
   - component: {fileID: 459614786}
   - component: {fileID: 459614785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BaconUncooked (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1906,7 +1958,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 481209356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tomatoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1991,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 481936213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Misc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1972,7 +2024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505185868}
   - component: {fileID: 505185869}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2041,7 +2093,7 @@ GameObject:
   - component: {fileID: 534250484}
   - component: {fileID: 534250486}
   - component: {fileID: 534250485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plate (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2191,7 +2243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 583597319}
   - component: {fileID: 583597320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spinach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2288,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 595004508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2272,7 +2324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624381963}
   - component: {fileID: 624381964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2315,7 +2367,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 671942482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EggCarton
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -2349,7 +2401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 680693843}
   - component: {fileID: 680693844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2450,7 @@ GameObject:
   - component: {fileID: 714677762}
   - component: {fileID: 714677761}
   - component: {fileID: 714677760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonFridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2581,6 +2633,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &751062023 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108222371732444842, guid: 07ef05f413a082d44bc22134072772d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1960680047}
 --- !u!1 &758085260 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1145642246669240, guid: 537f2c85f84ceb143bee7aa66c709492,
@@ -2596,7 +2653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759499105}
   - component: {fileID: 759499106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tomatos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2643,7 +2700,7 @@ GameObject:
   - component: {fileID: 775906405}
   - component: {fileID: 775906407}
   - component: {fileID: 775906406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2721,7 +2778,7 @@ GameObject:
   - component: {fileID: 820999066}
   - component: {fileID: 820999065}
   - component: {fileID: 820999064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtonPantry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2996,7 +3053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834908030}
   - component: {fileID: 834908031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3256,7 @@ GameObject:
   - component: {fileID: 912411923}
   - component: {fileID: 912411925}
   - component: {fileID: 912411924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HollandaiseSauce
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -3377,7 +3434,7 @@ GameObject:
   - component: {fileID: 919828817}
   - component: {fileID: 919828816}
   - component: {fileID: 919828815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NoPickUpCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3704,7 +3761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018566699}
   - component: {fileID: 1018566700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3773,7 +3830,7 @@ GameObject:
   - component: {fileID: 1050701687}
   - component: {fileID: 1050701689}
   - component: {fileID: 1050701688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonLedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3921,7 +3978,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1079885189}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bacon
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -3956,7 +4013,7 @@ GameObject:
   - component: {fileID: 1093281164}
   - component: {fileID: 1093281166}
   - component: {fileID: 1093281165}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: m_EggCartonBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4160,7 +4217,7 @@ GameObject:
   - component: {fileID: 1153910998}
   - component: {fileID: 1153911000}
   - component: {fileID: 1153910999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plate (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4267,6 +4324,22 @@ Prefab:
       propertyPath: m_Name
       value: SpinachPickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 1266452392831744, guid: 241d86f5377f45b43888fa6f3cddff57, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996297618411754, guid: 241d86f5377f45b43888fa6f3cddff57, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440040115170656, guid: 241d86f5377f45b43888fa6f3cddff57, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770643156761524, guid: 241d86f5377f45b43888fa6f3cddff57, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 241d86f5377f45b43888fa6f3cddff57, type: 2}
   m_IsPrefabParent: 0
@@ -4279,7 +4352,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1209873701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plates
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -4315,7 +4388,7 @@ GameObject:
   - component: {fileID: 1227025421}
   - component: {fileID: 1227025423}
   - component: {fileID: 1227025422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtonLedge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4659,6 +4732,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1885787832847714, guid: 86a0c71da72f9634eac3d96f61d161a9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448606845777172, guid: 86a0c71da72f9634eac3d96f61d161a9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811018815885908, guid: 86a0c71da72f9634eac3d96f61d161a9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465554052973670, guid: 86a0c71da72f9634eac3d96f61d161a9, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86a0c71da72f9634eac3d96f61d161a9, type: 2}
   m_IsPrefabParent: 0
@@ -4704,7 +4793,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1291865343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Food Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4803,7 +4892,7 @@ GameObject:
   - component: {fileID: 1293727934}
   - component: {fileID: 1293727936}
   - component: {fileID: 1293727935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plate (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +5027,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1348778706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InteractableFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5007,7 +5096,7 @@ GameObject:
   - component: {fileID: 1369535896}
   - component: {fileID: 1369535898}
   - component: {fileID: 1369535897}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5080,7 +5169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1414909709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushrooms
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -5114,7 +5203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1424723565}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fridge Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5148,7 +5237,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1466743267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5253,7 +5342,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1470523903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fridge Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5286,7 +5375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481009617}
   - component: {fileID: 1481009618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485875741}
   - component: {fileID: 1485875742}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeLight_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5406,7 +5495,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1529102877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5525,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1533671557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5473,7 +5562,7 @@ GameObject:
   - component: {fileID: 1546429385}
   - component: {fileID: 1546429387}
   - component: {fileID: 1546429386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5552,7 +5641,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1550754473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Misc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5587,7 +5676,7 @@ GameObject:
   - component: {fileID: 1575859278}
   - component: {fileID: 1575859280}
   - component: {fileID: 1575859279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spinach
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -5749,7 +5838,7 @@ GameObject:
   - component: {fileID: 1605764235}
   - component: {fileID: 1605764237}
   - component: {fileID: 1605764236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FridgeBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5918,7 +6007,7 @@ GameObject:
   - component: {fileID: 1626120405}
   - component: {fileID: 1626120407}
   - component: {fileID: 1626120406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5993,7 +6082,7 @@ GameObject:
   - component: {fileID: 1630031898}
   - component: {fileID: 1630031900}
   - component: {fileID: 1630031899}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ButtonHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6068,7 +6157,7 @@ GameObject:
   - component: {fileID: 1642944491}
   - component: {fileID: 1642944493}
   - component: {fileID: 1642944492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: m_EggCartonLip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6142,7 +6231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1678621681}
   - component: {fileID: 1678621682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1685170545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6254,7 +6343,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1764655762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pantry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6288,7 +6377,7 @@ GameObject:
   - component: {fileID: 1767031592}
   - component: {fileID: 1767031594}
   - component: {fileID: 1767031593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mug
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -6363,7 +6452,7 @@ GameObject:
   - component: {fileID: 1776886230}
   - component: {fileID: 1776886232}
   - component: {fileID: 1776886231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6439,7 +6528,7 @@ GameObject:
   - component: {fileID: 1777997751}
   - component: {fileID: 1777997753}
   - component: {fileID: 1777997752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BreadLoaf
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -6549,7 +6638,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1809571063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6611,7 +6700,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1821765726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SceneryItems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6707,6 +6796,22 @@ Prefab:
       propertyPath: m_Name
       value: BaconPickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 1462778100974796, guid: bdaeb9a0dbad29249b69570ae05d6228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1359925481772810, guid: bdaeb9a0dbad29249b69570ae05d6228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527385262870044, guid: bdaeb9a0dbad29249b69570ae05d6228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568759584412624, guid: bdaeb9a0dbad29249b69570ae05d6228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdaeb9a0dbad29249b69570ae05d6228, type: 2}
   m_IsPrefabParent: 0
@@ -6777,11 +6882,48 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114019492493491550, guid: a21ef0d0d13661845a894b36834bba50,
+    - target: {fileID: 4198019460979464, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198019460979464, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23807912188593400, guid: a21ef0d0d13661845a894b36834bba50,
         type: 2}
-      propertyPath: staplePoint
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1899862549}
+      objectReference: {fileID: 2100000, guid: b9492603f1d1609428252b722340e964, type: 2}
+    - target: {fileID: 23799942028551660, guid: a21ef0d0d13661845a894b36834bba50,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0754221814ef1e44d85e29bfd7b5eb70, type: 2}
+    - target: {fileID: 1178364415234086, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_TagString
+      value: Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827698482702710, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797769944492460, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039831786498528, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243521983161894, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178364415234086, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a21ef0d0d13661845a894b36834bba50, type: 2}
   m_IsPrefabParent: 0
@@ -6795,11 +6937,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1178364415234086, guid: a21ef0d0d13661845a894b36834bba50,
     type: 2}
   m_PrefabInternal: {fileID: 1899862546}
---- !u!1 &1899862549 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1797769944492460, guid: a21ef0d0d13661845a894b36834bba50,
-    type: 2}
-  m_PrefabInternal: {fileID: 1899862546}
 --- !u!1 &1902957136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,7 +6948,7 @@ GameObject:
   - component: {fileID: 1902957137}
   - component: {fileID: 1902957139}
   - component: {fileID: 1902957138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7165,7 +7302,7 @@ GameObject:
   - component: {fileID: 1926972259}
   - component: {fileID: 1926972261}
   - component: {fileID: 1926972260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7347,6 +7484,88 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1470642989168858, guid: 07ef05f413a082d44bc22134072772d3, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225616352046566, guid: 07ef05f413a082d44bc22134072772d3, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1889062934706474, guid: 07ef05f413a082d44bc22134072772d3, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108748360200898288, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294965759
+      objectReference: {fileID: 0}
+    - target: {fileID: 108176631319516024, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294965759
+      objectReference: {fileID: 0}
+    - target: {fileID: 108785596446899002, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294965759
+      objectReference: {fileID: 0}
+    - target: {fileID: 108745243568561470, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294965759
+      objectReference: {fileID: 0}
+    - target: {fileID: 108809530785549618, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294965759
+      objectReference: {fileID: 0}
+    - target: {fileID: 108809530785549618, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 108176631319516024, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108745243568561470, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108809530785549618, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108222371732444842, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108785596446899002, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108748360200898288, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 108222371732444842, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108222371732444842, guid: 07ef05f413a082d44bc22134072772d3,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07ef05f413a082d44bc22134072772d3, type: 2}
   m_IsPrefabParent: 0
@@ -7460,7 +7679,7 @@ GameObject:
   - component: {fileID: 2084393915}
   - component: {fileID: 2084393917}
   - component: {fileID: 2084393916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7535,7 +7754,7 @@ GameObject:
   - component: {fileID: 2091623172}
   - component: {fileID: 2091623174}
   - component: {fileID: 2091623173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtonHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7737,7 +7956,7 @@ GameObject:
   - component: {fileID: 2104215222}
   - component: {fileID: 2104215224}
   - component: {fileID: 2104215223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pantry Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
