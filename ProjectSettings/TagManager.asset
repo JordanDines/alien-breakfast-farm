@@ -22,6 +22,7 @@ TagManager:
   - CoffeeMachine
   - Coffee
   - Plate
+  - Sauce
   layers:
   - Default
   - TransparentFX

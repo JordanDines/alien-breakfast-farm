@@ -9,139 +9,108 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1885787832847714}
+  m_RootGameObject: {fileID: 1346870949373682}
   m_IsPrefabParent: 1
---- !u!1 &1448606845777172
+--- !u!1 &1346870949373682
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4847120078815748}
-  m_Layer: 9
+  - component: {fileID: 4021135315577414}
+  - component: {fileID: 65495881574806354}
+  - component: {fileID: 54858300222013244}
+  - component: {fileID: 114234205022348718}
+  - component: {fileID: 114299748121744126}
+  - component: {fileID: 82591144722452624}
+  m_Layer: 8
+  m_Name: SauceObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1505954665496606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4570419527461624}
+  m_Layer: 0
   m_Name: StaplePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1465554052973670
+--- !u!1 &1952055246289364
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4058529629411122}
-  - component: {fileID: 33900618975566416}
-  - component: {fileID: 23871024691917450}
-  m_Layer: 9
-  m_Name: EggUncooked
-  m_TagString: Egg
+  - component: {fileID: 4460687891102888}
+  - component: {fileID: 33763083368936488}
+  - component: {fileID: 23843857417481034}
+  m_Layer: 0
+  m_Name: Sauce
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2
-  m_IsActive: 1
---- !u!1 &1811018815885908
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4521645612851216}
-  - component: {fileID: 33700191333768918}
-  - component: {fileID: 23277900209282226}
-  m_Layer: 9
-  m_Name: EggCooked
-  m_TagString: CookedEgg
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2
-  m_IsActive: 0
---- !u!1 &1885787832847714
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4308494813691298}
-  - component: {fileID: 54840592750437240}
-  - component: {fileID: 65278462815544412}
-  - component: {fileID: 114417018021567982}
-  - component: {fileID: 114898074809248846}
-  - component: {fileID: 82490918129959212}
-  m_Layer: 9
-  m_Name: Egg_PickUp
-  m_TagString: Egg
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4058529629411122
+--- !u!4 &4021135315577414
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465554052973670}
-  m_LocalRotation: {x: -0, y: -0, z: -1.110223e-16, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4308494813691298}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4308494813691298
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4058529629411122}
-  - {fileID: 4521645612851216}
-  - {fileID: 4847120078815748}
+  - {fileID: 4570419527461624}
+  - {fileID: 4460687891102888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4521645612851216
+--- !u!4 &4460687891102888
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1811018815885908}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1952055246289364}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.10967672, z: 1}
   m_Children: []
-  m_Father: {fileID: 4308494813691298}
+  m_Father: {fileID: 4021135315577414}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4847120078815748
+--- !u!4 &4570419527461624
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1448606845777172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0271, z: -0.005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1505954665496606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.00403, z: 0}
+  m_LocalScale: {x: 1, y: 0.10967672, z: 1}
   m_Children: []
-  m_Father: {fileID: 4308494813691298}
-  m_RootOrder: 2
+  m_Father: {fileID: 4021135315577414}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23277900209282226
+--- !u!23 &23843857417481034
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1811018815885908}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1952055246289364}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -149,8 +118,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fbd0a8f1418793c438feca91c5a5c1be, type: 3}
-  - {fileID: 2100002, guid: fbd0a8f1418793c438feca91c5a5c1be, type: 3}
+  - {fileID: 2100000, guid: 30727e55b78a6ce4c999deeb3e920f7b, type: 2}
+  - {fileID: 2100000, guid: 30727e55b78a6ce4c999deeb3e920f7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,60 +139,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23871024691917450
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465554052973670}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 9692d1a042fb3634cbeab7ca8cb291f4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &33700191333768918
+--- !u!33 &33763083368936488
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1811018815885908}
-  m_Mesh: {fileID: 4300000, guid: fbd0a8f1418793c438feca91c5a5c1be, type: 3}
---- !u!33 &33900618975566416
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465554052973670}
-  m_Mesh: {fileID: 4300000, guid: 290ff0d9906a70a448c7b31527df5263, type: 3}
---- !u!54 &54840592750437240
+  m_GameObject: {fileID: 1952055246289364}
+  m_Mesh: {fileID: 4300000, guid: 4e11674ac910bc74db7edc4fa5f97be3, type: 3}
+--- !u!54 &54858300222013244
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -233,24 +161,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65278462815544412
+--- !u!65 &65495881574806354
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.1, z: 0.052429225}
-  m_Center: {x: -0.045, y: 0.035721187, z: -0.000000059471574}
---- !u!82 &82490918129959212
+  m_Size: {x: 0.1, y: 0.15, z: 0.1}
+  m_Center: {x: 0, y: 0.05, z: 0}
+--- !u!82 &82591144722452624
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -325,31 +253,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114417018021567982
+--- !u!114 &114234205022348718
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1895ac3a2985927439e3fbde69c98e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: {fileID: 11400000, guid: f19335adb8e518249a5760cc38cbe153, type: 2}
-  uncookedMesh: {fileID: 1465554052973670}
-  cookedMesh: {fileID: 1811018815885908}
+  ingredient: {fileID: 11400000, guid: 5efb316577507eb4a92efbbbfdb6096c, type: 2}
+  uncookedMesh: {fileID: 1952055246289364}
+  cookedMesh: {fileID: 1952055246289364}
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
   offset: {x: 0, y: 0, z: 0}
-  staplePoint: {fileID: 1448606845777172}
---- !u!114 &114898074809248846
+  staplePoint: {fileID: 0}
+--- !u!114 &114299748121744126
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885787832847714}
+  m_GameObject: {fileID: 1346870949373682}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -360,7 +288,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114417018021567982}
+        - m_Target: {fileID: 23843857417481034}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 114234205022348718}
           m_MethodName: GrabObject
           m_Mode: 1
           m_Arguments:
@@ -369,9 +308,9 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 82490918129959212}
+        - m_Target: {fileID: 82591144722452624}
           m_MethodName: Play
           m_Mode: 1
           m_Arguments:
@@ -380,7 +319,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
