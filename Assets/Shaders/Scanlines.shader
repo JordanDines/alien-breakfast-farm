@@ -1,13 +1,12 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6596-OUT,spec-358-OUT,alpha-3982-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:31785,y:32232,varname:node_6343,prsc:2;n:type:ShaderForge.SFN_Tex2d,id:7736,x:32254,y:32622,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:21916c2c8afab0048a0150c03850af13,ntxv:0,isnm:False|UVIN-457-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:32195,y:33020,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:31921,y:32402,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Add,id:457,x:32035,y:32622,varname:node_457,prsc:2|A-265-UVOUT,B-5697-OUT;n:type:ShaderForge.SFN_TexCoord,id:265,x:31800,y:32531,varname:node_265,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Multiply,id:5697,x:31800,y:32735,varname:node_5697,prsc:2|A-9663-OUT,B-4255-T;n:type:ShaderForge.SFN_Append,id:9663,x:31596,y:32661,varname:node_9663,prsc:2|A-9125-OUT,B-7288-OUT;n:type:ShaderForge.SFN_Time,id:4255,x:31596,y:32803,varname:node_4255,prsc:2;n:type:ShaderForge.SFN_ValueProperty,id:9125,x:31368,y:32585,ptovrint:False,ptlb:U speed,ptin:_Uspeed,varname:node_9125,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:7288,x:31368,y:32739,ptovrint:False,ptlb:V speed,ptin:_Vspeed,varname:_node_9125_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5;n:type:ShaderForge.SFN_Color,id:7124,x:32254,y:32831,ptovrint:False,ptlb:node_7124,ptin:_node_7124,varname:node_7124,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5,c2:0.5,c3:0.5,c4:1;n:type:ShaderForge.SFN_Multiply,id:6596,x:32458,y:32710,varname:node_6596,prsc:2|A-7736-RGB,B-7124-RGB;n:type:ShaderForge.SFN_Slider,id:3982,x:32195,y:33121,ptovrint:False,ptlb:Opacity,ptin:_Opacity,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;proporder:7736-358-1813-9125-7288-7124-3982;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:3,bdst:7,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6596-OUT,spec-358-OUT,alpha-3982-OUT;n:type:ShaderForge.SFN_Tex2d,id:7736,x:32254,y:32622,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ece1c0a13c7103648a5e5ab43cacda38,ntxv:0,isnm:False|UVIN-457-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:32195,y:33020,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:457,x:32035,y:32622,varname:node_457,prsc:2|A-265-UVOUT,B-5697-OUT;n:type:ShaderForge.SFN_TexCoord,id:265,x:31800,y:32531,varname:node_265,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Multiply,id:5697,x:31800,y:32735,varname:node_5697,prsc:2|A-9663-OUT,B-4255-T;n:type:ShaderForge.SFN_Append,id:9663,x:31596,y:32661,varname:node_9663,prsc:2|A-9125-OUT,B-7288-OUT;n:type:ShaderForge.SFN_Time,id:4255,x:31596,y:32803,varname:node_4255,prsc:2;n:type:ShaderForge.SFN_ValueProperty,id:9125,x:31368,y:32585,ptovrint:False,ptlb:U speed,ptin:_Uspeed,varname:node_9125,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:7288,x:31368,y:32739,ptovrint:False,ptlb:V speed,ptin:_Vspeed,varname:_node_9125_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5;n:type:ShaderForge.SFN_Color,id:7124,x:32254,y:32831,ptovrint:False,ptlb:node_7124,ptin:_node_7124,varname:node_7124,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5,c2:0.5,c3:0.5,c4:1;n:type:ShaderForge.SFN_Multiply,id:6596,x:32458,y:32710,varname:node_6596,prsc:2|A-7736-RGB,B-7124-RGB;n:type:ShaderForge.SFN_Slider,id:3982,x:32195,y:33121,ptovrint:False,ptlb:Opacity,ptin:_Opacity,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;proporder:7736-358-9125-7288-7124-3982;pass:END;sub:END;*/
 
 Shader "Shader Forge/Scanlines" {
     Properties {
         _MainTex ("Base Color", 2D) = "white" {}
         _Metallic ("Metallic", Range(0, 1)) = 0
-        _Gloss ("Gloss", Range(0, 1)) = 0.8
         _Uspeed ("U speed", Float ) = 1
         _Vspeed ("V speed", Float ) = 0.5
         _node_7124 ("node_7124", Color) = (0.5,0.5,0.5,1)
@@ -25,6 +24,7 @@ Shader "Shader Forge/Scanlines" {
             Tags {
                 "LightMode"="ForwardBase"
             }
+            Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
             
             CGPROGRAM
@@ -42,7 +42,7 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
@@ -231,7 +231,7 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
@@ -358,7 +358,7 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
