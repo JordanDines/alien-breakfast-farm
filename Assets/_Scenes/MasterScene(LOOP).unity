@@ -91,7 +91,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 1e61bd906e1e3e54b85a06ac388a11cb,
+  m_LightingDataAsset: {fileID: 112000002, guid: 81fbd5385393cdc4a8254950c376d629,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -489,8 +489,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.646281, y: 1, z: 3.2012482}
-  m_Center: {x: 0.6780758, y: 0, z: -0.49322358}
+  m_Size: {x: 5.646281, y: 1, z: 5}
+  m_Center: {x: 0.6780758, y: 0, z: -1}
 --- !u!33 &40844078
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -958,22 +958,6 @@ Prefab:
     - target: {fileID: 1402632260402338, guid: 070d087d446818e4b892a705535da4b5, type: 2}
       propertyPath: m_Name
       value: Bread_Obj
-      objectReference: {fileID: 0}
-    - target: {fileID: 1237268609574378, guid: 070d087d446818e4b892a705535da4b5, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1991157048065300, guid: 070d087d446818e4b892a705535da4b5, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1164566602189298, guid: 070d087d446818e4b892a705535da4b5, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402632260402338, guid: 070d087d446818e4b892a705535da4b5, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 070d087d446818e4b892a705535da4b5, type: 2}
@@ -1510,6 +1494,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4123669469884790, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009207408428320, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393495653036612, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102655146977840, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475288490994068, guid: 1e8b2f699c1ba574288bac90c52ad096, type: 2}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2281,6 +2281,18 @@ Prefab:
       propertyPath: m_Name
       value: Sauce_Obj
       objectReference: {fileID: 0}
+    - target: {fileID: 1901518010490642, guid: e4dceb770ef0e5945942ce62034a5604, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894761474066932, guid: e4dceb770ef0e5945942ce62034a5604, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707744631769796, guid: e4dceb770ef0e5945942ce62034a5604, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4dceb770ef0e5945942ce62034a5604, type: 2}
   m_IsPrefabParent: 0
@@ -2607,6 +2619,22 @@ Prefab:
     - target: {fileID: 1913398759717184, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
       propertyPath: m_Name
       value: Plate_Obj
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069179764151386, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1237835518482662, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913398759717184, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262064516864004, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
@@ -3913,7 +3941,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.646281, y: 1, z: 3.2012482}
+  m_Size: {x: 5.646281, y: 1, z: 5}
   m_Center: {x: 0.6780758, y: 0, z: -0.49322358}
 --- !u!33 &919828817
 MeshFilter:
