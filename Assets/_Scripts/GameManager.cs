@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+	public bool infinite;
 	[HideInInspector]
 	//If the player can hold something
 	public bool canHold = true;
@@ -42,11 +44,11 @@ public class GameManager : MonoBehaviour
 	public List<Ingredient> currentlyPlated = new List<Ingredient> ();
 
 	public GameObject ingredientPanel;
+	public GameObject finishedPanel;
+
 
 	void Start ()
 	{
-		
-
 		//Locks the rotation of the screen so the home button is on the right
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
 		currentRecipe = recipes [recipeIndex];
@@ -74,10 +76,6 @@ public class GameManager : MonoBehaviour
 
 	void Update ()
 	{
-
-		if (isPlating) {
-
-		}
 		currentRecipe = recipes [recipeIndex];
 		PlateUpInteractive ();
 
@@ -87,11 +85,11 @@ public class GameManager : MonoBehaviour
 		if (!breakfastReady) {
 			CheckRecipe ();
 		}
-		 
-
+		if (!infinite && recipeIndex == recipes.Count - 1) {
+			finishedPanel.SetActive (true);
+			ingredientPanel.SetActive (false);
+		}
 	}
-
-
 
 	void CreateNewRecipe ()
 	{
@@ -126,15 +124,39 @@ public class GameManager : MonoBehaviour
 						Destroy (tempGO.gameObject);
 					}
 				}
-
 			}
 			if (numItemsCorrect == numItemsNeeded) {
 				breakfastReady = true;
 				numItemsCorrect = 0;
 				break;
 			}
-
 		}
+	}
+
+	public void InfiniteNextRecipe () {
+		//Clears the ingredients panel
+		int ingCount = ingredientPanel.transform.childCount;
+		Transform tempIng;
+		for (int i = 0; i < ingCount; i++) {
+			tempIng = ingredientPanel.transform.GetChild (i);
+			Destroy (tempIng.gameObject);
+		}
+
+		//Clears the served items from the game world
+		int servedItems = plateUp.GetComponent<PlateUp> ().placePoint.transform.childCount;
+		Transform tempServed;
+		for (int i = 0; i < servedItems; i++) {
+			tempServed = plateUp.GetComponent<PlateUp> ().placePoint.transform.GetChild (i);
+			Destroy (tempServed.gameObject);
+		}
+
+		recipeIndex = Random.Range(1, (recipes.Count - 1));
+		currentNeededIngredients.Clear ();
+		currentlyPlated.Clear ();
+		previousObject = null;
+		plateUpButton.GetComponent <Collider> ().enabled = false;
+		breakfastReady = false;
+		CreateNewRecipe ();
 	}
 
 
@@ -163,14 +185,12 @@ public class GameManager : MonoBehaviour
 		plateUpButton.GetComponent <Collider> ().enabled = false;
 		breakfastReady = false;
 		CreateNewRecipe ();
-		Debug.Log (currentRecipe);
 	}
 
 	void PlateUpInteractive ()
 	{
 		//Checks if the currently held object is ready to be plated up
 		if (holdingObject != null && (holdingObject.GetComponent<ObjectInteract> ().isReady == true || holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false)) {
-			Debug.Log ("The plate can be used");
 			//Make the plate up area interactable
 			plateUp.GetComponent<PlateUp>().plateUpGlow.SetActive(true);
 			plateUp.GetComponent<Collider> ().enabled = true;
@@ -180,6 +200,10 @@ public class GameManager : MonoBehaviour
 			plateUp.GetComponent<Collider> ().enabled = false;
 			//}
 		}
+	}
+
+	public void NextScene () {
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 	public void RestartScene () {
