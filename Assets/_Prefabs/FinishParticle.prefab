@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4733722189476624}
   - component: {fileID: 198330210229620620}
+  - component: {fileID: 114247991456418648}
   - component: {fileID: 199237275350948422}
   m_Layer: 0
   m_Name: FinishParticle
@@ -34,13 +35,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1966154188401344}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5763, y: 0.371, z: 0.0129}
+  m_LocalRotation: {x: -0.7071068, y: -0.0000003874302, z: -0.0000003874302, w: 0.7071068}
+  m_LocalPosition: {x: 0.58399993, y: 0.94805056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114247991456418648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966154188401344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5271e235395b0447a72f731acbca3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestory: 2
 --- !u!198 &198330210229620620
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +114,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1315489136
+  randomSeed: 750631779
   InitialModule:
     serializedVersion: 3
     enabled: 1

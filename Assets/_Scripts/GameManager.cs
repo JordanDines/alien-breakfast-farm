@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
 	public GameObject ingredientPanel;
 	public GameObject finishedPanel;
 
+	public GameObject teleportParticle;
 
 	void Start ()
 	{
@@ -149,7 +150,8 @@ public class GameManager : MonoBehaviour
 			tempServed = plateUp.GetComponent<PlateUp> ().placePoint.transform.GetChild (i);
 			Destroy (tempServed.gameObject);
 		}
-
+			
+		Instantiate (teleportParticle, plateUp.transform.position, teleportParticle.transform.rotation, plateUp.transform);
 		recipeIndex = Random.Range(1, (recipes.Count - 1));
 		currentNeededIngredients.Clear ();
 		currentlyPlated.Clear ();
@@ -178,6 +180,7 @@ public class GameManager : MonoBehaviour
 			Destroy (tempServed.gameObject);
 		}
 
+		Instantiate (teleportParticle, plateUp.transform.position, teleportParticle.transform.rotation);
 		recipeIndex++;
 		currentNeededIngredients.Clear ();
 		currentlyPlated.Clear ();
