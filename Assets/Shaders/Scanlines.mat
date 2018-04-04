@@ -26,7 +26,7 @@ Material:
     - _Cutoff: 0.5
     - _Gloss: 1
     - _Metallic: 1
-    - _Opacity: 0
+    - _Opacity: 0.961
     - _Uspeed: 1
     - _Vspeed: 0.2
     m_Colors:
