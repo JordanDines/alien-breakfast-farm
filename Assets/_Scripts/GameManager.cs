@@ -52,11 +52,13 @@ public class GameManager : MonoBehaviour
 	{
 		//Locks the rotation of the screen so the home button is on the right
 		Screen.orientation = ScreenOrientation.LandscapeLeft;
-		currentRecipe = recipes [recipeIndex];
-		foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
+		if (infinite) {
+			recipeIndex = Random.Range(1, recipes.Count);
+		}
+			currentRecipe = recipes [recipeIndex];
+			foreach (Ingredient ingredient in currentRecipe.ingredientsInRecipe) {
 			if (currentNeededIngredients.Count >= currentRecipe.ingredientsInRecipe.Count) {
 				breakfastReady = false;
-				Debug.Log ("Got them adding to list");
 				break;
 			} else {
 				if (currentRecipe.ingredientsInRecipe.Contains (ingredient)) {
@@ -86,9 +88,14 @@ public class GameManager : MonoBehaviour
 		if (!breakfastReady) {
 			CheckRecipe ();
 		}
-		if (!infinite && recipeIndex == recipes.Count - 1) {
+			
+	}
+
+	public void CheckGameEnded() {
+	if (!infinite && recipeIndex == recipes.Count - 1) {
 			finishedPanel.SetActive (true);
 			ingredientPanel.SetActive (false);
+			return;
 		}
 	}
 

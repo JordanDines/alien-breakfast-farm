@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 114769056575479058}
   - component: {fileID: 114755213300885818}
   m_Layer: 0
-  m_Name: FUCK
+  m_Name: CanvasFix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

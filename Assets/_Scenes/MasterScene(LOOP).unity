@@ -3520,7 +3520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ee6a47d876d9e4bacb3b12085753a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infinite: 0
+  infinite: 1
   canHold: 1
   canPlace: 0
   holdingObject: {fileID: 0}
@@ -3537,7 +3537,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 920092824fec98b4db3f235489dd9076, type: 2}
   - {fileID: 11400000, guid: 2536ea0cc63ebd747a0e507619008625, type: 2}
   - {fileID: 11400000, guid: 05a474d55a7204149934dd8270e52f72, type: 2}
-  - {fileID: 11400000, guid: 2709cf8d82c1121469202e50390b0490, type: 2}
   currentNeededIngredients: []
   currentRecipe: {fileID: 0}
   currentlyPlated: []
@@ -4030,7 +4029,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 845248162}
-          m_MethodName: NextRecipe
+          m_MethodName: InfiniteNextRecipe
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4108,17 +4107,6 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1964700571}
           m_MethodName: RespawnIngredient
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 845248162}
-          m_MethodName: CheckGameEnded
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

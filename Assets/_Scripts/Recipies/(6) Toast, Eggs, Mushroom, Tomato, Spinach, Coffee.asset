@@ -9,10 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6976dd85c7030d94eadd57d32e9e5dfd, type: 3}
-  m_Name: (4)Bacon, Eggs, Mushroom, Coffee
+  m_Name: (6) Toast, Eggs, Mushroom, Tomato, Spinach, Coffee
   m_EditorClassIdentifier: 
   ingredientsInRecipe:
-  - {fileID: 11400000, guid: d2ceea04bad8c2f4bab6d8d58ff5545c, type: 2}
+  - {fileID: 11400000, guid: 1342aac01b711114c824706d8107d9d8, type: 2}
   - {fileID: 11400000, guid: f19335adb8e518249a5760cc38cbe153, type: 2}
   - {fileID: 11400000, guid: 3c7adf9550777774eb60ab86d6ba9d8f, type: 2}
+  - {fileID: 11400000, guid: 4eb752e0793e14544b8e7dcde8c29157, type: 2}
+  - {fileID: 11400000, guid: 39a84d58a3d5e11418eba20722692575, type: 2}
   - {fileID: 11400000, guid: e379df44344734a4988b719e4abd8bb8, type: 2}
