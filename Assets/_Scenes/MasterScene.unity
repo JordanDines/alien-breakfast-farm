@@ -8,9 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 4
     smallestHole: 0.25
     backfaceThreshold: 50
-  m_SceneGUID: 7c8fd364583178140b667e3296e07be6
-  m_OcclusionCullingData: {fileID: 36300000, guid: a7502f8bd36025548a8d88ba576b474e,
-    type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -8041,27 +8040,27 @@ Prefab:
     - target: {fileID: 108748360200898288, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965759
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 108176631319516024, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965759
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 108785596446899002, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965759
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 108745243568561470, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965759
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 108809530785549618, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 4294965759
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 108809530785549618, guid: 07ef05f413a082d44bc22134072772d3,
         type: 2}
