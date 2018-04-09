@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/_Scenes/MasterScene.unity
+  - enabled: 0
+    path: Assets/_Scenes/_Non VR/MasterScene.unity
     guid: 7c8fd364583178140b667e3296e07be6
+  - enabled: 0
+    path: Assets/_Scenes/_Non VR/MasterScene(LOOP).unity
+    guid: 1b5c0ad7e29fc0c41b8d2e3c61be6a64
   - enabled: 1
-    path: Assets/_Scenes/MasterScene(LOOP).unity
-    guid: 3bd639e4eee2a794d820f83d163e92b9
+    path: Assets/_Scenes/_VR/MasterScene 1.unity
+    guid: bcb86abe8680d7a41ae7943821c04ef9
+  - enabled: 1
+    path: Assets/_Scenes/_VR/MasterScene(LOOP) 1.unity
+    guid: ae2a614b2ab650144a0623a9b1f3bebd
