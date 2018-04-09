@@ -135,8 +135,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475288490994068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0.0012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4430363312121664}
@@ -144,7 +144,7 @@ Transform:
   - {fileID: 4567709890631018}
   m_Father: {fileID: 4932789736024346}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!4 &4221970307680770
 Transform:
   m_ObjectHideFlags: 1
@@ -165,7 +165,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299363648908936}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.025, z: -0.0025}
+  m_LocalPosition: {x: 0, y: 0.00343, z: -0.0025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4932789736024346}
@@ -190,13 +190,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393495653036612}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.00089125347, y: 0.02421831, z: -0.017315643, w: 0.99955636}
+  m_LocalPosition: {x: -0.0021, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4123669469884790}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.15, y: 2.7730002, z: -1.9810001}
 --- !u!4 &4567709890631018
 Transform:
   m_ObjectHideFlags: 1
@@ -204,7 +204,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096256917909346}
   m_LocalRotation: {x: 0.12698345, y: 0.000000059604645, z: 0.000000014901161, w: 0.99190485}
-  m_LocalPosition: {x: -0.0031000176, y: -0.0065000057, z: 0.016299935}
+  m_LocalPosition: {x: -0.0052000084, y: -0.0065000057, z: 0.016299935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4123669469884790}
@@ -514,7 +514,7 @@ MonoBehaviour:
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
-  offset: {x: 90, y: 90, z: 0}
+  offset: {x: 0, y: 90, z: 0}
   staplePoint: {fileID: 1299363648908936}
 --- !u!114 &114251327300928888
 MonoBehaviour:
