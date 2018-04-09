@@ -189,7 +189,7 @@ QualitySettings:
   - serializedVersion: 2
     name: Mobile
     pixelLightCount: 10
-    shadows: 0
+    shadows: 1
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 2
