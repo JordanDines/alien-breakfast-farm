@@ -86,6 +86,7 @@ public class PlateUp : MonoBehaviour {
 
 	public void PlaceFood () {
 		if (gm.holdingObject.GetComponent<ObjectInteract> ().isReady || gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false) {
+			gm.holdingObject.GetComponent<ObjectInteract> ().respawnParent.GetComponent<Respawn> ().RespawnIngredient ();
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
 			gm.currentlyPlated.Add (oi.ingredient);
 			isPlating = true;

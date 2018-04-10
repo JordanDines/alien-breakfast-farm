@@ -38,8 +38,11 @@ public class ObjectInteract : MonoBehaviour {
 	private GameObject reticle;
 	[Tooltip("Drag in this objects 'Staple Point' GameObject which will reference the position that the next item will be stacked at")]
 	public GameObject staplePoint;
+	[HideInInspector]
+	public GameObject respawnParent;
 
 	void Start () {
+		respawnParent = this.gameObject.transform.parent.gameObject;
 		//Find the object holding this script and get the gameobject as a reference
 		reticle = FindObjectOfType<GvrReticlePointer> ().gameObject;
 		//Find the GameManager in the scene to reference later on
