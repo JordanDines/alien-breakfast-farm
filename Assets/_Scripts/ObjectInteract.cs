@@ -49,10 +49,10 @@ public class ObjectInteract : MonoBehaviour {
 		gm = FindObjectOfType<GameManager> ();
 		//Find the player's HoldingPoint to also reference later on
 		holdingPoint = GameObject.FindGameObjectWithTag ("HoldingPoint");
-		//Initialize the object currently being held in the GameManager
-		gm.holdingObject = null;
 		//Set this objects tag to the tag it needs to be
 		transform.tag = ingredient.tagThisAs;
+
+		grabbingSpeed = ingredient.grabbingSpeed;
 	}
 
 
@@ -130,10 +130,7 @@ public class ObjectInteract : MonoBehaviour {
 			transform.GetComponent<Collider> ().enabled = false;
 		}
 	}
-
-	void DropObject () {
-
-	}
+		
 
 
 	//This function has been depreciated in this script. See Appliances.cs void MoveTowardPlacement().
@@ -156,21 +153,24 @@ public class ObjectInteract : MonoBehaviour {
 
 	void MoveTowardsPlayer () {
 		//Then move it to the player and make it look at the player
-		transform.position = Vector3.Lerp (transform.position, holdingPoint.transform.position, grabbingSpeed);
+		transform.position = Vector3.Lerp (transform.position, holdingPoint.transform.position, grabbingSpeed * Time.deltaTime);
 		gm.holdingObject.transform.LookAt(GameObject.FindGameObjectWithTag ("Player").transform.position);
+		hasBeenPlaced = false;
+		gm.canHold = false;
 		//If it has reached the player's holding point, allow it to be put down in a specific spot
-		if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.1f) {
-			hasBeenPlaced = false;
-			gm.canHold = false;
-			gm.canPlace = true;
+		if (Vector3.Distance(transform.position, holdingPoint.transform.position) < 0.007f) {
 			isGrabbing = false;
+			gm.canPlace = true;
 		}
 	}
 
+
 	void HoldingObject () {
-		//If you're holding the object, make it look at the player. Will follow the player's rotation
-		gm.holdingObject.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
-		gm.holdingObject.transform.rotation = Camera.main.GetComponent<Transform> ().transform.rotation;
+		if (gm.holdingObject.GetComponent<ObjectInteract> ().isGrabbing) {
+			//If you're holding the object, make it look at the player. Will follow the player's rotation
+			gm.holdingObject.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
+			gm.holdingObject.transform.rotation = Camera.main.GetComponent<Transform> ().transform.rotation;
+		}
 	}
 	#endregion
 		

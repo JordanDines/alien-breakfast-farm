@@ -11,10 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246d21d8adfd50f46af4fc641c74746b, type: 3}
   m_Name: Spinach
   m_EditorClassIdentifier: 
-  grabbingSpeed: 0.1
+  grabbingSpeed: 7
   timeToCook: 2
   needsToBeCooked: 1
-  cookedName: CookedSpinach
   tagThisAs: Spinach
   tagsToInteractWith:
   - Pan

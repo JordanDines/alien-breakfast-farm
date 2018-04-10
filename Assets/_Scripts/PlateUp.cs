@@ -39,27 +39,26 @@ public class PlateUp : MonoBehaviour {
 			MoveTowardsPlateUp ();
 		}
 
+		CheckPlateInteractivity ();
+
 	}
 
 
 	void MoveTowardsPlateUp () {
-		float tempOffsetx = gm.holdingObject.GetComponent<ObjectInteract> ().offset.x;
-		float tempOffsety = gm.holdingObject.GetComponent<ObjectInteract> ().offset.y;
-		float tempOffsetz = gm.holdingObject.GetComponent<ObjectInteract> ().offset.z;
+		Vector3 tempOffset = gm.holdingObject.GetComponent<ObjectInteract> ().offset;
+
 		if (gm.previousObject == null) {
-			//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-			//gm.holdingObject.transform.rotation = placePoint.transform.rotation;
-			gm.holdingObject.transform.rotation = Quaternion.Euler (new Vector3(tempOffsetx,tempOffsety, tempOffsetz));
-			//gm.holdingObject.transform.rotation = new Quaternion ((placePoint.transform.rotation.x + tempOffset.x), 
-			//	(placePoint.transform.rotation.y + tempOffset.y), (placePoint.transform.rotation.z + tempOffset.z), 0);
 			gm.holdingObject.transform.position = Vector3.Lerp
-				(gm.holdingObject.transform.position, placePoint.transform.position, grabbingSpeed);
+				(gm.holdingObject.transform.position, placePoint.transform.position, grabbingSpeed * Time.deltaTime);
+
+			//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
+			gm.holdingObject.transform.rotation = Quaternion.Euler (new Vector3 (tempOffset.x, tempOffset.y, tempOffset.z));
 			//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
-			if (Vector3.Distance (gm.holdingObject.transform.position, placePoint.transform.position) < .1f) {
+			if (Vector3.Distance (gm.holdingObject.transform.position, placePoint.transform.position) < .007f) {
 				isPlating = false;
-				gm.holdingObject.GetComponent<ObjectInteract> ().interactable = false;
 				gm.canHold = true;
 				gm.canPlace = false;
+				gm.holdingObject.GetComponent<ObjectInteract> ().interactable = false;
 				gm.previousObject = gm.holdingObject;
 				gm.holdingObject = null;
 			}
@@ -68,15 +67,15 @@ public class PlateUp : MonoBehaviour {
 		} else {
 			GameObject tempPlace = gm.previousObject.GetComponent<ObjectInteract> ().staplePoint;
 			//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-			gm.holdingObject.transform.rotation = Quaternion.Euler (new Vector3(tempOffsetx, tempOffsety, tempOffsetz));
+			gm.holdingObject.transform.rotation = Quaternion.Euler (new Vector3(tempOffset.x, tempOffset.y, tempOffset.z));
 			gm.holdingObject.transform.position = Vector3.Lerp
-				(gm.holdingObject.transform.position, tempPlace.transform.position, grabbingSpeed);
+				(gm.holdingObject.transform.position, tempPlace.transform.position, grabbingSpeed * Time.deltaTime);
 			//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
-			if (Vector3.Distance (gm.holdingObject.transform.position, tempPlace.transform.position) < .1f) {
+			if (Vector3.Distance (gm.holdingObject.transform.position, tempPlace.transform.position) < .007f) {
 				isPlating = false;
-				gm.holdingObject.GetComponent<ObjectInteract> ().interactable = false;
 				gm.canHold = true;
 				gm.canPlace = false;
+				gm.holdingObject.GetComponent<ObjectInteract> ().interactable = false;
 				gm.previousObject = gm.holdingObject;
 				gm.holdingObject = null;
 			}
@@ -87,11 +86,10 @@ public class PlateUp : MonoBehaviour {
 	public void PlaceFood () {
 		if (gm.holdingObject.GetComponent<ObjectInteract> ().isReady || gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false) {
 			gm.holdingObject.GetComponent<ObjectInteract> ().respawnParent.GetComponent<Respawn> ().RespawnIngredient ();
+			gm.holdingObject.transform.SetParent (placePoint.transform);
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
 			gm.currentlyPlated.Add (oi.ingredient);
 			isPlating = true;
-			gm.holdingObject.transform.SetParent (placePoint.transform);
-			transform.GetComponent<Collider> ().enabled = false;
 			putDownSound.Play ();
 
 		} else if (!gm.holdingObject.GetComponent<ObjectInteract> ().isReady && gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked) {
@@ -99,4 +97,19 @@ public class PlateUp : MonoBehaviour {
 			return;
 		}
 	}
+	void CheckPlateInteractivity ()
+	{
+		if (isPlating) {
+			//Make it not interactable
+			plateUpGlow.SetActive(false);
+			GetComponent<Collider> ().enabled = false;
+		}
+		//Checks if the currently held object is ready to be plated up
+		else if (gm.holdingObject != null && (gm.holdingObject.GetComponent<ObjectInteract> ().isReady == true || gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.needsToBeCooked == false)) {
+			//Make the plate up area interactable
+			plateUpGlow.SetActive(true);
+			GetComponent<Collider> ().enabled = true;
+		}
+	}
+
 }

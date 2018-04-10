@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  grabbingSpeed: 1
+  grabbingSpeed: 8
   inserting: 0
   removing: 0
   isCooking: 0
@@ -3924,28 +3924,22 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 114000221335006480, guid: 427dbe16823690f4380e64955b8681e8,
+        type: 2}
+      propertyPath: grabbingSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114608384394796894, guid: 427dbe16823690f4380e64955b8681e8,
+        type: 2}
+      propertyPath: grabbingSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 136380864240724524, guid: 427dbe16823690f4380e64955b8681e8, type: 2}
     - {fileID: 95334063820369380, guid: 427dbe16823690f4380e64955b8681e8, type: 2}
+    - {fileID: 135288183960903714, guid: 427dbe16823690f4380e64955b8681e8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 427dbe16823690f4380e64955b8681e8, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &916483880 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1185506577617900, guid: 427dbe16823690f4380e64955b8681e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 916483879}
---- !u!135 &916483881
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916483880}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0, y: 0.11081324, z: -0.08752396}
 --- !u!1 &919828813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,6 +5695,11 @@ Prefab:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1030345527}
+    - target: {fileID: 114079005461633952, guid: 579a774818ef7a647a781d2351db5c90,
+        type: 2}
+      propertyPath: grabbingSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 579a774818ef7a647a781d2351db5c90, type: 2}
   m_IsPrefabParent: 0
@@ -7913,7 +7912,7 @@ MonoBehaviour:
   oi: {fileID: 0}
   heldObject: {fileID: 0}
   placePoint: {fileID: 1820693692}
-  grabbingSpeed: 1
+  grabbingSpeed: 8
   isPlating: 0
   putDownSound: {fileID: 1911241191}
   plateUpGlow: {fileID: 97804601}

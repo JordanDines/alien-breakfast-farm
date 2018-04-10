@@ -52,11 +52,14 @@ public class Appliances : MonoBehaviour {
 
 	public GameObject finishedParticle;
 
+	private PlateUp plateup;
+
 	void Start () {
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
 		//Reference each of the holding points
 		heldObject = null;
+		plateup = FindObjectOfType<PlateUp> ();
 	}
 
 	void Update () {
@@ -116,21 +119,23 @@ public class Appliances : MonoBehaviour {
 
 	void MoveTowardsPlacement () {
 		//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-		gm.holdingObject.transform.rotation = holdingPoint1.transform.rotation;
+		gm.holdingObject.transform.rotation = applianceObject.GetComponent<Appliances>().holdingPoint1.transform.rotation;
 		gm.holdingObject.transform.position = Vector3.Lerp 
-				(gm.holdingObject.transform.position, holdingPoint1.transform.position, grabbingSpeed);
+			(gm.holdingObject.transform.position, applianceObject.GetComponent<Appliances>().holdingPoint1.transform.position, grabbingSpeed * Time.deltaTime);
 		//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
-		if (Vector3.Distance (gm.holdingObject.transform.position, holdingPoint1.transform.position) < .1f) {
+		if (Vector3.Distance (gm.holdingObject.transform.position, applianceObject.GetComponent<Appliances>().holdingPoint1.transform.position) < .007f) {
 			//Make the held object non interactable as to not fuck with player feedback (reticle openning and closing)
 			gm.holdingObject.GetComponent<ObjectInteract> ().interactable = false;
-			//Stop this function
-			isPlacing = false;
 			//Set the player to be able to pick things up
 			gm.canHold = true;
 			//Set the player to not be able to put things down
 			gm.canPlace = false;
 			//Set the player's held object to nothing
 			gm.holdingObject = null;
+			//Stop this function
+			isPlacing = false;
+			//Make the button active
+			button.transform.GetComponent<Collider> ().enabled = true;
 		}
 	}
 
@@ -150,15 +155,17 @@ public class Appliances : MonoBehaviour {
 
 	void MoveToHoldingPoint2 () {
 		//Get reference the button's tempHeldObject, then move it to the second holding point over (preset) time. This holding point is the INSERTED transform
-		tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint2.transform.position, grabbingSpeed);
+		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, applianceObject.GetComponent<Appliances>().holdingPoint2.transform.position, grabbingSpeed * Time.deltaTime);
+		button.transform.GetComponent<Collider> ().enabled = false;
 		//If it gets close enough
-		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint2.transform.position) < 0.1f) {
+		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint2.transform.position) < 0.007f) {
+			//button.GetComponent<Appliances> ().tempHeldObj = null;
 			//Stop this function from working
 			inserting = false;
 			//Set the appliance to be interacted with
 			//transform.GetComponent<Collider> ().enabled = true;
 			//Set the button to non-interactable, as to not interfere with player feedback (reticle size)
-			button.transform.GetComponent<Collider> ().enabled = false;
+
 		}
 		
 	}
@@ -166,11 +173,11 @@ public class Appliances : MonoBehaviour {
 	void MoveToHoldingPoint1 () {
 		applianceObject.GetComponent<Appliances> ().heldObject = null;
 		//Get the button's tempHeldObject position, then move it back to the first holding point over (preset) time. This holding point is the REMOVED transform
-		tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, holdingPoint1.transform.position, grabbingSpeed);
+		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (button.GetComponent<Appliances> ().tempHeldObj.transform.position, applianceObject.GetComponent<Appliances> ().holdingPoint1.transform.position, grabbingSpeed);
 		//If it gets close enough
-		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint1.transform.position) < 0.0001f) {
+		if (Vector3.Distance (button.GetComponent<Appliances> ().tempHeldObj.transform.position, button.GetComponent<Appliances> ().holdingPoint1.transform.position) < 0.007f) {
 			//Stop this function from running
-			button.GetComponent<Appliances> ().tempHeldObj = null;
+			//GetComponent<Appliances> ().tempHeldObj = null;
 			removing = false;
 		}
 	}
@@ -179,21 +186,24 @@ public class Appliances : MonoBehaviour {
 		//If you are holding something
 		if (gm.holdingObject != null) {
 			//Check if the thing that you're holding can interact with the thing you're looking at AND if the thing you're looking at isn't already in use
-			if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag) && applianceObject.GetComponent<Appliances> ().heldObject == null) {
-				Debug.Log ("Object to interact with: " + transform.tag + ". The current held object is: " + applianceObject.GetComponent<Appliances> ().heldObject);
-				//Then, make this appliance interactable
-				applianceObject.transform.GetComponent<Collider> ().enabled = true;
+			if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag) 
+				&& applianceObject.GetComponent<Appliances> ().heldObject == null 
+				&& gm.canPlace == true
+				&& plateup.isPlating == false) {
+					Debug.Log ("Object to interact with: " + transform.tag + ". The current held object is: " + applianceObject.GetComponent<Appliances> ().heldObject);
+					//Then, make this appliance interactable
+					applianceObject.transform.GetComponent<Collider> ().enabled = true;
 			} else {
 				//Else, make it unusable
-				//applianceObject.transform.GetComponent<Collider> ().enabled = false;
+				applianceObject.transform.GetComponent<Collider> ().enabled = false;
 			}
 			//If you're NOT holding something AND the appliance ISN'T holding something
-		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && button.GetComponent<Appliances> ().heldObject == null) {
+		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && button.GetComponent<Appliances> ().heldObject == null ) {
 			
 			//Then make the object unsable. This is to prevent player feedback from being confused as to what is usable or not, otherwise a NullReference
 			//will come up in the console. Nothing bad will happen just, poor player feedback
 			applianceObject.transform.GetComponent<Collider> ().enabled = false;
-		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null) {
+		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && plateup.isPlating == false) {
 			applianceObject.transform.GetComponent<Collider> ().enabled = true;
 		}
 	}
@@ -201,19 +211,17 @@ public class Appliances : MonoBehaviour {
 	#region PLACE_FOOD
 	public void PlaceFood () {
 		//If the held object has any of the tags liosted in the scriptable object associated with them, then...
-		if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag)) {
+		if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag) && plateup.isPlating == false) {
+			//Set the parent to the appliances parent
+			gm.holdingObject.transform.SetParent (holdingPoint1.transform.parent);
+			//See MoveTowardPlacement ()
+			isPlacing = true;
 			//Set the ObjectInteract script to the one held in the appliance
 			oi = gm.holdingObject.GetComponent<ObjectInteract> ();
 			//Set the held object the same as the currently held object
 			heldObject = gm.holdingObject;
-			//Make the button active
-			button.transform.GetComponent<Collider> ().enabled = true;
 			//Set the button's temp held obj the same as the appliance held object
 			button.transform.GetComponent <Appliances> ().tempHeldObj = heldObject;
-			//See MoveTowardPlacement ()
-			isPlacing = true;
-			//Set the parent to the appliances parent
-			gm.holdingObject.transform.SetParent (holdingPoint1.transform.parent);
 			//Make the object non-interactable (as to not interfere with the button collider)
 			transform.GetComponent<Collider> ().enabled = false;
 
