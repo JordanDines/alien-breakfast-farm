@@ -189,16 +189,16 @@ public class Appliances : MonoBehaviour {
 			if (gm.holdingObject.GetComponent<ObjectInteract> ().ingredient.tagsToInteractWith.Contains (transform.tag) 
 				&& applianceObject.GetComponent<Appliances> ().heldObject == null 
 				&& gm.canPlace == true
-				&& plateup.isPlating == false) {
-					Debug.Log ("Object to interact with: " + transform.tag + ". The current held object is: " + applianceObject.GetComponent<Appliances> ().heldObject);
+				&& plateup.isPlating == false && gm.holdingObject.GetComponent<ObjectInteract>().isReady == false) {
+					Debug.Log ("Object to interact with: " + transform.tag);
 					//Then, make this appliance interactable
 					applianceObject.transform.GetComponent<Collider> ().enabled = true;
 			} else {
 				//Else, make it unusable
-				applianceObject.transform.GetComponent<Collider> ().enabled = false;
+				//applianceObject.transform.GetComponent<Collider> ().enabled = false;
 			}
 			//If you're NOT holding something AND the appliance ISN'T holding something
-		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && button.GetComponent<Appliances> ().heldObject == null ) {
+		} else if (gm.holdingObject == null && applianceObject.GetComponent<Appliances> ().heldObject == null && button.GetComponent<Appliances> ().heldObject == null) {
 			
 			//Then make the object unsable. This is to prevent player feedback from being confused as to what is usable or not, otherwise a NullReference
 			//will come up in the console. Nothing bad will happen just, poor player feedback
