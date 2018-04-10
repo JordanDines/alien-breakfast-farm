@@ -343,6 +343,7 @@ MonoBehaviour:
   isReady: 0
   offset: {x: 90, y: 90, z: 0}
   staplePoint: {fileID: 1991157048065300}
+  respawnParent: {fileID: 0}
 --- !u!114 &114738135211263040
 MonoBehaviour:
   m_ObjectHideFlags: 1
