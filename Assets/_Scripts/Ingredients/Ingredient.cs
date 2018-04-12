@@ -6,9 +6,6 @@ using UnityEngine;
 [CreateAssetMenu (fileName = "New Ingredient", menuName = "Ingredient")]
 public class Ingredient : ScriptableObject {
 	[Header ("Cooking Variables")]
-	//How long it takes for the object to move to the player
-	[Tooltip("How long it takes for the object to move to the player")]
-	public float grabbingSpeed = .1f;
 	//How long this ingredient takes to become ready
 	[Tooltip("How long this ingredient takes to become ready")]
 	public float timeToCook;

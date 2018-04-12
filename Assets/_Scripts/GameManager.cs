@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
 
 	public bool infinite;
+	[Tooltip("The larger the number, the quicker it moves")]
+	public float grabbingSpeed = 25f;
 	[HideInInspector]
 	//If the player can hold something
 	public bool canHold = true;
@@ -15,9 +17,9 @@ public class GameManager : MonoBehaviour
 	//If the player is holding something and can place it
 	public bool canPlace = false;
 	//Reference to the currently held object
-	//[HideInInspector]
+	[HideInInspector]
 	public GameObject holdingObject;
-	//[HideInInspector]
+	[HideInInspector]
 	public GameObject previousObject;
 
 	[Tooltip ("Reference the PlateUp GameObject")]

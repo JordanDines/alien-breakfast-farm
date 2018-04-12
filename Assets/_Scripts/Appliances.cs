@@ -7,9 +7,8 @@ public class Appliances : MonoBehaviour {
 	public ObjectInteract oi;
 	[HideInInspector]
 	private GameManager gm;
-	[SerializeField]
-	[Tooltip("How long it takes for the object to move to the player")]
-	public float grabbingSpeed = 1;
+	[HideInInspector]
+	private float grabbingSpeed;
 
 	[HideInInspector]
 	//Bools are great
@@ -60,6 +59,7 @@ public class Appliances : MonoBehaviour {
 		//Reference each of the holding points
 		heldObject = null;
 		plateup = FindObjectOfType<PlateUp> ();
+		grabbingSpeed = gm.grabbingSpeed;
 	}
 
 	void Update () {
@@ -155,7 +155,9 @@ public class Appliances : MonoBehaviour {
 
 	void MoveToHoldingPoint2 () {
 		//Get reference the button's tempHeldObject, then move it to the second holding point over (preset) time. This holding point is the INSERTED transform
-		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, applianceObject.GetComponent<Appliances>().holdingPoint2.transform.position, grabbingSpeed * Time.deltaTime);
+		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (tempHeldObj.transform.position, 
+			applianceObject.GetComponent<Appliances>().holdingPoint2.transform.position, 
+			grabbingSpeed * Time.deltaTime);
 		button.transform.GetComponent<Collider> ().enabled = false;
 		//If it gets close enough
 		if (Vector3.Distance (tempHeldObj.transform.position, holdingPoint2.transform.position) < 0.007f) {
@@ -173,7 +175,9 @@ public class Appliances : MonoBehaviour {
 	void MoveToHoldingPoint1 () {
 		applianceObject.GetComponent<Appliances> ().heldObject = null;
 		//Get the button's tempHeldObject position, then move it back to the first holding point over (preset) time. This holding point is the REMOVED transform
-		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (button.GetComponent<Appliances> ().tempHeldObj.transform.position, applianceObject.GetComponent<Appliances> ().holdingPoint1.transform.position, grabbingSpeed);
+		button.GetComponent<Appliances> ().tempHeldObj.transform.position = Vector3.Lerp (button.GetComponent<Appliances> ().tempHeldObj.transform.position, 
+			applianceObject.GetComponent<Appliances> ().holdingPoint1.transform.position, 
+			grabbingSpeed * Time.deltaTime);
 		//If it gets close enough
 		if (Vector3.Distance (button.GetComponent<Appliances> ().tempHeldObj.transform.position, button.GetComponent<Appliances> ().holdingPoint1.transform.position) < 0.007f) {
 			//Stop this function from running

@@ -23,7 +23,7 @@ public class ObjectInteract : MonoBehaviour {
 
 	[Header("Variables")]
 	[Tooltip("The speed at which the ingredient goes to the player")]
-	private float grabbingSpeed = 1;
+	private float grabbingSpeed;
 	[HideInInspector]
 	private bool isGrabbing = false;
 	[HideInInspector]
@@ -52,7 +52,7 @@ public class ObjectInteract : MonoBehaviour {
 		//Set this objects tag to the tag it needs to be
 		transform.tag = ingredient.tagThisAs;
 
-		grabbingSpeed = ingredient.grabbingSpeed;
+		grabbingSpeed = gm.grabbingSpeed;
 	}
 
 

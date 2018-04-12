@@ -12,8 +12,8 @@ public class PlateUp : MonoBehaviour {
 	[Tooltip("Reference the space the Ingredient will go to")]
 	public GameObject placePoint;
 	[Space (10)]
-	[Tooltip("The speed at which the ingredient goes to the Place Point")]
-	public float grabbingSpeed = 1;
+	[HideInInspector]
+	private float grabbingSpeed;
 	[HideInInspector]
 	public bool isPlating = false;
 
@@ -29,7 +29,7 @@ public class PlateUp : MonoBehaviour {
 	void Start () {
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
-
+		grabbingSpeed = gm.grabbingSpeed;
 	}
 	
 	// Update is called once per frame
