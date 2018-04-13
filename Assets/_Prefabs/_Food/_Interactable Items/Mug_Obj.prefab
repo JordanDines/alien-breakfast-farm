@@ -465,5 +465,6 @@ MonoBehaviour:
   hasBeenPlaced: 0
   interactable: 1
   isReady: 0
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 90, z: 0}
   staplePoint: {fileID: 1329131037147350}
+  respawnParent: {fileID: 0}

@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 	public GameObject finishedPanel;
 
 	public GameObject teleportParticle;
+	public Animator breakfastReadyAnimation;
 
 	void Start ()
 	{
@@ -86,9 +87,11 @@ public class GameManager : MonoBehaviour
 
 		if (breakfastReady) {
 			plateUpButton.GetComponent <Collider> ().enabled = true;
+			breakfastReadyAnimation.SetBool ("BreakfastReady", true);
 		}
 		if (!breakfastReady) {
 			CheckRecipe ();
+			breakfastReadyAnimation.SetBool ("BreakfastReady", false);
 		}
 			
 	}
