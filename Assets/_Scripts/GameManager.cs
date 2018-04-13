@@ -86,8 +86,8 @@ public class GameManager : MonoBehaviour
 		currentRecipe = recipes [recipeIndex];
 
 		if (breakfastReady) {
-			plateUpButton.GetComponent <Collider> ().enabled = true;
 			breakfastReadyAnimation.SetBool ("BreakfastReady", true);
+			plateUpButton.GetComponent <Collider> ().enabled = true;
 		}
 		if (!breakfastReady) {
 			CheckRecipe ();
