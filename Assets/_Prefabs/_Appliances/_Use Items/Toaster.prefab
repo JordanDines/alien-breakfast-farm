@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 114000221335006480}
   - component: {fileID: 135930146461787710}
   - component: {fileID: 82504646090632762}
-  - component: {fileID: 135288183960903714}
   m_Layer: 0
   m_Name: ButtonToaster
   m_TagString: Button
@@ -123,7 +122,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4882408629553426}
-  - component: {fileID: 95334063820369380}
   - component: {fileID: 65058802634546284}
   - component: {fileID: 114181069788935812}
   - component: {fileID: 114608384394796894}
@@ -223,8 +221,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528607018752860}
-  m_LocalRotation: {x: -0, y: 0.52886635, z: -0, w: 0.8487052}
-  m_LocalPosition: {x: 0.488, y: 0.22074455, z: 0.414}
+  m_LocalRotation: {x: -0, y: 0.38806474, z: -0, w: 0.9216322}
+  m_LocalPosition: {x: 0.472, y: 0.196, z: 0.446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4885082719053142}
@@ -236,20 +234,20 @@ Transform:
   - {fileID: 4419530307281184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45.668003, z: 0}
 --- !u!4 &4885082719053142
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262519032664796}
-  m_LocalRotation: {x: -0, y: 0.00000035762784, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4882408629553426}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 90}
 --- !u!4 &4972968113687084
 Transform:
   m_ObjectHideFlags: 1
@@ -679,23 +677,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95334063820369380
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1528607018752860}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: 64c67e4b74b16614f8daa5fcd914fd5e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000221335006480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -708,7 +689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  grabbingSpeed: 0.5
   inserting: 0
   removing: 0
   isCooking: 0
@@ -775,7 +755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  grabbingSpeed: 1
   inserting: 0
   removing: 0
   isCooking: 0
@@ -830,18 +809,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!135 &135288183960903714
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1185506577617900}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.06
-  m_Center: {x: 0, y: 0.11081324, z: -0.08752396}
 --- !u!135 &135930146461787710
 SphereCollider:
   m_ObjectHideFlags: 1
