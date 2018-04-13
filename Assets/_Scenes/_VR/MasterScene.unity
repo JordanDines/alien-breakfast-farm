@@ -2374,6 +2374,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f37b5997c8c36b49a99b7387d62870a, type: 2}
   m_IsPrefabParent: 0
@@ -2828,7 +2843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
       propertyPath: m_LocalRotation.y
@@ -2840,7 +2855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
       propertyPath: m_RootOrder
