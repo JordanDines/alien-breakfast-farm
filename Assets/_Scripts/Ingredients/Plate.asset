@@ -11,13 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246d21d8adfd50f46af4fc641c74746b, type: 3}
   m_Name: Plate
   m_EditorClassIdentifier: 
-  grabbingSpeed: 25
   timeToCook: 6
   needsToBeCooked: 0
   tagThisAs: Plate
   tagsToInteractWith:
-  - Pan
-  - Toaster
   - PlateUp
+  - Toaster
   notPlatedSprite: {fileID: 0}
   platedSprite: {fileID: 0}
