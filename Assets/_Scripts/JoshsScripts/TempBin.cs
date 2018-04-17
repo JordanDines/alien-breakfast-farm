@@ -45,14 +45,14 @@ public class TempBin : MonoBehaviour {
 
         timeForThing = true;
         print("Open");
-        binUpper.transform.position = Vector3.Lerp(obj1Pos1.transform.position, obj1Pos2.transform.position, OpenCloseSpeed);
-        binLower.transform.position = Vector3.Lerp(obj2Pos1.transform.position, obj2Pos2.transform.position, OpenCloseSpeed);
+        binUpper.transform.position = Vector3.MoveTowards(obj1Pos1.transform.position, obj1Pos2.transform.position, OpenCloseSpeed);
+        binLower.transform.position = Vector3.MoveTowards(obj2Pos1.transform.position, obj2Pos2.transform.position, OpenCloseSpeed);
         fire.gameObject.SetActive(true);
 
         if (timeCount >= timeToWait) {
             print("Close");
-            binUpper.transform.position = Vector3.Lerp(obj1Pos2.transform.position, obj1Pos1.transform.position, OpenCloseSpeed);
-            binLower.transform.position = Vector3.Lerp(obj2Pos2.transform.position, obj2Pos1.transform.position, OpenCloseSpeed);
+            binUpper.transform.position = Vector3.MoveTowards(obj1Pos2.transform.position, obj1Pos1.transform.position, OpenCloseSpeed);
+            binLower.transform.position = Vector3.MoveTowards(obj2Pos2.transform.position, obj2Pos1.transform.position, OpenCloseSpeed);
 
             fire.gameObject.SetActive(false);
             timeForThing = false;
