@@ -34,6 +34,7 @@ public class PlateUp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if(isPlating) 
 		{
 			MoveTowardsPlateUp ();
@@ -43,7 +44,34 @@ public class PlateUp : MonoBehaviour {
 
 	}
 
+	// runs every frame, checks if the meal has been made -> if so, button becomes active
+	public void CheckRecipe ()
+	{
+		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
+		int numItemsNeeded = gm.currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
+		int numItemsCorrect = 0;
 
+		// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
+		foreach (Ingredient ingredient in gm.currentNeededIngredients.ToArray()) {
+			if (gm.currentlyPlated.Contains (ingredient)) {
+				numItemsCorrect++;
+				int ingCount = gm.ingredientPanel.transform.childCount;
+				Transform tempGO;
+				for (int i = 0; i < ingCount; i++) {
+					tempGO = gm.ingredientPanel.transform.GetChild (i);
+					if (ingredient.tagThisAs == tempGO.tag) {
+						Instantiate (ingredient.platedSprite, gm.ingredientPanel.transform.position, gm.ingredientPanel.transform.rotation, gm.ingredientPanel.transform);
+						Destroy (tempGO.gameObject);
+					}
+				}
+			}
+			if (numItemsCorrect == numItemsNeeded) {
+				gm.breakfastReady = true;
+				numItemsCorrect = 0;
+				break;
+			}
+		}
+	}
 	void MoveTowardsPlateUp () {
 		Vector3 tempOffset = gm.holdingObject.GetComponent<ObjectInteract> ().offset;
 

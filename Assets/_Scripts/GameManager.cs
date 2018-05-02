@@ -85,14 +85,12 @@ public class GameManager : MonoBehaviour
 		currentRecipe = recipes [recipeIndex];
 
 		if (breakfastReady) {
-			breakfastReadyAnimation.SetBool ("BreakfastReady", true);
-			plateUpButton.GetComponent <Collider> ().enabled = true;
+			BreakfastReady ();
 		}
 		if (!breakfastReady) {
-			CheckRecipe ();
-			breakfastReadyAnimation.SetBool ("BreakfastReady", false);
+			//CheckRecipe ();
+			BreakfastNotReady ();
 		}
-			
 	}
 
 	public void CheckGameEnded() {
@@ -101,6 +99,15 @@ public class GameManager : MonoBehaviour
 			ingredientPanel.SetActive (false);
 			return;
 		}
+	}
+
+	void BreakfastNotReady() {
+		breakfastReadyAnimation.SetBool ("BreakfastReady", false);
+	}
+
+	void BreakfastReady () {
+		breakfastReadyAnimation.SetBool ("BreakfastReady", true);
+		plateUpButton.GetComponent <Collider> ().enabled = true;
 	}
 
 	void CreateNewRecipe ()
@@ -117,33 +124,33 @@ public class GameManager : MonoBehaviour
 	}
 
 	// runs every frame, checks if the meal has been made -> if so, button becomes active
-	void CheckRecipe ()
-	{
-		// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
-		int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
-		int numItemsCorrect = 0;
-
-		// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
-		foreach (Ingredient ingredient in currentNeededIngredients.ToArray()) {
-			if (currentlyPlated.Contains (ingredient)) {
-				numItemsCorrect++;
-				int ingCount = ingredientPanel.transform.childCount;
-				Transform tempGO;
-				for (int i = 0; i < ingCount; i++) {
-					tempGO = ingredientPanel.transform.GetChild (i);
-					if (ingredient.tagThisAs == tempGO.tag) {
-						Instantiate (ingredient.platedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
-						Destroy (tempGO.gameObject);
-					}
-				}
-			}
-			if (numItemsCorrect == numItemsNeeded) {
-				breakfastReady = true;
-				numItemsCorrect = 0;
-				break;
-			}
-		}
-	}
+	//void CheckRecipe ()
+	//{
+	//	// check if currentlyPlatedIngredients covers everything needed by currentNeededIngredients
+	//	int numItemsNeeded = currentNeededIngredients.Count;   // (now we know how many things are needed in the meal)  
+	//	int numItemsCorrect = 0;
+	//
+	//	// for each ingredient in currentNeededIngredients, if currentlyPlatedIngredients contains that ingredient, do nothing, if not,  
+	//	foreach (Ingredient ingredient in currentNeededIngredients.ToArray()) {
+	//		if (currentlyPlated.Contains (ingredient)) {
+	//			numItemsCorrect++;
+	//			int ingCount = ingredientPanel.transform.childCount;
+	//			Transform tempGO;
+	//			for (int i = 0; i < ingCount; i++) {
+	//				tempGO = ingredientPanel.transform.GetChild (i);
+	//				if (ingredient.tagThisAs == tempGO.tag) {
+	//					Instantiate (ingredient.platedSprite, ingredientPanel.transform.position, ingredientPanel.transform.rotation, ingredientPanel.transform);
+	//					Destroy (tempGO.gameObject);
+	//				}
+	//			}
+	//		}
+	//		if (numItemsCorrect == numItemsNeeded) {
+	//			breakfastReady = true;
+	//			numItemsCorrect = 0;
+	//			break;
+	//		}
+	//	}
+	//}
 
 	public void InfiniteNextRecipe () {
 		//Clears the ingredients panel

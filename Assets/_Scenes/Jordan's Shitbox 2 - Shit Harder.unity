@@ -628,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &97804602
 Animator:
   serializedVersion: 3
@@ -874,7 +874,7 @@ Transform:
   m_LocalPosition: {x: 0.086700015, y: 0.0029152632, z: 1.0858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1602871774}
+  - {fileID: 698191135}
   m_Father: {fileID: 297361322}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1101,7 +1101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  grabbingSpeed: 1
   inserting: 0
   removing: 0
   isCooking: 0
@@ -2485,6 +2484,21 @@ Transform:
   m_Father: {fileID: 1764655762}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &595904856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 698191134}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 698191135}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &624381962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,6 +2669,20 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &698191135
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 698191134}
+  m_GameObject: {fileID: 595904856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1602871774}
+  m_Father: {fileID: 121533748}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714677758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,9 +3167,34 @@ Prefab:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 845248162}
+    - target: {fileID: 95389106275961690, guid: 06ac4daaab5548944b63ef073554d0f8,
+        type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 95389106275961690, guid: 06ac4daaab5548944b63ef073554d0f8,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2a120c309437a5c4dbf1080596b4ece0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06ac4daaab5548944b63ef073554d0f8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &803037909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 698191134}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1602871774}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &820999062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,6 +3680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infinite: 0
+  grabbingSpeed: 25
   canHold: 1
   canPlace: 0
   holdingObject: {fileID: 0}
@@ -3651,6 +3705,7 @@ MonoBehaviour:
   finishedPanel: {fileID: 743148377}
   teleportParticle: {fileID: 1966154188401344, guid: a6dff477d15081243a7885ddf1eb709c,
     type: 2}
+  breakfastReadyAnimation: {fileID: 1666248722}
 --- !u!4 &850463712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4982951236512854, guid: bdaeb9a0dbad29249b69570ae05d6228,
@@ -6118,11 +6173,20 @@ Transform:
   m_PrefabParentObject: {fileID: 4308494813691298, guid: 86a0c71da72f9634eac3d96f61d161a9,
     type: 2}
   m_PrefabInternal: {fileID: 1289719306}
---- !u!4 &1602871774 stripped
+--- !u!4 &1602871774
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186,
     type: 2}
   m_PrefabInternal: {fileID: 698191134}
+  m_GameObject: {fileID: 803037909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 698191135}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605764234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,6 +6547,11 @@ Transform:
   m_Father: {fileID: 1795517013}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1666248722 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95389106275961690, guid: 06ac4daaab5548944b63ef073554d0f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 790443906}
 --- !u!1 &1678621680
 GameObject:
   m_ObjectHideFlags: 0
@@ -7462,6 +7531,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1911241187}
+          m_MethodName: CheckRecipe
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
@@ -7480,7 +7560,6 @@ MonoBehaviour:
   oi: {fileID: 0}
   heldObject: {fileID: 0}
   placePoint: {fileID: 1820693692}
-  grabbingSpeed: 1
   isPlating: 0
   putDownSound: {fileID: 1911241191}
   plateUpGlow: {fileID: 97804601}
