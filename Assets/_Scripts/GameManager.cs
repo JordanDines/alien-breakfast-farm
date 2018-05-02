@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
 
 	public List<Recipe> recipes = new List<Recipe> ();
 	private int recipeIndex = 0;
-	private int ingredientIndex = 0;
 
 	[HideInInspector]
 	public List<Ingredient> currentNeededIngredients = new List<Ingredient> ();

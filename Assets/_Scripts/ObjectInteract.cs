@@ -34,8 +34,6 @@ public class ObjectInteract : MonoBehaviour {
 	public bool isReady;
 	[Tooltip ("Change this offset to change the rotation when this item gets plated up")]
 	public Vector3 offset;
-	//This is a reference to the GvrReticlePointer's gameobject
-	private GameObject reticle;
 	[Tooltip("Drag in this objects 'Staple Point' GameObject which will reference the position that the next item will be stacked at")]
 	public GameObject staplePoint;
 	[HideInInspector]
@@ -43,8 +41,6 @@ public class ObjectInteract : MonoBehaviour {
 
 	void Start () {
 		respawnParent = this.gameObject.transform.parent.gameObject;
-		//Find the object holding this script and get the gameobject as a reference
-		reticle = FindObjectOfType<GvrReticlePointer> ().gameObject;
 		//Find the GameManager in the scene to reference later on
 		gm = FindObjectOfType<GameManager> ();
 		//Find the player's HoldingPoint to also reference later on
@@ -118,38 +114,12 @@ public class ObjectInteract : MonoBehaviour {
 	}
 
 	void InteractiveCheck () {
-		if (interactable == true) {
-			GetComponent<Collider> ().enabled = true;
-		} else if (interactable == false) {
-			GetComponent<Collider> ().enabled = false;
-		}
-
 		if (gm.holdingObject == null && interactable == true) {
 			transform.GetComponent<Collider> ().enabled = true;
 		} else {
 			transform.GetComponent<Collider> ().enabled = false;
 		}
 	}
-		
-
-
-	//This function has been depreciated in this script. See Appliances.cs void MoveTowardPlacement().
-	//void MoveTowardsPlacement () {
-	//	//if the object is moving toward a PlacePoint, move it to the position and snap the rotation (cannot get Quaternion.Lerp working)
-	//		gm.holdingObject.transform.rotation = transform.Find ("PlacePoint").transform.rotation;
-	//		gm.holdingObject.transform.position = Vector3.Lerp (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position, grabbingSpeed);
-	//		//Also enable the collider to allow it to be interactable again
-	//		gm.holdingObject.GetComponent<Collider> ().enabled = true;
-	//		//If it gets close enough to the desired location, stop it moving and allow it to be picked up again
-	//		if (Vector3.Distance (gm.holdingObject.transform.position, transform.Find("PlacePoint").transform.position) < .1f) {
-	//			hasBeenPlaced = true;
-	//			isPlacing = false;
-	//			gm.canPlace = false;
-	//			gm.canHold = true;
-	//			gm.holdingObject = null;
-	//
-	//		}
-	//}
 
 	void MoveTowardsPlayer () {
 		//Then move it to the player and make it look at the player
