@@ -194,7 +194,6 @@ public class Appliances : MonoBehaviour {
 				&& applianceObject.GetComponent<Appliances> ().heldObject == null 
 				&& gm.canPlace == true
 				&& plateup.isPlating == false && gm.holdingObject.GetComponent<ObjectInteract>().isReady == false) {
-					Debug.Log ("Object to interact with: " + transform.tag);
 					//Then, make this appliance interactable
 					applianceObject.transform.GetComponent<Collider> ().enabled = true;
 			} else {

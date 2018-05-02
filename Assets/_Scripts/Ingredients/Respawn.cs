@@ -8,7 +8,6 @@ public class Respawn : MonoBehaviour {
 
 
 	public void RespawnIngredient () {
-		Debug.Log (transform.name + ": " + transform.childCount);
 		if (transform.childCount == 0) {
 			Instantiate (ingredientPrefab, transform.position, transform.rotation, this.gameObject.transform);
 		}

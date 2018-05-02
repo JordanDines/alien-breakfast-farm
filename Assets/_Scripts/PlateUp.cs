@@ -60,7 +60,8 @@ public class PlateUp : MonoBehaviour {
 				for (int i = 0; i < ingCount; i++) {
 					tempGO = gm.ingredientPanel.transform.GetChild (i);
 					if (ingredient.tagThisAs == tempGO.tag) {
-						Instantiate (ingredient.platedSprite, gm.ingredientPanel.transform.position, gm.ingredientPanel.transform.rotation, gm.ingredientPanel.transform);
+						GameObject newSprite = Instantiate (ingredient.platedSprite, gm.ingredientPanel.transform.position, gm.ingredientPanel.transform.rotation, gm.ingredientPanel.transform);
+						newSprite.transform.SetSiblingIndex (tempGO.transform.GetSiblingIndex() + 1);
 						Destroy (tempGO.gameObject);
 					}
 				}

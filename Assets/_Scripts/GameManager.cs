@@ -103,11 +103,13 @@ public class GameManager : MonoBehaviour
 
 	void BreakfastNotReady() {
 		breakfastReadyAnimation.SetBool ("BreakfastReady", false);
+		return;
 	}
 
 	void BreakfastReady () {
 		breakfastReadyAnimation.SetBool ("BreakfastReady", true);
 		plateUpButton.GetComponent <Collider> ().enabled = true;
+		return;
 	}
 
 	void CreateNewRecipe ()
