@@ -6,14 +6,23 @@ public class FrigdePantryButton : MonoBehaviour
 {
 	public GameObject objectToMove;
 
-	public void Update ()
+	private Animator buttonAnimation;
 
-	{
-		
+	void Start () {
+		buttonAnimation = GetComponent<Animator> ();
 	}
+		
 
 	public void UpDown()
 	{
 		objectToMove.GetComponent<FridgePantryMovement> ().toggle = true;
+	}
+
+	public void ButtonDown () {
+		buttonAnimation.SetBool ("Pressed", true);
+	}
+
+	public void ButtonUp () {
+		buttonAnimation.SetBool ("Pressed", false);
 	}
 }
