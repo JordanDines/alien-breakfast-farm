@@ -1675,7 +1675,7 @@ MeshRenderer:
   m_GameObject: {fileID: 327449338}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2111,6 +2111,11 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.m_Rotation.z
       value: 13.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
         type: 2}
