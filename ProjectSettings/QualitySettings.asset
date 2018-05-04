@@ -96,6 +96,7 @@ QualitySettings:
     excludedTargetPlatforms:
     - Android
     - iPhone
+    - tvOS
   - serializedVersion: 2
     name: High
     pixelLightCount: 2
@@ -244,7 +245,7 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 6
+    Android: 7
     Nintendo 3DS: 5
     Nintendo Switch: 5
     PS4: 5
