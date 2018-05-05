@@ -18,6 +18,10 @@ public class MenuManager : MonoBehaviour {
 
 	private const string cardboardString = "cardboard";
 
+	void Start () {
+		StartCoroutine (LoadDevice ("None"));
+	}
+
 	void Update ()  {
 		deviceName.text = XRSettings.loadedDeviceName;
 	}
@@ -33,6 +37,20 @@ public class MenuManager : MonoBehaviour {
 			Debug.Log (XRSettings.loadedDeviceName + ": means nothing m9");
 			VRPlayer.GetComponent<GyroController> ().enabled = false;
 		}
+	}
+
+	public void ToggleXR () {
+		if (XRSettings.loadedDeviceName == "cardboard") {
+			StartCoroutine (LoadDevice ("None"));
+		} else
+			StartCoroutine (LoadDevice ("cardboard"));
+	}
+
+	IEnumerator LoadDevice (string newDevice)
+	{
+		XRSettings.LoadDeviceByName (newDevice);
+		yield return null;
+		XRSettings.enabled = true;
 	}
 
 	public void PlayGame () 
