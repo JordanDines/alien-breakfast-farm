@@ -743,7 +743,7 @@ Transform:
   m_LocalPosition: {x: 0.086700015, y: 0.0029152632, z: 1.0858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1602871774}
+  - {fileID: 698191135}
   m_Father: {fileID: 297361322}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -981,7 +981,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oi: {fileID: 0}
-  grabbingSpeed: 1
   inserting: 0
   removing: 0
   isCooking: 0
@@ -2574,6 +2573,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcf0b4fa5ea837f4e87dbd5632bef186, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &698191135 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 698191134}
 --- !u!1 &714677758
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infinite: 0
+  grabbingSpeed: 25
   canHold: 1
   canPlace: 0
   holdingObject: {fileID: 0}
@@ -3508,6 +3512,7 @@ MonoBehaviour:
   finishedPanel: {fileID: 743148377}
   teleportParticle: {fileID: 1966154188401344, guid: a6dff477d15081243a7885ddf1eb709c,
     type: 2}
+  breakfastReadyAnimation: {fileID: 2001984884}
 --- !u!4 &850463712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4982951236512854, guid: bdaeb9a0dbad29249b69570ae05d6228,
@@ -6394,11 +6399,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4308494813691298, guid: 86a0c71da72f9634eac3d96f61d161a9,
     type: 2}
   m_PrefabInternal: {fileID: 1289719306}
---- !u!4 &1602871774 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4176425728628604, guid: dcf0b4fa5ea837f4e87dbd5632bef186,
-    type: 2}
-  m_PrefabInternal: {fileID: 698191134}
 --- !u!1 &1605764234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7606,7 +7606,6 @@ MonoBehaviour:
   oi: {fileID: 0}
   heldObject: {fileID: 0}
   placePoint: {fileID: 1820693692}
-  grabbingSpeed: 1
   isPlating: 0
   putDownSound: {fileID: 1911241191}
   plateUpGlow: {fileID: 97804601}
