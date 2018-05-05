@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour {
 	private const string cardboardString = "cardboard";
 
 	void Start () {
-		StartCoroutine (LoadDevice ("cardboard"));
+		StartCoroutine (LoadDevice ("none"));
 	}
 
 	void Update ()  {

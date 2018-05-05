@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731725, g: 0.13414745, b: 0.12107873, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -598,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706460769}
   - component: {fileID: 706460770}
+  - component: {fileID: 706460771}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -631,6 +632,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VRPlayer: {fileID: 280872671}
   deviceName: {fileID: 1312541928}
+--- !u!114 &706460771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706460768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ce4d6f63fd24a4f8c2d442b9639ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &726931892
 Prefab:
   m_ObjectHideFlags: 0
@@ -711,6 +723,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 933697641}
+  - component: {fileID: 933697642}
   m_Layer: 0
   m_Name: '------------UI---------------'
   m_TagString: Untagged
@@ -732,6 +745,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933697642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933697640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1553c218704e34a877edf8425c5e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 0.05
+  player: {fileID: 1505976607}
 --- !u!1001 &1073717729
 Prefab:
   m_ObjectHideFlags: 0
@@ -1051,6 +1077,11 @@ RectTransform:
   m_AnchoredPosition: {x: 80.52997, y: -80}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1505976607 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1680881201678936, guid: 942a3ac28e15e3144b41da047cc51665,
+    type: 2}
+  m_PrefabInternal: {fileID: 1575560515}
 --- !u!4 &1538578034 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4677296008546844, guid: 942a3ac28e15e3144b41da047cc51665,
@@ -1097,6 +1128,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1462645123491148, guid: 942a3ac28e15e3144b41da047cc51665, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114353077346581374, guid: 942a3ac28e15e3144b41da047cc51665,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1180,6 +1216,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 706460770}
         m_MethodName: ToggleXR
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 706460771}
+        m_MethodName: DoStaticBool
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
