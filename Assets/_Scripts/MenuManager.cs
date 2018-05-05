@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject playerInScene;
 
-	public Text vrSettingStateMessage;
 	private const string cardboardString = "cardboard";
 
 	public void XRSwitcher ()
@@ -21,5 +21,10 @@ public class MenuManager : MonoBehaviour {
 			XRSettings.LoadDeviceByName ("none");
 			Debug.Log (XRSettings.loadedDeviceName);
 		}
+	}
+
+	public void PlayGame () 
+	{
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);	
 	}
 }
