@@ -17,9 +17,11 @@ public class MenuManager : MonoBehaviour {
 		if (XRSettings.loadedDeviceName == cardboardString) {
 			XRSettings.LoadDeviceByName (cardboardString);
 			Debug.Log (XRSettings.loadedDeviceName);
+			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);	
 		} else if (XRSettings.loadedDeviceName != cardboardString) {
 			XRSettings.LoadDeviceByName ("none");
 			Debug.Log (XRSettings.loadedDeviceName);
+			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);	
 		}
 	}
 
