@@ -288,6 +288,7 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
+    - None
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 1
   openGLRequireES31AEP: 0
