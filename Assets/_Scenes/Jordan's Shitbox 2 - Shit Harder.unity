@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 751062023}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4812,9 +4812,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 114248595417922772, guid: 6b23cbbc2861b4041b9e071e35d24d01,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1235465523}
+    - target: {fileID: 114248595417922772, guid: 6b23cbbc2861b4041b9e071e35d24d01,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShareScreenshotWithText
+      objectReference: {fileID: 0}
+    - target: {fileID: 114248595417922772, guid: 6b23cbbc2861b4041b9e071e35d24d01,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b23cbbc2861b4041b9e071e35d24d01, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1235465522 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1615903296345028, guid: 6b23cbbc2861b4041b9e071e35d24d01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1235465521}
+--- !u!114 &1235465523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235465522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef914a80a1b9dde4cba1e7b68c9e781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenshotName: AlienBrekkie.png
 --- !u!1001 &1237148824
 Prefab:
   m_ObjectHideFlags: 0
