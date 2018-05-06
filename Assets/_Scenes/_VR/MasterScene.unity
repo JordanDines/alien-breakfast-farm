@@ -4088,6 +4088,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f37b5997c8c36b49a99b7387d62870a, type: 2}
   m_IsPrefabParent: 0
@@ -5771,6 +5776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 845248161}
   - component: {fileID: 845248162}
+  - component: {fileID: 845248163}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -5827,6 +5833,18 @@ MonoBehaviour:
   teleportParticle: {fileID: 1966154188401344, guid: a6dff477d15081243a7885ddf1eb709c,
     type: 2}
   breakfastReadyAnimation: {fileID: 2001984884}
+--- !u!114 &845248163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845248160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e307f20673a1d1c40bf79ade1ed6c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1795517007}
 --- !u!4 &850463712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4982951236512854, guid: bdaeb9a0dbad29249b69570ae05d6228,
@@ -8114,11 +8132,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 21f0687479fc3c148baad7030b345b83, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 21f0687479fc3c148baad7030b345b83, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21f0687479fc3c148baad7030b345b83, type: 3}
