@@ -60,7 +60,7 @@ public class ScreenshotShare : MonoBehaviour {
 
 		// Get Screenshot
 		Texture2D screenshot;
-		screenshot = new Texture2D((int)width, (int)height, TextureFormat.RGBA32, false);
+		screenshot = new Texture2D((int)width, (int)height, TextureFormat.RGB24, false);
 		screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
 		screenshot.Apply();
 
