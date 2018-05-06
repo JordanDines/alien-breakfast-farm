@@ -12,7 +12,7 @@ public class ToggleGyroScript : MonoBehaviour {
     {
         vrValue = SetStaticBool.isVR;
 
-        ToggleGyro();
+        //ToggleGyro();
     }
     void Start() {
  
