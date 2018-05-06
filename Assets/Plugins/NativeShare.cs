@@ -49,57 +49,56 @@ public static class NativeShare
 #endif
     }
 
-		#if UNITY_ANDROID
-		public static void ShareAndroid(string body, string subject, string url, string[] filePaths, string mimeType, bool chooser, string chooserText)
-		{
-		using (AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-		using (AndroidJavaObject currentActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity"))
+#if UNITY_ANDROID
+	public static void ShareAndroid(string body, string subject, string url, string[] filePaths, string mimeType, bool chooser, string chooserText)
+	{
 		using (AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent"))
 		using (AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent"))
 		{
+			if (!string.IsNullOrEmpty(url))
+			{
+				// attach url
+				using (AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri"))
+				using (AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", url))
+				using (intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject))
+				{ }
+			}
+			else if (filePaths != null)
+			{
+				// attach extra files (pictures, pdf, etc.)
+				using (AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri"))
+				using (AndroidJavaObject uris = new AndroidJavaObject("java.util.ArrayList"))
+				{
+					for (int i = 0; i < filePaths.Length; i++)
+					{
+						//instantiate the object Uri with the parse of the url's file
+						using (AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file://" + filePaths[i]))
+						{
+							uris.Call<bool>("add", uriObject);
+						}
+					}
 
-		if (!string.IsNullOrEmpty(url))
-		{
-		// attach url
-		using (AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri"))
-		using (AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", url))
-		using (intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject))
-		{ }
-		}
-		else if (filePaths != null)
-		{
-		// attach extra files (pictures, pdf, etc.)
-		using (AndroidJavaClass fileProviderClass = new AndroidJavaClass("android.support.v4.content.FileProvider"))                
-		using (AndroidJavaObject unityContext = currentActivity.Call<AndroidJavaObject>("getApplicationContext"))
-		using (AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri"))
-		using (AndroidJavaObject uris = new AndroidJavaObject("java.util.ArrayList"))
-		{
-		string packageName = unityContext.Call<string>("getPackageName");
-		string authority = packageName + ".provider";
+					using (intentObject.Call<AndroidJavaObject>("putParcelableArrayListExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uris))
+					{ }
+				}
+			}
 
-		AndroidJavaObject fileObj = new AndroidJavaObject("java.io.File", filePaths[0]);
-		AndroidJavaObject uriObj = fileProviderClass.CallStatic<AndroidJavaObject>("getUriForFile", unityContext, authority, fileObj);
-
-		int FLAG_GRANT_READ_URI_PERMISSION = intentObject.GetStatic<int>("FLAG_GRANT_READ_URI_PERMISSION");
-		intentObject.Call<AndroidJavaObject>("addFlags", FLAG_GRANT_READ_URI_PERMISSION);
-
-		using (intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObj))
-		{ }
+			// finally start application
+			using (AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+			using (AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity"))
+			{
+				if (chooser)
+                {
+                    AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, chooserText);
+                    currentActivity.Call("startActivity", jChooser);
+                }
+                else
+                {
+                    currentActivity.Call("startActivity", intentObject);
+                }
+			}
 		}
-		}
-
-		// finally start application
-		if (chooser)
-		{
-		AndroidJavaObject jChooser = intentClass.CallStatic<AndroidJavaObject>("createChooser", intentObject, chooserText);
-		currentActivity.Call("startActivity", jChooser);
-		}
-		else
-		{
-		currentActivity.Call("startActivity", intentObject);
-		}
-		}
-		}
+	}
 #endif
 
 #if UNITY_IOS
