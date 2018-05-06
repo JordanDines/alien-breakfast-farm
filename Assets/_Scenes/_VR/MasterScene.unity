@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 751062023}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2867,6 +2867,21 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.m_Rotation.z
       value: 13.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
         type: 2}
@@ -13394,6 +13409,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1869534000106156, guid: 5f278ae9ff2284a4cb46f8888050edca,
     type: 2}
   m_PrefabInternal: {fileID: 2013286053}
+--- !u!114 &1795517008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795517007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a219656738556cc4b8436c146fa3823e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802929214
 GameObject:
   m_ObjectHideFlags: 0

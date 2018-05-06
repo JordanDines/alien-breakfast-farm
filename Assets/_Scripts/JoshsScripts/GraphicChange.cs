@@ -25,7 +25,7 @@ public class GraphicChange : MonoBehaviour {
             // Loads the NonVR Quality Settings
             UnityEngine.QualitySettings.SetQualityLevel(0, true);
             Debug.Log(UnityEngine.QualitySettings.GetQualityLevel());
-            SceneManager.LoadScene(phoneLevelToLoad);
+           // SceneManager.LoadScene(phoneLevelToLoad);
         }
     }
 
@@ -35,7 +35,7 @@ public class GraphicChange : MonoBehaviour {
             // Loads the Cardboard Quality Settings
             UnityEngine.QualitySettings.SetQualityLevel(1, true);
             Debug.Log(UnityEngine.QualitySettings.GetQualityLevel());
-            SceneManager.LoadScene(vRLevelToLoad);
+           // SceneManager.LoadScene(vRLevelToLoad);
     }
     }
         

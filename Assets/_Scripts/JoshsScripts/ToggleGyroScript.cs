@@ -5,20 +5,25 @@ using UnityEngine;
 public class ToggleGyroScript : MonoBehaviour {
 
     public GameObject playerCamera;
-  //  private Component gyroScript;
     private bool vrValue;
- 
-    void Start() {
-     //   gyroScript = playerCamera.GetComponent<GyroController>();
+
+
+    private void Awake()
+    {
         vrValue = SetStaticBool.isVR;
 
         ToggleGyro();
+    }
+    void Start() {
+ 
+       
     }
 
 
     private void LateUpdate()
     {
-        Debug.Log(vrValue);
+       // Debug.Log(vrValue);
+       // Debug.Log(QualitySettings.GetQualityLevel());
     }
 
     public void ToggleGyro()
