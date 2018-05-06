@@ -10,16 +10,14 @@ public class MenuManager : MonoBehaviour {
 	[SerializeField]
 	private GameObject VRPlayer;
 
-
 	[SerializeField]
 	private Text deviceName;
-	[SerializeField]
 
 
 	private const string cardboardString = "cardboard";
 
 	void Start () {
-		StartCoroutine (LoadDevice ("none"));
+		StartCoroutine (LoadDevice ("None"));
 	}
 
 	void Update ()  {
@@ -31,10 +29,8 @@ public class MenuManager : MonoBehaviour {
 		if (XRSettings.loadedDeviceName == cardboardString) {
 			XRSettings.LoadDeviceByName (cardboardString);
 			VRPlayer.GetComponent<GyroController> ().enabled = false;
-			Debug.Log (XRSettings.loadedDeviceName);
 		} else if (XRSettings.loadedDeviceName != cardboardString) {
 			XRSettings.LoadDeviceByName ("none");
-			Debug.Log (XRSettings.loadedDeviceName + ": means nothing m9");
 			VRPlayer.GetComponent<GyroController> ().enabled = false;
 		}
 	}
