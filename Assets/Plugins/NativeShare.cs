@@ -57,14 +57,6 @@ public static class NativeShare
 		using (AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent"))
 		using (AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent"))
 		{
-		using (intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string>("ACTION_SEND")))
-		{ }
-		using (intentObject.Call<AndroidJavaObject>("setType", mimeType))
-		{ }
-		using (intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_SUBJECT"), subject))
-		{ }
-		using (intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), body))
-		{ }
 
 		if (!string.IsNullOrEmpty(url))
 		{
