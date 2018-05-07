@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:0,dpts:2,wrdp:False,dith:3,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32751,y:32493,varname:node_2865,prsc:2|diff-2240-OUT,spec-358-OUT,alpha-7139-OUT,clip-3352-OUT,voffset-4785-OUT;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31923,y:32634,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ece1c0a13c7103648a5e5ab43cacda38,ntxv:0,isnm:False|UVIN-457-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:31864,y:33032,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:457,x:31704,y:32634,varname:node_457,prsc:2|A-265-UVOUT,B-5697-OUT;n:type:ShaderForge.SFN_TexCoord,id:265,x:31469,y:32543,varname:node_265,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Multiply,id:5697,x:31469,y:32747,varname:node_5697,prsc:2|A-9663-OUT,B-4255-T;n:type:ShaderForge.SFN_Append,id:9663,x:31265,y:32673,varname:node_9663,prsc:2|A-9125-OUT,B-7288-OUT;n:type:ShaderForge.SFN_Time,id:4255,x:31265,y:32815,varname:node_4255,prsc:2;n:type:ShaderForge.SFN_ValueProperty,id:9125,x:31037,y:32597,ptovrint:False,ptlb:U speed,ptin:_Uspeed,varname:node_9125,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:7288,x:31037,y:32751,ptovrint:False,ptlb:V speed,ptin:_Vspeed,varname:_node_9125_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5;n:type:ShaderForge.SFN_Color,id:7124,x:31923,y:32843,ptovrint:False,ptlb:node_7124,ptin:_node_7124,varname:node_7124,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5,c2:0.5,c3:0.5,c4:1;n:type:ShaderForge.SFN_Multiply,id:6596,x:32127,y:32722,varname:node_6596,prsc:2|A-7736-RGB,B-7124-RGB;n:type:ShaderForge.SFN_Slider,id:3982,x:31864,y:33133,ptovrint:False,ptlb:Shine_1,ptin:_Shine_1,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Lerp,id:7139,x:32376,y:33163,varname:node_7139,prsc:2|A-3982-OUT,B-1909-OUT,T-7597-T;n:type:ShaderForge.SFN_Slider,id:1909,x:31864,y:33236,ptovrint:False,ptlb:Shine_2,ptin:_Shine_2,varname:_Opacity_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:1,max:1;n:type:ShaderForge.SFN_Time,id:7597,x:32001,y:33322,varname:node_7597,prsc:2;n:type:ShaderForge.SFN_Tex2d,id:526,x:31469,y:32297,ptovrint:False,ptlb:Mask,ptin:_Mask,varname:node_526,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:1e8e3f5681900154688721b07cc5865b,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Multiply,id:2240,x:32379,y:32301,varname:node_2240,prsc:2|A-3352-OUT,B-6596-OUT;n:type:ShaderForge.SFN_ComponentMask,id:3352,x:31915,y:32297,varname:node_3352,prsc:2,cc1:0,cc2:-1,cc3:-1,cc4:-1|IN-5084-OUT;n:type:ShaderForge.SFN_OneMinus,id:5084,x:31706,y:32297,varname:node_5084,prsc:2|IN-526-RGB;n:type:ShaderForge.SFN_Slider,id:4785,x:32127,y:32914,ptovrint:False,ptlb:Wiggle,ptin:_Wiggle,varname:node_4785,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:-1,cur:0.3851665,max:1;proporder:7736-358-9125-7288-7124-3982-1909-526-4785;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:3,bdst:7,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6596-OUT,spec-358-OUT,alpha-3982-OUT;n:type:ShaderForge.SFN_Tex2d,id:7736,x:32254,y:32622,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ece1c0a13c7103648a5e5ab43cacda38,ntxv:0,isnm:False|UVIN-457-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:32195,y:33020,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Add,id:457,x:32035,y:32622,varname:node_457,prsc:2|A-265-UVOUT,B-5697-OUT;n:type:ShaderForge.SFN_TexCoord,id:265,x:31800,y:32531,varname:node_265,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Multiply,id:5697,x:31800,y:32735,varname:node_5697,prsc:2|A-9663-OUT,B-4255-T;n:type:ShaderForge.SFN_Append,id:9663,x:31596,y:32661,varname:node_9663,prsc:2|A-9125-OUT,B-7288-OUT;n:type:ShaderForge.SFN_Time,id:4255,x:31596,y:32803,varname:node_4255,prsc:2;n:type:ShaderForge.SFN_ValueProperty,id:9125,x:31368,y:32585,ptovrint:False,ptlb:U speed,ptin:_Uspeed,varname:node_9125,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:7288,x:31368,y:32739,ptovrint:False,ptlb:V speed,ptin:_Vspeed,varname:_node_9125_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.5;n:type:ShaderForge.SFN_Color,id:7124,x:32254,y:32831,ptovrint:False,ptlb:node_7124,ptin:_node_7124,varname:node_7124,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5,c2:0.5,c3:0.5,c4:1;n:type:ShaderForge.SFN_Multiply,id:6596,x:32458,y:32710,varname:node_6596,prsc:2|A-7736-RGB,B-7124-RGB;n:type:ShaderForge.SFN_Slider,id:3982,x:32195,y:33121,ptovrint:False,ptlb:Opacity,ptin:_Opacity,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;proporder:7736-358-9125-7288-7124-3982;pass:END;sub:END;*/
 
 Shader "Shader Forge/Scanlines" {
     Properties {
@@ -10,10 +10,7 @@ Shader "Shader Forge/Scanlines" {
         _Uspeed ("U speed", Float ) = 1
         _Vspeed ("V speed", Float ) = 0.5
         _node_7124 ("node_7124", Color) = (0.5,0.5,0.5,1)
-        _Shine_1 ("Shine_1", Range(0, 1)) = 0
-        _Shine_2 ("Shine_2", Range(0, 1)) = 1
-        _Mask ("Mask", 2D) = "white" {}
-        _Wiggle ("Wiggle", Range(-1, 1)) = 0.3851665
+        _Opacity ("Opacity", Range(0, 1)) = 0
         [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
     }
     SubShader {
@@ -27,7 +24,7 @@ Shader "Shader Forge/Scanlines" {
             Tags {
                 "LightMode"="ForwardBase"
             }
-            Blend One One
+            Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
             
             CGPROGRAM
@@ -45,34 +42,14 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal 
             #pragma target 3.0
-            // Dithering function, to use with scene UVs (screen pixel coords)
-            // 4x4 Bayer matrix, based on https://en.wikipedia.org/wiki/Ordered_dithering
-            float BinaryDither4x4( float value, float2 sceneUVs ) {
-                float4x4 mtx = float4x4(
-                    float4( 1,  9,  3, 11 )/17.0,
-                    float4( 13, 5, 15,  7 )/17.0,
-                    float4( 4, 12,  2, 10 )/17.0,
-                    float4( 16, 8, 14,  6 )/17.0
-                );
-                float2 px = floor(_ScreenParams.xy * sceneUVs);
-                int xSmp = fmod(px.x,4);
-                int ySmp = fmod(px.y,4);
-                float4 xVec = 1-saturate(abs(float4(0,1,2,3) - xSmp));
-                float4 yVec = 1-saturate(abs(float4(0,1,2,3) - ySmp));
-                float4 pxMult = float4( dot(mtx[0],yVec), dot(mtx[1],yVec), dot(mtx[2],yVec), dot(mtx[3],yVec) );
-                return round(value + dot(pxMult, xVec));
-            }
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
             uniform float _Uspeed;
             uniform float _Vspeed;
             uniform float4 _node_7124;
-            uniform float _Shine_1;
-            uniform float _Shine_2;
-            uniform sampler2D _Mask; uniform float4 _Mask_ST;
-            uniform float _Wiggle;
+            uniform float _Opacity;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -90,10 +67,9 @@ Shader "Shader Forge/Scanlines" {
                 float3 normalDir : TEXCOORD4;
                 float3 tangentDir : TEXCOORD5;
                 float3 bitangentDir : TEXCOORD6;
-                float4 projPos : TEXCOORD7;
-                UNITY_FOG_COORDS(8)
+                UNITY_FOG_COORDS(7)
                 #if defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH)
-                    float4 ambientOrLightmapUV : TEXCOORD9;
+                    float4 ambientOrLightmapUV : TEXCOORD8;
                 #endif
             };
             VertexOutput vert (VertexInput v) {
@@ -112,13 +88,10 @@ Shader "Shader Forge/Scanlines" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                v.vertex.xyz += float3(_Wiggle,_Wiggle,_Wiggle);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
-                o.projPos = ComputeScreenPos (o.pos);
-                COMPUTE_EYEDEPTH(o.projPos.z);
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
@@ -127,10 +100,6 @@ Shader "Shader Forge/Scanlines" {
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
                 float3 normalDirection = i.normalDir;
                 float3 viewReflectDirection = reflect( -viewDirection, normalDirection );
-                float2 sceneUVs = (i.projPos.xy / i.projPos.w);
-                float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
-                float node_3352 = (1.0 - _Mask_var.rgb).r;
-                clip( BinaryDither4x4(node_3352 - 1.5, sceneUVs) );
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
                 float3 lightColor = _LightColor0.rgb;
                 float3 halfDirection = normalize(viewDirection+lightDirection);
@@ -192,7 +161,7 @@ Shader "Shader Forge/Scanlines" {
                 float4 node_4255 = _Time;
                 float2 node_457 = (i.uv0+(float2(_Uspeed,_Vspeed)*node_4255.g));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_457, _MainTex));
-                float3 diffuseColor = (node_3352*(_MainTex_var.rgb*_node_7124.rgb)); // Need this for specular when using metallic
+                float3 diffuseColor = (_MainTex_var.rgb*_node_7124.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -232,8 +201,7 @@ Shader "Shader Forge/Scanlines" {
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
-                float4 node_7597 = _Time;
-                fixed4 finalRGBA = fixed4(finalColor,lerp(_Shine_1,_Shine_2,node_7597.g));
+                fixed4 finalRGBA = fixed4(finalColor,_Opacity);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
             }
@@ -263,34 +231,14 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal 
             #pragma target 3.0
-            // Dithering function, to use with scene UVs (screen pixel coords)
-            // 4x4 Bayer matrix, based on https://en.wikipedia.org/wiki/Ordered_dithering
-            float BinaryDither4x4( float value, float2 sceneUVs ) {
-                float4x4 mtx = float4x4(
-                    float4( 1,  9,  3, 11 )/17.0,
-                    float4( 13, 5, 15,  7 )/17.0,
-                    float4( 4, 12,  2, 10 )/17.0,
-                    float4( 16, 8, 14,  6 )/17.0
-                );
-                float2 px = floor(_ScreenParams.xy * sceneUVs);
-                int xSmp = fmod(px.x,4);
-                int ySmp = fmod(px.y,4);
-                float4 xVec = 1-saturate(abs(float4(0,1,2,3) - xSmp));
-                float4 yVec = 1-saturate(abs(float4(0,1,2,3) - ySmp));
-                float4 pxMult = float4( dot(mtx[0],yVec), dot(mtx[1],yVec), dot(mtx[2],yVec), dot(mtx[3],yVec) );
-                return round(value + dot(pxMult, xVec));
-            }
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
             uniform float _Uspeed;
             uniform float _Vspeed;
             uniform float4 _node_7124;
-            uniform float _Shine_1;
-            uniform float _Shine_2;
-            uniform sampler2D _Mask; uniform float4 _Mask_ST;
-            uniform float _Wiggle;
+            uniform float _Opacity;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -308,9 +256,8 @@ Shader "Shader Forge/Scanlines" {
                 float3 normalDir : TEXCOORD4;
                 float3 tangentDir : TEXCOORD5;
                 float3 bitangentDir : TEXCOORD6;
-                float4 projPos : TEXCOORD7;
-                LIGHTING_COORDS(8,9)
-                UNITY_FOG_COORDS(10)
+                LIGHTING_COORDS(7,8)
+                UNITY_FOG_COORDS(9)
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
@@ -320,13 +267,10 @@ Shader "Shader Forge/Scanlines" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                v.vertex.xyz += float3(_Wiggle,_Wiggle,_Wiggle);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
-                o.projPos = ComputeScreenPos (o.pos);
-                COMPUTE_EYEDEPTH(o.projPos.z);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
@@ -335,10 +279,6 @@ Shader "Shader Forge/Scanlines" {
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
                 float3 normalDirection = i.normalDir;
-                float2 sceneUVs = (i.projPos.xy / i.projPos.w);
-                float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
-                float node_3352 = (1.0 - _Mask_var.rgb).r;
-                clip( BinaryDither4x4(node_3352 - 1.5, sceneUVs) );
                 float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));
                 float3 lightColor = _LightColor0.rgb;
                 float3 halfDirection = normalize(viewDirection+lightDirection);
@@ -360,7 +300,7 @@ Shader "Shader Forge/Scanlines" {
                 float4 node_4255 = _Time;
                 float2 node_457 = (i.uv0+(float2(_Uspeed,_Vspeed)*node_4255.g));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_457, _MainTex));
-                float3 diffuseColor = (node_3352*(_MainTex_var.rgb*_node_7124.rgb)); // Need this for specular when using metallic
+                float3 diffuseColor = (_MainTex_var.rgb*_node_7124.rgb); // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
                 float NdotV = abs(dot( normalDirection, viewDirection ));
@@ -388,92 +328,9 @@ Shader "Shader Forge/Scanlines" {
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
-                float4 node_7597 = _Time;
-                fixed4 finalRGBA = fixed4(finalColor * lerp(_Shine_1,_Shine_2,node_7597.g),0);
+                fixed4 finalRGBA = fixed4(finalColor * _Opacity,0);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
-            }
-            ENDCG
-        }
-        Pass {
-            Name "ShadowCaster"
-            Tags {
-                "LightMode"="ShadowCaster"
-            }
-            Offset 1, 1
-            Cull Back
-            
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #define UNITY_PASS_SHADOWCASTER
-            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )
-            #define _GLOSSYENV 1
-            #include "UnityCG.cginc"
-            #include "Lighting.cginc"
-            #include "UnityPBSLighting.cginc"
-            #include "UnityStandardBRDF.cginc"
-            #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
-            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
-            #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
-            #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
-            // Dithering function, to use with scene UVs (screen pixel coords)
-            // 4x4 Bayer matrix, based on https://en.wikipedia.org/wiki/Ordered_dithering
-            float BinaryDither4x4( float value, float2 sceneUVs ) {
-                float4x4 mtx = float4x4(
-                    float4( 1,  9,  3, 11 )/17.0,
-                    float4( 13, 5, 15,  7 )/17.0,
-                    float4( 4, 12,  2, 10 )/17.0,
-                    float4( 16, 8, 14,  6 )/17.0
-                );
-                float2 px = floor(_ScreenParams.xy * sceneUVs);
-                int xSmp = fmod(px.x,4);
-                int ySmp = fmod(px.y,4);
-                float4 xVec = 1-saturate(abs(float4(0,1,2,3) - xSmp));
-                float4 yVec = 1-saturate(abs(float4(0,1,2,3) - ySmp));
-                float4 pxMult = float4( dot(mtx[0],yVec), dot(mtx[1],yVec), dot(mtx[2],yVec), dot(mtx[3],yVec) );
-                return round(value + dot(pxMult, xVec));
-            }
-            uniform sampler2D _Mask; uniform float4 _Mask_ST;
-            uniform float _Wiggle;
-            struct VertexInput {
-                float4 vertex : POSITION;
-                float2 texcoord0 : TEXCOORD0;
-                float2 texcoord1 : TEXCOORD1;
-                float2 texcoord2 : TEXCOORD2;
-            };
-            struct VertexOutput {
-                V2F_SHADOW_CASTER;
-                float2 uv0 : TEXCOORD1;
-                float2 uv1 : TEXCOORD2;
-                float2 uv2 : TEXCOORD3;
-                float4 posWorld : TEXCOORD4;
-                float4 projPos : TEXCOORD5;
-            };
-            VertexOutput vert (VertexInput v) {
-                VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
-                o.uv1 = v.texcoord1;
-                o.uv2 = v.texcoord2;
-                v.vertex.xyz += float3(_Wiggle,_Wiggle,_Wiggle);
-                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = UnityObjectToClipPos( v.vertex );
-                o.projPos = ComputeScreenPos (o.pos);
-                COMPUTE_EYEDEPTH(o.projPos.z);
-                TRANSFER_SHADOW_CASTER(o)
-                return o;
-            }
-            float4 frag(VertexOutput i) : COLOR {
-                float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float2 sceneUVs = (i.projPos.xy / i.projPos.w);
-                float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
-                float node_3352 = (1.0 - _Mask_var.rgb).r;
-                clip( BinaryDither4x4(node_3352 - 1.5, sceneUVs) );
-                SHADOW_CASTER_FRAGMENT(i)
             }
             ENDCG
         }
@@ -501,32 +358,13 @@ Shader "Shader Forge/Scanlines" {
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal 
             #pragma target 3.0
-            // Dithering function, to use with scene UVs (screen pixel coords)
-            // 4x4 Bayer matrix, based on https://en.wikipedia.org/wiki/Ordered_dithering
-            float BinaryDither4x4( float value, float2 sceneUVs ) {
-                float4x4 mtx = float4x4(
-                    float4( 1,  9,  3, 11 )/17.0,
-                    float4( 13, 5, 15,  7 )/17.0,
-                    float4( 4, 12,  2, 10 )/17.0,
-                    float4( 16, 8, 14,  6 )/17.0
-                );
-                float2 px = floor(_ScreenParams.xy * sceneUVs);
-                int xSmp = fmod(px.x,4);
-                int ySmp = fmod(px.y,4);
-                float4 xVec = 1-saturate(abs(float4(0,1,2,3) - xSmp));
-                float4 yVec = 1-saturate(abs(float4(0,1,2,3) - ySmp));
-                float4 pxMult = float4( dot(mtx[0],yVec), dot(mtx[1],yVec), dot(mtx[2],yVec), dot(mtx[3],yVec) );
-                return round(value + dot(pxMult, xVec));
-            }
             uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
             uniform float _Metallic;
             uniform float _Uspeed;
             uniform float _Vspeed;
             uniform float4 _node_7124;
-            uniform sampler2D _Mask; uniform float4 _Mask_ST;
-            uniform float _Wiggle;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float2 texcoord0 : TEXCOORD0;
@@ -539,34 +377,27 @@ Shader "Shader Forge/Scanlines" {
                 float2 uv1 : TEXCOORD1;
                 float2 uv2 : TEXCOORD2;
                 float4 posWorld : TEXCOORD3;
-                float4 projPos : TEXCOORD4;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
-                v.vertex.xyz += float3(_Wiggle,_Wiggle,_Wiggle);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.pos = UnityMetaVertexPosition(v.vertex, v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );
-                o.projPos = ComputeScreenPos (o.pos);
-                COMPUTE_EYEDEPTH(o.projPos.z);
                 return o;
             }
             float4 frag(VertexOutput i) : SV_Target {
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float2 sceneUVs = (i.projPos.xy / i.projPos.w);
                 UnityMetaInput o;
                 UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );
                 
                 o.Emission = 0;
                 
-                float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
-                float node_3352 = (1.0 - _Mask_var.rgb).r;
                 float4 node_4255 = _Time;
                 float2 node_457 = (i.uv0+(float2(_Uspeed,_Vspeed)*node_4255.g));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_457, _MainTex));
-                float3 diffColor = (node_3352*(_MainTex_var.rgb*_node_7124.rgb));
+                float3 diffColor = (_MainTex_var.rgb*_node_7124.rgb);
                 float specularMonochrome;
                 float3 specColor;
                 diffColor = DiffuseAndSpecularFromMetallic( diffColor, _Metallic, specColor, specularMonochrome );
