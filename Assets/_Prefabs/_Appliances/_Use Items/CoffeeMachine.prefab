@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1514082133136002
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,9 +110,9 @@ GameObject:
   - component: {fileID: 135030319394609952}
   - component: {fileID: 114461466872406696}
   - component: {fileID: 114736615466342356}
-  - component: {fileID: 114383993978745562}
+  - component: {fileID: 114411790969067280}
   - component: {fileID: 82621653573864354}
-  - component: {fileID: 95175535426401666}
+  - component: {fileID: 95682859429832204}
   m_Layer: 0
   m_Name: ButtonCoffee
   m_TagString: CoffeeMachine
@@ -578,7 +578,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95175535426401666
+--- !u!95 &95682859429832204
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -620,7 +620,7 @@ MonoBehaviour:
   cookingParticle: {fileID: 1432418187846150}
   finishedParticle: {fileID: 1918757026565528, guid: 57b3313389391cb4695ac916e0715c53,
     type: 2}
---- !u!114 &114383993978745562
+--- !u!114 &114411790969067280
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -729,7 +729,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 114383993978745562}
+        - m_Target: {fileID: 114411790969067280}
           m_MethodName: ButtonUp
           m_Mode: 1
           m_Arguments:
@@ -746,7 +746,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114383993978745562}
+        - m_Target: {fileID: 114411790969067280}
           m_MethodName: ButtonDown
           m_Mode: 1
           m_Arguments:
@@ -907,14 +907,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 147447653
+  randomSeed: 1670134904
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
