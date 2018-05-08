@@ -284,8 +284,8 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Enabled: 1
     m_Devices:
-    - None
     - cardboard
+    - None
   - m_BuildTarget: iOS
     m_Enabled: 1
     m_Devices:
