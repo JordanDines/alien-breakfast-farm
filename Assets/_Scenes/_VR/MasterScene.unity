@@ -3948,6 +3948,46 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f37b5997c8c36b49a99b7387d62870a, type: 2}
   m_IsPrefabParent: 0
@@ -5659,7 +5699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 845248161}
   - component: {fileID: 845248162}
-  - component: {fileID: 845248163}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -5716,18 +5755,6 @@ MonoBehaviour:
   teleportParticle: {fileID: 1966154188401344, guid: a6dff477d15081243a7885ddf1eb709c,
     type: 2}
   breakfastReadyAnimation: {fileID: 2001984884}
---- !u!114 &845248163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 845248160}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e307f20673a1d1c40bf79ade1ed6c1bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 1795517007}
 --- !u!4 &850463712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4982951236512854, guid: bdaeb9a0dbad29249b69570ae05d6228,
@@ -14140,7 +14167,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795517007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a219656738556cc4b8436c146fa3823e, type: 3}
   m_Name: 
@@ -16268,6 +16295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef914a80a1b9dde4cba1e7b68c9e781e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenCaptureCamera: {fileID: 0}
   ScreenshotName: screenshot.png
 --- !u!114 &2146681454
 MonoBehaviour:
@@ -16340,7 +16368,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146681452}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

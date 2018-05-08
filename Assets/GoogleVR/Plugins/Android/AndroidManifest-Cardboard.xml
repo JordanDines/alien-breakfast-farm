@@ -32,7 +32,7 @@
         </activity>
         <meta-data android:name="IMMERSIVE_MODE" android:value="true" />
       <provider android:name="android.support.v4.content.FileProvider"
-                android:authorities="com.ThreeJays.AlienBreakfastFarm"
+                android:authorities="com.ThreeJays.AlienBreakfastFarm.provider"
                 android:exported="false" 
                 android:grantUriPermissions="true">
                 <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
