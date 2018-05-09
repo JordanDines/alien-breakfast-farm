@@ -1,22 +1,18 @@
 fileFormatVersion: 2
-guid: cc1f8c06238ef9f49909475eee7c933e
-timeCreated: 1523369458
+guid: eb1ee3c5cd4a2624b9668dcac5250e69
+timeCreated: 1525825198
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert2
-    2100002: lambert3
-    2100004: lambert1
-    2100006: mat_floor
-    2100008: mat_benchOuter
-    2100010: mat_benchTop
+    2100000: TrimOuter
+    2100002: lambert1
+    2100004: TrimInner
     2300000: //RootNode
     3300000: //RootNode
-    4300000: m_Bench
-    4300002: m_BenchV2
+    4300000: pCylinder13
   externalObjects: {}
   materials:
     importMaterials: 1
