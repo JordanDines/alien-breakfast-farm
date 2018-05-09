@@ -719,8 +719,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1378246648}
-  - {fileID: 2071018039}
   - {fileID: 1099663575}
+  - {fileID: 2071018039}
   m_Father: {fileID: 830941369}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2488,6 +2488,11 @@ Prefab:
         type: 2}
       propertyPath: ShapeModule.m_Rotation.z
       value: 13.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 198930521253016594, guid: 3f37b5997c8c36b49a99b7387d62870a,
         type: 2}
@@ -6996,7 +7001,7 @@ Transform:
   - {fileID: 1546429385}
   - {fileID: 2003038066}
   m_Father: {fileID: 105718528}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1099663576
 Animator:
@@ -14196,7 +14201,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795517007}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a219656738556cc4b8436c146fa3823e, type: 3}
   m_Name: 
