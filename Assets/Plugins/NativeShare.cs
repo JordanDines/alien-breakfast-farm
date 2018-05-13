@@ -49,7 +49,7 @@ public static class NativeShare
 #endif
     }
 
-//#if UNITY_ANDROID
+#if UNITY_ANDROID
     public static void ShareAndroid(string body, string subject, string url, string[] filePaths, string mimeType, bool chooser, string chooserText)
     {
         using (AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -108,7 +108,7 @@ public static class NativeShare
             }
         }
     }
-//#endif
+#endif
 
 #if UNITY_IOS
 	public struct ConfigStruct
