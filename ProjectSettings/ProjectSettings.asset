@@ -6,7 +6,7 @@ PlayerSettings:
   serializedVersion: 15
   productGUID: d3f17f28c354d17459866ec58fc34de8
   AndroidProfiler: 0
-  AndroidFilterTouchesWhenObscured: 1
+  AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
   targetDevice: 0
   useOnDemandResources: 0
@@ -167,7 +167,7 @@ PlayerSettings:
     iOS: com.jordan.aliengame
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
@@ -247,7 +247,7 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
   clonedFromGUID: 00000000000000000000000000000000
-  AndroidTargetArchitectures: 7
+  AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
