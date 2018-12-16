@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/_VR/MasterScene.unity
     guid: fa23c6fe8698aac41ac447103edbcdbe
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/_VR/MasterScene(LOOP).unity
     guid: ae1a98792627c54439cf15c198757b49
   - enabled: 0
