@@ -5,14 +5,33 @@ using UnityEngine.XR;
 // ancestor thereof, such as the "player" game object.
 public class GyroController : MonoBehaviour
 {
+
+
     // Optional, allows user to drag left/right to rotate the world.
     private const float DRAG_RATE = .2f;
     float dragYawDegrees;
+    private GyroController gC;
+
+    private void Awake()
+    {
+        gC = GetComponent<GyroController>();
+
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+        {
+            gC.enabled = false;
+        }
+#elif UNITY_IOS || UNITY_ANDROID
+        {
+            gC.enabled = true;
+        }
+#endif
+    }
 
     void Start()
     {
         // Make sure orientation sensor is enabled.
         Input.gyro.enabled = true;
+        
     }
 
     void Update()
