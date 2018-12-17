@@ -11,16 +11,7 @@ public class SetStaticBool : MonoBehaviour {
     {
         QualitySettings.SetQualityLevel(0, true);
     }
-    // Use this for initialization
-    void Start () {
-        
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+  
     public void DoStaticBool()
     {
         if (isVR == false)
@@ -36,6 +27,6 @@ public class SetStaticBool : MonoBehaviour {
             Debug.Log(UnityEngine.QualitySettings.GetQualityLevel()+" Non VR Quality");
         }
 
-        Debug.Log(isVR);
+      //  Debug.Log(isVR);
     }
 }
