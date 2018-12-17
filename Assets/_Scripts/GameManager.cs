@@ -7,54 +7,64 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-	public bool infinite;
-	[Tooltip("The larger the number, the quicker it moves")]
-	public float grabbingSpeed = 25f;
-	[HideInInspector]
-	//If the player can hold something
-	public bool canHold = true;
-	[HideInInspector]
-	//If the player is holding something and can place it
-	public bool canPlace = false;
-	//Reference to the currently held object
-	[HideInInspector]
-	public GameObject holdingObject;
-	[HideInInspector]
-	public GameObject previousObject;
+    public bool infinite;
+    [Tooltip("The larger the number, the quicker it moves")]
+    public float grabbingSpeed = 25f;
+    [HideInInspector]
+    //If the player can hold something
+    public bool canHold = true;
+    [HideInInspector]
+    //If the player is holding something and can place it
+    public bool canPlace = false;
+    //Reference to the currently held object
+    [HideInInspector]
+    public GameObject holdingObject;
+    [HideInInspector]
+    public GameObject previousObject;
 
-	[Tooltip ("Reference the PlateUp GameObject")]
-	//Reference to the plate up area
-	public GameObject plateUp;
-	public GameObject plateUpButton;
+    [Tooltip("Reference the PlateUp GameObject")]
+    //Reference to the plate up area
+    public GameObject plateUp;
+    public GameObject plateUpButton;
 
-	[HideInInspector]
-	public bool breakfastReady = false;
-	[HideInInspector]
-	public bool isPlating = false;
+    [HideInInspector]
+    public bool breakfastReady = false;
+    [HideInInspector]
+    public bool isPlating = false;
 
 
-	public List<Recipe> recipes = new List<Recipe> ();
-	private int recipeIndex = 0;
+    public List<Recipe> recipes = new List<Recipe>();
+    private int recipeIndex = 0;
 
-	[HideInInspector]
-	public List<Ingredient> currentNeededIngredients = new List<Ingredient> ();
+    [HideInInspector]
+    public List<Ingredient> currentNeededIngredients = new List<Ingredient>();
 
-	[HideInInspector]
-	public Recipe currentRecipe;
-	[HideInInspector]
-	public List<Ingredient> currentlyPlated = new List<Ingredient> ();
+    [HideInInspector]
+    public Recipe currentRecipe;
+    [HideInInspector]
+    public List<Ingredient> currentlyPlated = new List<Ingredient>();
 
-	public GameObject ingredientPanel;
-	public GameObject finishedPanel;
+    public GameObject ingredientPanel;
+    public GameObject finishedPanel;
 
-	public GameObject teleportParticle;
-	public Animator breakfastReadyAnimation;
+    public GameObject teleportParticle;
+    public Animator breakfastReadyAnimation;
+    [Space]
+    [Header("Countdown Variables")]
+    public Text countdown;
+    public float timeToCountdown = 3.0f;
+    private float originalCountdownNumber;
+    private int countdownNumber;
+    public string countdownText, countdownText2;
+    public CanvasGroup defaultCanvas;
+    public CanvasGroup countdownCanvas;
 
 	void Start ()
 	{
+        originalCountdownNumber = timeToCountdown;
 
-		//Locks the rotation of the screen so the home button is on the right
-		Screen.orientation = ScreenOrientation.LandscapeLeft;
+        //Locks the rotation of the screen so the home button is on the right
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
 		if (infinite) {
 			recipeIndex = Random.Range(1, recipes.Count);
 		}
@@ -91,8 +101,45 @@ public class GameManager : MonoBehaviour
 			//CheckRecipe ();
 			BreakfastNotReady ();
 		}
-	}
 
+        EndGame();
+
+    }
+
+    /// <summary>
+    /// Countdown to quitting application
+    /// </summary>
+    private void EndGame() {
+        if (Input.GetKey("escape"))
+        {
+
+            defaultCanvas.alpha = 0;
+            countdownCanvas.alpha = 1;
+
+            countdownNumber = Mathf.RoundToInt(timeToCountdown -= Time.deltaTime);
+            countdown.text = countdownText + " " + countdownNumber + " " + countdownText2;
+
+            if (countdownNumber == 0)
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+                      Application.Quit();
+#endif
+            }
+
+        }
+        else {
+            timeToCountdown = originalCountdownNumber;
+            defaultCanvas.alpha = 1;
+            countdownCanvas.alpha = 0;
+        }
+    }
+
+
+    /// <summary>
+    /// Functions
+    /// </summary>
 	public void CheckGameEnded() {
 	if (!infinite && recipeIndex == recipes.Count - 1) {
 			finishedPanel.SetActive (true);

@@ -29,7 +29,7 @@ public class GvrEditorEmulator : MonoBehaviour {
   // gets applied after LateUpdate has occured. However, any functionality that
   // queries the camera pose during Update or LateUpdate after GvrEditorEmulator has been
   // updated will get the wrong value applied by GvrEditorEmulator intsead.
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE
   public static GvrEditorEmulator Instance { get; private set; }
 
   private const string AXIS_MOUSE_X = "Mouse X";
@@ -171,5 +171,5 @@ public class GvrEditorEmulator : MonoBehaviour {
       yield return cam;
     }
   }
-#endif  // UNITY_EDITOR
+#endif
 }

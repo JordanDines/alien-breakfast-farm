@@ -16,7 +16,7 @@ public class GyroController : MonoBehaviour
     {
         gC = GetComponent<GyroController>();
 
-#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+#if UNITY_STANDALONE || UNITY_EDITOR
         {
             gC.enabled = false;
         }
